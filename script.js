@@ -24,3 +24,14 @@ resourceSearch.addEventListener("input", () => {
       keywords.includes(query) || text.includes(query) ? "" : "none";
   });
 });
+
+// Collapsible resource categories
+const collapsibles = document.querySelectorAll(".collapsible");
+
+collapsibles.forEach(section => {
+  const header = section.querySelector(".collapsible-header");
+
+  header.addEventListener("click", () => {
+    section.classList.toggle("open");
+  });
+});
