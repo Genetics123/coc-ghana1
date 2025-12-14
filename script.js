@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ COLLAPSIBLE LOGIC (Accordion + Smart Delayed Scroll)
+   ✅ COLLAPSIBLE LOGIC (Accordion + Pre-Scroll Fix)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -13,27 +13,42 @@ collapsibles.forEach(section => {
 
       const isOpening = !section.classList.contains("open");
 
-      // ✅ Close all other sections
+      // ✅ If closing → scroll to header BEFORE collapsing
+      if (!isOpening) {
+        const yOffset = -20;
+        const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth"
+        });
+
+        // ✅ Wait for scroll to finish, THEN collapse
+        setTimeout(() => {
+          section.classList.remove("open");
+        }, 300);
+
+        return; // stop here
+      }
+
+      // ✅ If opening → close others first
       collapsibles.forEach(other => {
         if (other !== section) {
           other.classList.remove("open");
         }
       });
 
-      // ✅ Toggle this section
-      section.classList.toggle("open");
+      // ✅ Open this section
+      section.classList.add("open");
 
-      // ✅ Delay scroll until animation finishes (300ms)
-      setTimeout(() => {
-        const yOffset = -20;
-        const target = isOpening ? section : header;
-        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      // ✅ Scroll down to opened section
+      const yOffset = -20;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-        window.scrollTo({
-          top: y,
-          behavior: "smooth"
-        });
-      }, 300); // matches your CSS transition time
+      window.scrollTo({
+        top: y,
+        behavior: "smooth"
+      });
     }
   });
 });
@@ -81,6 +96,7 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
 
 
