@@ -3,27 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to The Church of Christ Ministry – Fosco Chapter, Assin Fosu</title>
-  <meta name="description" content="The Church of Christ Ministry – Fosco Chapter at Fosu College of Education, Assin Fosu. A royal priesthood committed to New Testament Christianity and spiritual growth.">
+  <title>The Church of Christ Ministry – Fosco Chapter, Assin Fosu</title>
+  <meta name="description" content="The Church of Christ Ministry – Fosco Chapter at Fosu College of Education, Assin Fosu. A royal priesthood committed to New Testament Christianity and spiritual growth." />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon (add favicon.ico to the root of the repo when ready) -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container nav-container">
       <div class="logo-area">
-        <!-- Replace the src below with the actual path/name of your logo file in the repo -->
         <img src="fosco-logo.jpeg" alt="Church of Christ Fosco Chapter Logo" class="logo-img" />
         <div class="logo-text">
           <h1>The Church of Christ Ministry</h1>
           <p>Fosco Chapter – Assin Fosu</p>
         </div>
       </div>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
       <nav class="main-nav">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#resources">Resources</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -44,18 +52,29 @@
     </div>
   </section>
 
+  <!-- Romans 16:16 Banner (optional visual verse banner; you can swap the image later) -->
+  <section class="verse-banner">
+    <!-- If you create a special banner image for the verse, update the src below -->
+    <!-- For now, this section is just styled text -->
+    <div class="container verse-banner-content">
+      <p class="verse-banner-text">
+        “Greet one another with a holy kiss. The churches of Christ greet you.” – <strong>Romans 16:16</strong>
+      </p>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about" class="section about">
     <div class="container">
       <h2>About The Fosco Chapter</h2>
       <p>
-        The Church of Christ Ministry – Fosco Chapter, Assin Fosu, meets at Fosu College of Education. 
-        We are a campus-based congregation committed to New Testament Christianity, spiritual growth, and 
+        The Church of Christ Ministry – Fosco Chapter, Assin Fosu, meets at Fosu College of Education.
+        We are a campus-based congregation committed to New Testament Christianity, spiritual growth, and
         the training of students to become faithful servants in the Lord’s church.
       </p>
       <p>
-        As a royal priesthood, we emphasize sound biblical teaching, Christ-centered fellowship, and active 
-        participation in worship and ministry. Our desire is to help students grow in faith, character, and 
+        As a <strong>royal priesthood</strong>, we emphasize sound biblical teaching, Christ-centered fellowship, and active
+        participation in worship and ministry. Our desire is to help students grow in faith, character, and
         service while they pursue their academic studies.
       </p>
     </div>
@@ -66,30 +85,100 @@
     <div class="container">
       <h2>Resources</h2>
       <p>
-        Here you will find biblical resources, study materials, and documents prepared by the Fosco Chapter 
+        Here you will find biblical resources, study materials, and documents prepared by the Fosco Chapter
         to strengthen your faith and understanding of God’s word.
       </p>
-      <ul class="resource-list">
-        <!-- Example items – update these when you upload real PDFs -->
-        <li>
-          <a href="resources/bible-study-guide.pdf" download>
-            Bible Study Guide (PDF)
-          </a>
-        </li>
-        <li>
-          <a href="resources/sermon-outline.pdf" download>
-            Sermon Outline – Campus Ministry (PDF)
-          </a>
-        </li>
-        <li>
-          <a href="resources/devotional-material.pdf" download>
-            Daily Devotional Material (PDF)
-          </a>
-        </li>
-      </ul>
+
+      <!-- Search bar for resources -->
+      <div class="resources-search">
+        <input
+          type="text"
+          id="resourceSearch"
+          placeholder="Search resources (e.g. faith, purity, evangelism)..."
+          aria-label="Search resources"
+        />
+      </div>
+
+      <div class="resources-groups" id="resourcesList">
+        <div class="resource-group" data-keywords="faith doctrine trust belief">
+          <h3>Faith</h3>
+          <ul>
+            <li>
+              <a href="resources/faith-study-guide.pdf" download>Faith Study Guide (PDF)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resource-group" data-keywords="purity holiness morality conduct">
+          <h3>Purity</h3>
+          <ul>
+            <li>
+              <a href="resources/purity-teaching-notes.pdf" download>Purity Teaching Notes (PDF)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resource-group" data-keywords="evangelism outreach soul-winning gospel">
+          <h3>Evangelism</h3>
+          <ul>
+            <li>
+              <a href="resources/evangelism-outline.pdf" download>Evangelism Outline (PDF)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resource-group" data-keywords="leadership elders deacons service">
+          <h3>Leadership</h3>
+          <ul>
+            <li>
+              <a href="resources/leadership-training.pdf" download>Leadership Training Notes (PDF)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resource-group" data-keywords="sermon sermons messages audio preaching">
+          <h3>Sermons</h3>
+          <ul>
+            <li>
+              <a href="resources/sermon-outline.pdf" download>Campus Ministry Sermon Outline (PDF)</a>
+            </li>
+            <!-- Example audio sermon (add an MP3 file later) -->
+            <!--
+            <li>
+              <audio controls>
+                <source src="resources/sermon1.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+
       <p class="resources-note">
-        You can later expand this section with more topics such as faith, purity, evangelism, leadership, and more.
+        As the ministry grows, this section can include more topics such as <em>discipleship</em>, <em>Christian living</em>,
+        <em>marriage</em>, and <em>youth ministry</em>, along with sermon audio and articles.
       </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p>
+        A glimpse into the life of the Fosco Chapter — worship, fellowship, and campus activities at Fosu College of Education.
+      </p>
+      <div class="gallery-grid">
+        <!-- Replace these with your real images when ready -->
+        <!-- Example: <img src="images/event1.jpg" alt="Worship session" /> -->
+        <img src="hero-bg.jpg" alt="Fosco Chapter Hero Image" />
+        <!-- You can add more images like: 
+        <img src="event1.jpg" alt="Event 1" />
+        <img src="event2.jpg" alt="Event 2" />
+        <img src="campus.jpg" alt="Fosu College of Education" />
+        -->
+      </div>
     </div>
   </section>
 
@@ -98,7 +187,8 @@
     <div class="container">
       <h2>Contact Us</h2>
       <p>
-        We would be glad to hear from you. You can reach the Church of Christ Ministry – Fosco Chapter, Assin Fosu, through any of the following numbers:
+        We would be glad to hear from you. You can reach the Church of Christ Ministry – Fosco Chapter, Assin Fosu,
+        through any of the following numbers:
       </p>
       <ul class="contact-list">
         <li>0593801386</li>
@@ -109,6 +199,28 @@
       <p class="location">
         <strong>Location:</strong> Fosu College of Education, Assin Fosu
       </p>
+
+      <!-- Contact form (needs a service like Formspree to fully work) -->
+      <div class="contact-form-wrapper">
+        <h3>Send Us a Message</h3>
+        <p class="contact-form-note">
+          To fully activate this form, you can connect it to a service like Formspree. For now, it shows how a message form will look.
+        </p>
+        <form class="contact-form">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-row">
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit" disabled>Send Message (Demo)</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -120,9 +232,6 @@
     </div>
   </footer>
 
-  <script>
-    // Simple script to keep the year updated
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
