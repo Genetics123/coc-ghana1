@@ -37,4 +37,27 @@ collapsibles.forEach(section => {
     section.classList.toggle("open");
   });
 });
+<script>
+  // your collapsible code here...
+
+  // ✅ Add the upgraded search code RIGHT HERE
+  const searchInput = document.getElementById("searchInput");
+  const resourceCards = document.querySelectorAll(".resource-card");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    resourceCards.forEach(card => {
+      const keywords = card.getAttribute("data-keywords").toLowerCase();
+
+      if (keywords.includes(query)) {
+        card.style.display = "block";
+        card.classList.add("open");   // ✅ Auto-open matching category
+      } else {
+        card.style.display = "none";
+        card.classList.remove("open"); // ✅ Close non-matching categories
+      }
+    });
+  });
+</script>
 
