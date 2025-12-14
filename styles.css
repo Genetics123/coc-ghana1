@@ -314,3 +314,19 @@ body {
   max-height: 600px;
   padding-bottom: 15px;
 }
+
+/* Force collapsible content to stay hidden when closed */
+.collapsible-content {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: max-height 0.35s ease;
+}
+
+/* When opened */
+.collapsible.open .collapsible-content {
+  max-height: 600px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
