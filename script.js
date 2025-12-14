@@ -37,25 +37,31 @@ if (resourceSearch && resourceGroups.length > 0) {
   });
 }
 
-// ✅ Scroll animations (fade-in, slide-left, slide-right)
+// ✅ Scroll animations that RESTART every time
 const animatedElements = document.querySelectorAll(".fade-in, .slide-left, .slide-right");
 
-function revealOnScroll() {
+function handleScrollAnimations() {
   const triggerBottom = window.innerHeight * 0.85;
 
   animatedElements.forEach(el => {
     const boxTop = el.getBoundingClientRect().top;
+    const boxBottom = el.getBoundingClientRect().bottom;
 
-    if (boxTop < triggerBottom) {
+    // ✅ Add animation when entering view
+    if (boxTop < triggerBottom && boxBottom > 0) {
       el.classList.add("visible");
+    } 
+    // ✅ Remove animation when leaving view (so it can restart)
+    else {
+      el.classList.remove("visible");
     }
   });
 }
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+window.addEventListener("scroll", handleScrollAnimations);
+window.addEventListener("load", handleScrollAnimations);
 
-// ✅ Smooth scrolling for navigation links
+// ✅ Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -65,6 +71,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
-
-
