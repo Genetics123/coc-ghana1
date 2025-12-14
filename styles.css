@@ -83,9 +83,13 @@ body {
       rgba(0, 40, 85, 0.74)
     ),
     url("hero-bg.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #ffffff;
   padding: 80px 0;
   margin-bottom: 30px;
+}
 }
 
 /* 
@@ -244,4 +248,5 @@ body {
     font-size: 1.4rem;
   }
 }
+
 
