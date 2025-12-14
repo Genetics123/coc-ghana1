@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ COLLAPSIBLE LOGIC (Accordion + Scroll Only on Open)
+   ✅ COLLAPSIBLE LOGIC (No scrolling at all)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -9,32 +9,18 @@ collapsibles.forEach(section => {
   header.addEventListener("click", () => {
     const query = document.getElementById("resourceSearch").value.toLowerCase();
 
-    if (!query) {
-      const isOpening = !section.classList.contains("open");
+    // ✅ Disable manual toggling during search
+    if (query) return;
 
-      // ✅ Close all other sections
-      collapsibles.forEach(other => {
-        if (other !== section) {
-          other.classList.remove("open");
-        }
-      });
-
-      // ✅ Toggle this section
-      section.classList.toggle("open");
-
-      // ✅ Scroll only when opening
-      if (isOpening) {
-        const yOffset = -20;
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({
-          top: y,
-          behavior: "smooth"
-        });
+    // ✅ Close all other sections
+    collapsibles.forEach(other => {
+      if (other !== section) {
+        other.classList.remove("open");
       }
+    });
 
-      // ❌ No scroll when collapsing
-    }
+    // ✅ Toggle this section (NO SCROLLING)
+    section.classList.toggle("open");
   });
 });
 
@@ -81,6 +67,7 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
 
 
