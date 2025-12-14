@@ -68,11 +68,12 @@ body {
 }
 
 .brand-logo {
-  width: 52px;
-  height: 52px;
+ .brand-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--color-accent-soft);
+  border: 2px solid #dde3f0;
 }
 
 .brand-subtitle {
@@ -550,3 +551,4 @@ body {
     padding: 2.4rem 0;
   }
 }
+
