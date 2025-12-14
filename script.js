@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ COLLAPSIBLE LOGIC (Accordion + Smart Scroll Up/Down)
+   ✅ COLLAPSIBLE LOGIC (Accordion + Smart Delayed Scroll)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -23,27 +23,17 @@ collapsibles.forEach(section => {
       // ✅ Toggle this section
       section.classList.toggle("open");
 
-      // ✅ If opening → scroll down to content
-      if (isOpening) {
+      // ✅ Delay scroll until animation finishes (300ms)
+      setTimeout(() => {
         const yOffset = -20;
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const target = isOpening ? section : header;
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         window.scrollTo({
           top: y,
           behavior: "smooth"
         });
-      }
-
-      // ✅ If closing → scroll UP to the header
-      else {
-        const yOffset = -20;
-        const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({
-          top: y,
-          behavior: "smooth"
-        });
-      }
+      }, 300); // matches your CSS transition time
     }
   });
 });
@@ -91,6 +81,7 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
 
 
