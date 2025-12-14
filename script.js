@@ -1,10 +1,10 @@
-// Update footer year
+// ✅ Update footer year
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// Mobile menu toggle
+// ✅ Mobile menu toggle
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
@@ -14,7 +14,7 @@ if (menuToggle && mainNav) {
   });
 }
 
-// Simple resource search filter
+// ✅ Resource search filter
 const resourceSearch = document.getElementById("resourceSearch");
 const resourceGroups = document.querySelectorAll(".resource-group");
 
@@ -36,3 +36,14 @@ if (resourceSearch && resourceGroups.length > 0) {
     });
   });
 }
+
+// ✅ Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
