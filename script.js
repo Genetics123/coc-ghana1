@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ COLLAPSIBLE LOGIC (Accordion + Pre-Scroll Fix)
+   ✅ FULLSCREEN SECTION MODE (Only one section visible)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -10,45 +10,41 @@ collapsibles.forEach(section => {
     const query = document.getElementById("resourceSearch").value.toLowerCase();
 
     if (!query) {
-
       const isOpening = !section.classList.contains("open");
 
-      // ✅ If closing → scroll to header BEFORE collapsing
-      if (!isOpening) {
-        const yOffset = -20;
-        const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({
-          top: y,
-          behavior: "smooth"
+      // ✅ If opening → show only this section
+      if (isOpening) {
+        collapsibles.forEach(other => {
+          if (other !== section) {
+            other.style.display = "none";   // hide others completely
+            other.classList.remove("open");
+          }
         });
 
-        // ✅ Wait for scroll to finish, THEN collapse
-        setTimeout(() => {
-          section.classList.remove("open");
-        }, 300);
+        section.classList.add("open");
+        section.style.display = "block";     // ensure it's visible
 
-        return; // stop here
+        // ✅ Scroll to top of the page (no more weird offsets)
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       }
 
-      // ✅ If opening → close others first
-      collapsibles.forEach(other => {
-        if (other !== section) {
-          other.classList.remove("open");
-        }
-      });
+      // ✅ If closing → restore all sections
+      else {
+        section.classList.remove("open");
 
-      // ✅ Open this section
-      section.classList.add("open");
+        collapsibles.forEach(other => {
+          other.style.display = "block";     // show everything again
+        });
 
-      // ✅ Scroll down to opened section
-      const yOffset = -20;
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({
-        top: y,
-        behavior: "smooth"
-      });
+        // ✅ Scroll to top again for clean reset
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
     }
   });
 });
@@ -96,6 +92,7 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
 
 
