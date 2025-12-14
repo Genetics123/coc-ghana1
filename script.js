@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ FULLSCREEN SECTION MODE (Only one section visible)
+   ✅ COLLAPSIBLE LOGIC (Accordion + Scroll Only on Open)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -12,39 +12,28 @@ collapsibles.forEach(section => {
     if (!query) {
       const isOpening = !section.classList.contains("open");
 
-      // ✅ If opening → show only this section
+      // ✅ Close all other sections
+      collapsibles.forEach(other => {
+        if (other !== section) {
+          other.classList.remove("open");
+        }
+      });
+
+      // ✅ Toggle this section
+      section.classList.toggle("open");
+
+      // ✅ Scroll only when opening
       if (isOpening) {
-        collapsibles.forEach(other => {
-          if (other !== section) {
-            other.style.display = "none";   // hide others completely
-            other.classList.remove("open");
-          }
-        });
+        const yOffset = -20;
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-        section.classList.add("open");
-        section.style.display = "block";     // ensure it's visible
-
-        // ✅ Scroll to top of the page (no more weird offsets)
         window.scrollTo({
-          top: 0,
+          top: y,
           behavior: "smooth"
         });
       }
 
-      // ✅ If closing → restore all sections
-      else {
-        section.classList.remove("open");
-
-        collapsibles.forEach(other => {
-          other.style.display = "block";     // show everything again
-        });
-
-        // ✅ Scroll to top again for clean reset
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      }
+      // ❌ No scroll when collapsing
     }
   });
 });
@@ -92,6 +81,7 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
 
 
