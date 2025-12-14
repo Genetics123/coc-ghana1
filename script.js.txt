@@ -1,0 +1,12 @@
+// Set current year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Simple fake form handler (you can replace with real backend later)
+const form = document.getElementById("contactForm");
+const statusEl = document.getElementById("formStatus");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  statusEl.textContent = "Thank you for your message. We will respond soon.";
+  form.reset();
+});

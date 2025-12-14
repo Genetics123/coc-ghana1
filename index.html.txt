@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Churches of Christ Ghana</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Churches of Christ Ghana</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#congregations">Congregations</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Churches of Christ Ghana</h1>
+      <p>
+        Committed to New Testament Christianity, biblical teaching, and
+        fellowship across congregations throughout Ghana.
+      </p>
+      <a href="#congregations" class="btn-primary">Find a congregation</a>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About us</h2>
+      <p>
+        The Churches of Christ in Ghana are autonomous congregations of believers
+        seeking to follow the pattern of the New Testament church. We emphasize
+        biblical teaching, congregational leadership by elders where possible,
+        a cappella worship, and the unity of the church in Christ.
+      </p>
+      <p>
+        This website serves as a central place to discover congregations,
+        upcoming events, and scriptural resources to strengthen faith and
+        fellowship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Congregations section -->
+  <section id="congregations" class="section section-alt">
+    <div class="container">
+      <h2>Congregations</h2>
+      <p>
+        Below are some example congregations. You can later connect this to a
+        database and make it searchable by region, city, or locality.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Nsawam Road Church of Christ</h3>
+          <p><strong>Location:</strong> Accra, Greater Accra Region</p>
+          <p><strong>Service times:</strong> Sundays 9:00 am – 12:00 pm</p>
+          <p><strong>Contact:</strong> +233 20 000 0000</p>
+        </div>
+        <div class="card">
+          <h3>Adum Church of Christ</h3>
+          <p><strong>Location:</strong> Kumasi, Ashanti Region</p>
+          <p><strong>Service times:</strong> Sundays 9:00 am – 12:00 pm</p>
+          <p><strong>Contact:</strong> +233 24 000 0000</p>
+        </div>
+        <div class="card">
+          <h3>Tamale Central Church of Christ</h3>
+          <p><strong>Location:</strong> Tamale, Northern Region</p>
+          <p><strong>Service times:</strong> Sundays 9:00 am – 12:00 pm</p>
+          <p><strong>Contact:</strong> +233 26 000 0000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events section -->
+  <section id="events" class="section">
+    <div class="container">
+      <h2>Upcoming events</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>National Youth Camp</h3>
+          <p><strong>Date:</strong> 20–25 August 2026</p>
+          <p><strong>Location:</strong> Kumasi</p>
+          <p>
+            A week of Bible study, worship, and fellowship for youth from
+            congregations across Ghana.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Leadership & Elders’ Workshop</h3>
+          <p><strong>Date:</strong> 5–6 October 2026</p>
+          <p><strong>Location:</strong> Accra</p>
+          <p>
+            Training and encouragement for church leaders, evangelists, and
+            aspiring elders and deacons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources section -->
+  <section id="resources" class="section section-alt">
+    <div class="container">
+      <h2>Resources</h2>
+      <p>
+        Add Bible study materials, sermon recordings, tracts, and downloadable
+        resources here.
+      </p>
+      <ul class="resource-list">
+        <li>
+          <strong>Basic Bible Study Series (PDF)</strong> – Introduction to the
+          gospel, salvation, and Christian living.
+        </li>
+        <li>
+          <strong>New Convert Follow-up Guide</strong> – Lessons to help new
+          Christians grow in faith.
+        </li>
+        <li>
+          <strong>Leadership Training Notes</strong> – Materials for elders,
+          deacons, and evangelists.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        Use this form for general enquiries, corrections about congregation
+        details, or to add your congregation to the directory.
+      </p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">Send message</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Churches of Christ Ghana. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
