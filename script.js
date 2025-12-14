@@ -10,18 +10,20 @@ navToggle.addEventListener("click", () => {
 });
 
 // Resource search
-const resourceSearch = document.getElementById("resourceSearch");
+const searchInput = document.getElementById("searchInput");
 const resourceCards = document.querySelectorAll(".resource-card");
 
-resourceSearch.addEventListener("input", () => {
-  const query = resourceSearch.value.toLowerCase().trim();
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
 
   resourceCards.forEach(card => {
     const keywords = card.getAttribute("data-keywords").toLowerCase();
-    const text = card.textContent.toLowerCase();
 
-    card.style.display =
-      keywords.includes(query) || text.includes(query) ? "" : "none";
+    if (keywords.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
   });
 });
 
@@ -35,3 +37,4 @@ collapsibles.forEach(section => {
     section.classList.toggle("open");
   });
 });
+
