@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ COLLAPSIBLE LOGIC (Accordion Mode + Slow Smooth Scroll)
+   ✅ COLLAPSIBLE LOGIC (Accordion + Smart Scroll Up/Down)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -9,8 +9,9 @@ collapsibles.forEach(section => {
   header.addEventListener("click", () => {
     const query = document.getElementById("resourceSearch").value.toLowerCase();
 
-    // ✅ Only allow manual toggling when search is empty
     if (!query) {
+
+      const isOpening = !section.classList.contains("open");
 
       // ✅ Close all other sections
       collapsibles.forEach(other => {
@@ -19,13 +20,24 @@ collapsibles.forEach(section => {
         }
       });
 
-      // ✅ Toggle the clicked section
+      // ✅ Toggle this section
       section.classList.toggle("open");
 
-      // ✅ Slow smooth scroll when opened
-      if (section.classList.contains("open")) {
-        const yOffset = -20; // adjust spacing above section
+      // ✅ If opening → scroll down to content
+      if (isOpening) {
+        const yOffset = -20;
         const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth"
+        });
+      }
+
+      // ✅ If closing → scroll UP to the header
+      else {
+        const yOffset = -20;
+        const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
         window.scrollTo({
           top: y,
@@ -79,5 +91,6 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
 
