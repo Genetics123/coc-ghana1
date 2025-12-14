@@ -1,14 +1,23 @@
-// ✅ COLLAPSIBLE LOGIC
+// ✅ COLLAPSIBLE LOGIC (Accordion Mode)
 const collapsibles = document.querySelectorAll(".collapsible");
 
 collapsibles.forEach(section => {
   const header = section.querySelector(".collapsible-header");
 
   header.addEventListener("click", () => {
-    // Only toggle when search is empty
     const query = document.getElementById("resourceSearch").value.toLowerCase();
 
+    // ✅ Only allow manual toggling when search is empty
     if (!query) {
+
+      // ✅ Close all other sections
+      collapsibles.forEach(other => {
+        if (other !== section) {
+          other.classList.remove("open");
+        }
+      });
+
+      // ✅ Toggle the clicked section
       section.classList.toggle("open");
     }
   });
@@ -52,3 +61,4 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
