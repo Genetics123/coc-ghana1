@@ -1,246 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Church of Christ Ministry – Fosco Chapter, Assin Fosu</title>
+/* HEADER LAYOUT */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  <!-- SEO -->
-  <meta name="description" content="The Church of Christ Ministry – Fosco Chapter, Assin Fosu at Fosu College of Education. A royal priesthood committed to New Testament Christianity, spiritual growth, and student ministry in Ghana." />
-  <meta name="keywords" content="Church of Christ Ghana, Fosu College of Education, campus ministry, Church of Christ Ministry Fosco Chapter, Assin Fosu, youth ministry, Bible study" />
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="The Church of Christ Ministry – Fosco Chapter, Assin Fosu" />
-  <meta property="og:description" content="The Church of Christ Ministry – Fosco Chapter, Assin Fosu at Fosu College of Education, committed to New Testament Christianity and spiritual growth." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Church+of+Christ+Fosco+Chapter" />
+/* LEFT SIDE: Church name */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=+" type="image/png" />
+.brand-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #dde3f0;
+}
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 2px;
+}
 
-  <!-- HEADER -->
- <header class="site-header" role="banner">
-  <div class="container header-inner">
+.brand-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #004a9f;
+}
 
-    <!-- Left side: Logo + Church name -->
-    <div class="brand">
-      <img src="fosco-logo.jpeg" alt="Church of Christ Campus Ministry Fosco Chapter logo" class="brand-logo" />
-      <div class="brand-text">
-        <p class="brand-subtitle">The Church of Christ Ministry</p>
-        <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
-      </div>
-    </div>
+/* RIGHT SIDE: Navigation menu */
+.main-nav {
+  margin-left: auto;
+}
 
-    <!-- Right side: Navigation menu -->
-    <nav class="main-nav" aria-label="Primary navigation">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-    <!-- Mobile toggle (optional) -->
-    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+.nav-list a {
+  text-decoration: none;
+  color: #004a9f;
+  font-weight: 600;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
 
-  </div>
-</header>
+.nav-list a:hover {
+  color: #e5a500;
+  border-bottom-color: #e5a500;
+}
 
-    
+/* MOBILE MENU TOGGLE */
+.nav-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #004a9f;
+}
 
-  <main id="home" class="site-main">
+/* RESPONSIVE NAVIGATION */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
 
-        <div class="hero-text">
-          <h2 id="hero-heading">Welcome to The Church of Christ Ministry – Fosco Chapter, Assin Fosu</h2>
-          <p class="hero-tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
+  .main-nav.open {
+    display: block;
+  }
 
-          <figure class="hero-verse">
-            <blockquote>
-              <em>“Greet one another with a holy kiss. The churches of Christ greet you.”</em>
-            </blockquote>
-            <figcaption><em>Romans 16:16</em></figcaption>
-          </figure>
-        </div>
-
-        <div class="hero-image-wrapper">
-          <img
-            src="https://images.pexels.com/photos/2351728/pexels-photo-2351728.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Worship gathering representing the Church of Christ Ministry – Fosco Chapter"
-            class="hero-image"
-          />
-        </div>
-
-      </div>
-    </section>
-
-    <!-- VERSE BANNER -->
-    <section class="verse-banner">
-      <div class="container verse-banner-inner">
-        <p class="verse-banner-text">
-          “Greet one another with a holy kiss. The churches of Christ greet you.” – <strong>Romans 16:16</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section section-about" aria-labelledby="about-heading">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="about-heading">About The Fosco Chapter</h2>
-          <hr class="section-divider" />
-        </header>
-
-        <article class="section-body">
-          <p>
-            The Church of Christ Ministry – Fosco Chapter, Assin Fosu, meets at Fosu College of Education.
-            We are a campus-based congregation committed to New Testament Christianity, spiritual growth,
-            and the training of students to become faithful servants in the Lord’s church.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- RESOURCES -->
-    <section id="resources" class="section section-resources" aria-labelledby="resources-heading">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="resources-heading">Resources</h2>
-          <hr class="section-divider" />
-          <p class="section-intro">Study materials to strengthen your faith.</p>
-        </header>
-
-        <div class="resources-search-wrapper">
-          <input type="text" id="resourceSearch" class="resources-search-input" placeholder="Search resources..." />
-        </div>
-
-        <div class="resources-grid" id="resourcesList">
-
-          <article class="resource-card" data-keywords="faith doctrine trust belief">
-            <h3>Faith</h3>
-            <ul>
-              <li><a href="resources/faith-study-guide.pdf" download>Faith Study Guide</a></li>
-            </ul>
-          </article>
-
-          <article class="resource-card" data-keywords="purity holiness morality conduct">
-            <h3>Purity</h3>
-            <ul>
-              <li><a href="resources/purity-teaching-notes.pdf" download>Purity Teaching Notes</a></li>
-            </ul>
-          </article>
-
-          <article class="resource-card" data-keywords="evangelism outreach gospel">
-            <h3>Evangelism</h3>
-            <ul>
-              <li><a href="resources/evangelism-outline.pdf" download>Evangelism Outline</a></li>
-            </ul>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section section-gallery" aria-labelledby="gallery-heading">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="gallery-heading">Gallery</h2>
-          <hr class="section-divider" />
-          <p class="section-intro">A visual glimpse of worship, fellowship, and campus ministry life.</p>
-        </header>
-
-        <div class="gallery-grid">
-          <figure class="gallery-item">
-            <img src="https://images.pexels.com/photos/2351728/pexels-photo-2351728.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                 alt="Worship service gathering in Ghana" />
-          </figure>
-
-          <figure class="gallery-item">
-            <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                 alt="Bible study group reading together" />
-          </figure>
-
-          <figure class="gallery-item">
-            <img src="https://images.pexels.com/photos/935944/pexels-photo-935944.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                 alt="Campus ministry students in fellowship" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <header class="section-header">
-          <h2 id="contact-heading">Contact Us</h2>
-          <hr class="section-divider" />
-        </header>
-
-        <div class="contact-layout">
-
-          <div class="contact-details">
-            <p class="contact-text">
-              You can reach The Church of Christ Ministry – Fosco Chapter, Assin Fosu, through the following phone numbers:
-            </p>
-
-            <ul class="contact-list">
-              <li>📞 0593801386</li>
-              <li>📞 0559131263</li>
-              <li>📞 0592510693</li>
-              <li>📞 0591428284</li>
-            </ul>
-
-            <p class="contact-location">
-              📍 <strong>Location:</strong> Fosu College of Education, Assin Fosu
-            </p>
-          </div>
-
-          <div class="contact-form-card">
-            <p class="contact-form-note">
-              This form is for demonstration only. To make it functional, connect it to a service such as Formspree or a backend script.
-            </p>
-
-            <form class="contact-form">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea rows="4" placeholder="Your Message" required></textarea>
-              <button type="submit" disabled>Send Message (Demo)</button>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter. All rights reserved.</p>
-      <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
-
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
