@@ -34,7 +34,12 @@ collapsibles.forEach(section => {
   const header = section.querySelector(".collapsible-header");
 
   header.addEventListener("click", () => {
-    section.classList.toggle("open");
+    // ✅ Only toggle if there's no active search
+    const query = document.getElementById("searchInput").value.toLowerCase();
+
+    if (!query) {
+      section.classList.toggle("open");
+    }
   });
 });
 <script>
@@ -60,4 +65,5 @@ collapsibles.forEach(section => {
     });
   });
 </script>
+
 
