@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   ✅ COLLAPSIBLE LOGIC (Accordion Mode + Smooth Scroll)
+   ✅ COLLAPSIBLE LOGIC (Accordion Mode + Slow Smooth Scroll)
 --------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
@@ -22,11 +22,14 @@ collapsibles.forEach(section => {
       // ✅ Toggle the clicked section
       section.classList.toggle("open");
 
-      // ✅ Smooth scroll into view when opened
+      // ✅ Slow smooth scroll when opened
       if (section.classList.contains("open")) {
-        section.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
+        const yOffset = -20; // adjust spacing above section
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth"
         });
       }
     }
@@ -76,4 +79,5 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
+
 
