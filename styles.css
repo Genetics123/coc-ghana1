@@ -274,16 +274,14 @@ body {
     grid-template-columns: 1fr;
   }
 }
-/* Collapsible container */
 .collapsible {
   border: 1px solid #eee;
   border-radius: 8px;
-  padding: 0;
+  margin-bottom: 16px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-/* Header */
 .collapsible-header {
   display: flex;
   justify-content: space-between;
@@ -297,7 +295,6 @@ body {
   background: #f0f0f0;
 }
 
-/* Icon rotation */
 .collapse-icon {
   transition: transform 0.3s ease;
 }
@@ -306,7 +303,6 @@ body {
   transform: rotate(180deg);
 }
 
-/* Content animation */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
@@ -315,6 +311,6 @@ body {
 }
 
 .collapsible.open .collapsible-content {
-  max-height: 600px; /* enough space for your PDFs */
+  max-height: 600px;
   padding-bottom: 15px;
 }
