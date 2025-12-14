@@ -1,4 +1,6 @@
-// ✅ COLLAPSIBLE LOGIC (Accordion Mode)
+/* ---------------------------------------------------------
+   ✅ COLLAPSIBLE LOGIC (Accordion Mode)
+--------------------------------------------------------- */
 const collapsibles = document.querySelectorAll(".collapsible");
 
 collapsibles.forEach(section => {
@@ -24,7 +26,9 @@ collapsibles.forEach(section => {
 });
 
 
-// ✅ SEARCH LOGIC (auto-expand + hide non-matching + no results + highlight)
+/* ---------------------------------------------------------
+   ✅ SEARCH LOGIC (auto-expand + hide + highlight)
+--------------------------------------------------------- */
 const searchInput = document.getElementById("resourceSearch");
 const resourceCards = document.querySelectorAll(".resource-card");
 const noResults = document.getElementById("noResults");
@@ -49,7 +53,10 @@ searchInput.addEventListener("input", () => {
       if (query.trim() !== "") {
         const title = header.textContent;
         const regex = new RegExp(`(${query})`, "gi");
-        header.innerHTML = title.replace(regex, `<span style="background:yellow; padding:2px; border-radius:3px;">$1</span>`);
+        header.innerHTML = title.replace(
+          regex,
+          `<span style="background:yellow; padding:2px; border-radius:3px;">$1</span>`
+        );
       }
 
     } else {
@@ -61,4 +68,3 @@ searchInput.addEventListener("input", () => {
   // ✅ Show or hide "No results found"
   noResults.style.display = anyVisible ? "none" : "block";
 });
-
