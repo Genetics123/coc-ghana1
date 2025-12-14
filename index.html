@@ -8,18 +8,22 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
+
+  <!-- HEADER -->
+  <header class="site-header fade-in">
     <div class="container nav-container">
-      <div class="logo-area fade-in">
-        <img src="fosco-logo.jpeg" alt="Church of Christ Fosco Chapter Logo" class="logo-img" />
+      <div class="logo-area">
+        <img src="fosco-logo.jpeg" alt="Church Logo" class="logo-img" />
         <div class="logo-text">
           <h1>The Church of Christ Ministry</h1>
           <p>Fosco Chapter – Assin Fosu</p>
         </div>
       </div>
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
+      <button class="menu-toggle">☰</button>
+
       <nav class="main-nav">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -32,7 +36,7 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section id="home" class="hero fade-in">
     <div class="container hero-content">
       <h2>Welcome to The Church of Christ Ministry – Fosco Chapter, Assin Fosu</h2>
@@ -44,7 +48,7 @@
     </div>
   </section>
 
-  <!-- Verse Banner -->
+  <!-- VERSE BANNER -->
   <section class="verse-banner slide-left">
     <div class="container verse-banner-content">
       <p class="verse-banner-text">
@@ -53,44 +57,56 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about" class="section about fade-in">
     <div class="container">
       <h2>About The Fosco Chapter</h2>
       <p>
         The Church of Christ Ministry – Fosco Chapter, Assin Fosu, meets at Fosu College of Education.
-        We are a campus-based congregation committed to New Testament Christianity, spiritual growth, and
-        the training of students to become faithful servants in the Lord’s church.
+        We are a campus-based congregation committed to New Testament Christianity, spiritual growth,
+        and the training of students to become faithful servants in the Lord’s church.
       </p>
     </div>
   </section>
 
-  <!-- Resources -->
+  <!-- RESOURCES -->
   <section id="resources" class="section resources slide-left">
     <div class="container">
       <h2>Resources</h2>
       <p>Study materials to strengthen your faith.</p>
+
       <div class="resources-search">
         <input type="text" id="resourceSearch" placeholder="Search resources..." />
       </div>
+
       <div class="resources-groups" id="resourcesList">
+
         <div class="resource-group" data-keywords="faith doctrine trust belief">
           <h3>Faith</h3>
-          <ul><li><a href="resources/faith-study-guide.pdf" download>Faith Study Guide</a></li></ul>
+          <ul>
+            <li><a href="resources/faith-study-guide.pdf" download>Faith Study Guide</a></li>
+          </ul>
         </div>
+
         <div class="resource-group" data-keywords="purity holiness morality conduct">
           <h3>Purity</h3>
-          <ul><li><a href="resources/purity-teaching-notes.pdf" download>Purity Teaching Notes</a></li></ul>
+          <ul>
+            <li><a href="resources/purity-teaching-notes.pdf" download>Purity Teaching Notes</a></li>
+          </ul>
         </div>
+
         <div class="resource-group" data-keywords="evangelism outreach gospel">
           <h3>Evangelism</h3>
-          <ul><li><a href="resources/evangelism-outline.pdf" download>Evangelism Outline</a></li></ul>
+          <ul>
+            <li><a href="resources/evangelism-outline.pdf" download>Evangelism Outline</a></li>
+          </ul>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- GALLERY -->
   <section id="gallery" class="section gallery slide-right">
     <div class="container">
       <h2>Gallery</h2>
@@ -100,17 +116,20 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact" class="section contact fade-in">
     <div class="container">
       <h2>Contact Us</h2>
+
       <ul class="contact-list">
         <li>0593801386</li>
         <li>0559131263</li>
         <li>0592510693</li>
         <li>0591428284</li>
       </ul>
+
       <p class="location"><strong>Location:</strong> Fosu College of Education, Assin Fosu</p>
+
       <form class="contact-form">
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
@@ -120,8 +139,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- FOOTER -->
+  <footer class="site-footer fade-in">
     <div class="container">
       <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
     </div>
@@ -130,4 +149,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
