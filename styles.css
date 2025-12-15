@@ -485,3 +485,28 @@ body {
   opacity: 0.9;
   font-style: italic;
 }
+
+.language-switcher {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+#languageSelect {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  color: #004080;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    margin-right: 10px;
+  }
+  #languageSelect {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
