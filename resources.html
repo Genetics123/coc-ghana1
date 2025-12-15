@@ -4,14 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | Fosco Chapter – Church of Christ</title>
-  <meta name="description" content="Free Bible study materials, PDFs, and hymns for spiritual growth from the Fosco Chapter of the Church of Christ." />
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-  <!-- Same header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -21,24 +17,17 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
-      <div class="language-switcher">
-        <select id="languageSelect">
-          <option value="en">🇬🇧 English</option>
-          <option value="tw">🇬🇭 Twi</option>
-          <option value="fr">🇫🇷 Français</option>
-        </select>
-      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html" data-i18n="home">Home</a></li>
-          <li><a href="about.html" data-i18n="about">About</a></li>
-          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
-          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
-          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
-          <li><a href="events.html" data-i18n="events">Events</a></li>
-          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
-          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
-          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="announcements.html">Announcements</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -48,22 +37,89 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2 data-i18n="resources_title">Resources</h2>
+        <h2>Resources</h2>
         <hr class="section-divider" />
-        <p class="section-intro" data-i18n="resources_intro">Study materials to strengthen your faith.</p>
+        <p class="section-intro">Study materials to strengthen your faith.</p>
         <input type="text" id="resourceSearch" class="resources-search-input" placeholder="Search resources..." />
         <p id="noResults" style="display:none; text-align:center; margin-top:10px; color:#777;">
           No results found
         </p>
         <div class="resources-grid" id="resourcesList">
-          <!-- (Keep your existing collapsible categories with additional Bible studies and fixed hymns) -->
-          <!-- Your previous resources code here – unchanged except for title/meta -->
+          <!-- FAITH CATEGORY -->
+          <div class="resource-card collapsible"
+            data-keywords="faith tithing dispensation beliefs joseph moses holy spirit spiritual gifts sin salvation obedience prayer">
+            <div class="collapsible-header">
+              <h3>Faith</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="tithing.pdf" download>Tithing</a></li>
+                <li><a href="dispensation-in-the-bible.pdf" download>Dispensation in the Bible</a></li>
+                <li><a href="beliefs-of-the-churches-of-christ.pdf" download>Beliefs of the Churches of Christ</a></li>
+                <li><a href="the-life-of-joseph.pdf" download>The Life of Joseph</a></li>
+                <li><a href="the-life-of-moses.pdf" download>The Life of Moses</a></li>
+                <li><a href="the-holy-spirit.pdf" download>The Holy Spirit</a></li>
+                <li><a href="spiritual-gifts.pdf" download>Spiritual Gifts</a></li>
+                <li><a href="sin-and-gods-plan-for-salvation.pdf" download>Sin and God's Plan for Salvation</a></li>
+                <li><a href="after-church-whats-next.pdf" download>After Church, What's Next</a></li>
+                <li><a href="obedience.pdf" download>Obedience</a></li>
+                <li><a href="the-need-for-the-church-to-be-a-house-of-prayer.pdf" download>The Need for the Church to Be a House of Prayer</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PURITY CATEGORY -->
+          <div class="resource-card collapsible"
+            data-keywords="purity sabbath revelation 666 prophecy holiness">
+            <div class="collapsible-header">
+              <h3>Purity</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="the-sabbaths.pdf" download>The Sabbaths</a></li>
+                <li><a href="revelation-13-666.pdf" download>Revelation 13 (666)</a></li>
+                <li><a href="revelation-11.pdf" download>Revelation 11</a></li>
+                <li><a href="revelation-21.pdf" download>Revelation 21</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EVANGELISM CATEGORY -->
+          <div class="resource-card collapsible"
+            data-keywords="evangelism false teachers prophets prophecy gospel teaching">
+            <div class="collapsible-header">
+              <h3>Evangelism</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="false-teachers-and-preachers.pdf" download>False Teachers and Preachers</a></li>
+                <li><a href="the-bible-and-prophets.pdf" download>The Bible and Prophets</a></li>
+                <li><a href="the-bible-and-prophetic-telescoping.pdf" download>The Bible and Prophetic Telescoping</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- HYMNS CATEGORY -->
+          <div class="resource-card collapsible"
+            data-keywords="hymns songs music worship">
+            <div class="collapsible-header">
+              <h3>Hymns</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="https://genetics123.github.io/coc-hymns/" target="_blank">CoC Hymns Web App</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Same footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
@@ -71,7 +127,6 @@
     </div>
   </footer>
 
-  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
