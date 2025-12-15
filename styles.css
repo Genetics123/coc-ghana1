@@ -221,7 +221,7 @@ body {
 }
 
 /* ==============================================
-   HERO SECTION – Now using your real group photo (green/yellow pillars) as background
+   HERO SECTION – Swapped: large group on steps as background, green/yellow pillars group as foreground
    ============================================== */
 .hero {
   position: relative;
@@ -229,7 +229,7 @@ body {
   display: flex;
   align-items: center;
   color: white;
-  background: linear-gradient(rgba(0, 64, 128, 0.85), rgba(0, 64, 128, 0.85)), url('hero-background.jpeg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 64, 128, 0.85), rgba(0, 64, 128, 0.85)), url('group-photo-large.jpeg') center/cover no-repeat;
 }
 
 .hero-content {
