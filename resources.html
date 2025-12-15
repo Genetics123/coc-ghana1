@@ -17,17 +17,24 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -37,15 +44,18 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Resources</h2>
+        <h2 data-i18n="resources_title">Resources</h2>
         <hr class="section-divider" />
-        <p class="section-intro">Study materials to strengthen your faith.</p>
+        <p class="section-intro" data-i18n="resources_intro">Study materials to strengthen your faith.</p>
         <input type="text" id="resourceSearch" class="resources-search-input" placeholder="Search resources..." />
-        <p id="noResults" style="display:none; text-align:center; margin-top:10px; color:#777;">No results found</p>
+        <p id="noResults" style="display:none; text-align:center; margin-top:10px; color:#777;">
+          No results found
+        </p>
         <div class="resources-grid" id="resourcesList">
+          <!-- FAITH CATEGORY -->
           <div class="resource-card collapsible" data-keywords="faith tithing dispensation beliefs joseph moses holy spirit spiritual gifts sin salvation obedience prayer">
             <div class="collapsible-header">
-              <h3>Faith</h3>
+              <h3 data-i18n="faith">Faith</h3>
               <i data-feather="chevron-down" class="collapse-icon"></i>
             </div>
             <div class="collapsible-content">
@@ -64,9 +74,11 @@
               </ul>
             </div>
           </div>
+
+          <!-- PURITY CATEGORY -->
           <div class="resource-card collapsible" data-keywords="purity sabbath revelation 666 prophecy holiness">
             <div class="collapsible-header">
-              <h3>Purity</h3>
+              <h3 data-i18n="purity">Purity</h3>
               <i data-feather="chevron-down" class="collapse-icon"></i>
             </div>
             <div class="collapsible-content">
@@ -78,9 +90,11 @@
               </ul>
             </div>
           </div>
+
+          <!-- EVANGELISM CATEGORY -->
           <div class="resource-card collapsible" data-keywords="evangelism false teachers prophets prophecy gospel teaching">
             <div class="collapsible-header">
-              <h3>Evangelism</h3>
+              <h3 data-i18n="evangelism">Evangelism</h3>
               <i data-feather="chevron-down" class="collapse-icon"></i>
             </div>
             <div class="collapsible-content">
@@ -91,14 +105,35 @@
               </ul>
             </div>
           </div>
+
+          <!-- HYMNS CATEGORY -->
           <div class="resource-card collapsible" data-keywords="hymns songs music worship">
             <div class="collapsible-header">
-              <h3>Hymns</h3>
+              <h3 data-i18n="hymns">Hymns</h3>
               <i data-feather="chevron-down" class="collapse-icon"></i>
             </div>
             <div class="collapsible-content">
               <ul>
-                <li><a href="https://genetics123.github.io/coc-hymns/" target="_blank">CoC Hymns Web App</a></li>
+                <li><a href="https://hymns.churchofchrist.org/" target="_blank">Church of Christ Hymns Online</a></li>
+                <li><a href="https://www.hymnal.net/en/" target="_blank">Hymnal.net (Acapella Hymns)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ADDITIONAL BIBLE STUDY RESOURCES -->
+          <div class="resource-card collapsible" data-keywords="bible study workbook lesson new testament salvation church">
+            <div class="collapsible-header">
+              <h3>Additional Bible Studies</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="https://westpalmbeachchurchofchrist.com/self-study-booklets" target="_blank">Self-Study Workbooks (West Palm Beach CoC)</a></li>
+                <li><a href="https://gewatkins.net/bible-study-lessons/" target="_blank">Free Printable Lessons (GEWatkins.net)</a></li>
+                <li><a href="http://camphillchurch.org/resources/study" target="_blank">200+ Studies by Paul Cantrell</a></li>
+                <li><a href="https://www.padfield.com/downloads/class.html" target="_blank">Class Books & Guides (Padfield.com)</a></li>
+                <li><a href="https://bibletalk.tv/series" target="_blank">Book-by-Book Series (BibleTalk.tv)</a></li>
+                <li><a href="https://www.lavistachurchofchrist.org/cms/bible-studies/" target="_blank">Bible Studies (La Vista CoC)</a></li>
               </ul>
             </div>
           </div>
@@ -114,6 +149,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
