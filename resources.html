@@ -11,11 +11,11 @@
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-  <!-- Same header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="fosco-logo.jpeg" alt="Logo" class="brand-logo" />
+        <img src="fosco-logo.jpeg" alt="Fosco Chapter Logo" class="brand-logo" />
         <div class="brand-text">
           <p class="brand-subtitle">The Church of Christ Ministry</p>
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
@@ -50,20 +50,73 @@
       <div class="container">
         <h2 data-i18n="resources_title">Resources</h2>
         <hr class="section-divider" />
-        <p class="section-intro" data-i18n="resources_intro">Study materials to strengthen your faith.</p>
-        <input type="text" id="resourceSearch" class="resources-search-input" placeholder="Search resources..." />
-        <p id="noResults" style="display:none; text-align:center; margin-top:10px; color:#777;">
-          No results found
+        <p class="section-intro" data-i18n="resources_intro">Study materials to strengthen your faith and deepen your understanding of God's Word.</p>
+
+        <input type="text" id="resourceSearch" class="resources-search-input" placeholder="Search resources..." data-i18n-placeholder="search_placeholder" />
+
+        <p id="noResults" style="display:none; text-align:center; margin-top:20px; color:#777; font-size:1.1rem;">
+          No results found. Try a different keyword.
         </p>
+
         <div class="resources-grid" id="resourcesList">
-          <!-- (Keep your existing collapsible categories with additional Bible studies and fixed hymns) -->
-          <!-- Your previous resources code here – unchanged except for title/meta -->
+          <!-- Bible Basics & Core Studies -->
+          <div class="collapsible resource-card open"> <!-- "open" class to expand by default -->
+            <div class="collapsible-header">
+              <h3 data-i18n="bible_basics">Bible Basics & Core Studies</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="pdfs/faith.pdf" target="_blank" data-i18n="faith">What Is Faith? (Hebrews 11)</a></li>
+                <li><a href="pdfs/purity.pdf" target="_blank" data-i18n="purity">Purity and Holiness in Christian Living</a></li>
+                <li><a href="pdfs/evangelism.pdf" target="_blank" data-i18n="evangelism">Personal Evangelism & Sharing the Gospel</a></li>
+                <li><a href="pdfs/salvation.pdf" target="_blank" data-i18n="salvation">Sin and God's Plan for Salvation</a></li>
+                <li><a href="pdfs/beliefs.pdf" target="_blank" data-i18n="beliefs">Beliefs of the Churches of Christ</a></li>
+                <li><a href="pdfs/worship.pdf" target="_blank" data-i18n="worship">New Testament Worship</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Hymns Section -->
+          <div class="collapsible resource-card">
+            <div class="collapsible-header">
+              <h3 data-i18n="hymns">Hymns & Songs of Praise</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="hymns/amazing-grace.pdf" target="_blank">Amazing Grace</a></li>
+                <li><a href="hymns/blessed-assurance.pdf" target="_blank">Blessed Assurance</a></li>
+                <li><a href="hymns/it-is-well.pdf" target="_blank">It Is Well With My Soul</a></li>
+                <li><a href="hymns/rock-of-ages.pdf" target="_blank">Rock of Ages</a></li>
+                <li><a href="hymns/holy-holy-holy.pdf" target="_blank">Holy, Holy, Holy</a></li>
+                <li><a href="hymns/how-great-thou-art.pdf" target="_blank">How Great Thou Art</a></li>
+                <!-- Add more hymns as you have PDFs -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Additional Topics -->
+          <div class="collapsible resource-card">
+            <div class="collapsible-header">
+              <h3 data-i18n="advanced_studies">Advanced & Topical Studies</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="pdfs/baptism.pdf" target="_blank" data-i18n="baptism">The Biblical Teaching on Baptism</a></li>
+                <li><a href="pdfs/church-history.pdf" target="_blank" data-i18n="church_history">Restoration Movement & Church History</a></li>
+                <li><a href="pdfs/prayer.pdf" target="_blank" data-i18n="prayer">The Power of Prayer</a></li>
+                <li><a href="pdfs/marriage.pdf" target="_blank" data-i18n="marriage">God's Plan for Marriage & Family</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Same footer -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
@@ -76,6 +129,34 @@
   <script>
     feather.replace();
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Basic collapsible toggle (in case script.js is still missing – this ensures it works)
+    document.querySelectorAll('.collapsible-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('open');
+      });
+    });
+
+    // Simple search filter (fallback if not in script.js)
+    const searchInput = document.getElementById('resourceSearch');
+    const noResults = document.getElementById('noResults');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        let visibleCount = 0;
+        document.querySelectorAll('#resourcesList li a').forEach(link => {
+          const text = link.textContent.toLowerCase();
+          const parentLi = link.parentElement;
+          if (text.includes(query)) {
+            parentLi.style.display = 'block';
+            visibleCount++;
+          } else {
+            parentLi.style.display = 'none';
+          }
+        });
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      });
+    }
   </script>
 </body>
 </html>
