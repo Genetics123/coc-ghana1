@@ -243,9 +243,12 @@ p {
 /* ==============================================
    HERO SECTION – Mobile-Optimized Height
    ============================================== */
+/* ==============================================
+   HERO SECTION – Reduced Height for Mobile
+   ============================================== */
 .hero {
   position: relative;
-  min-height: 70vh;
+  min-height: 65vh; /* Reduced from 70vh for desktop */
   display: flex;
   align-items: center;
   color: white;
@@ -255,43 +258,46 @@ p {
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px;
   align-items: center;
 }
 
 .hero-text {
-  padding: 30px;
+  padding: 20px;
 }
 
 .hero-text h2 {
-  font-size: 3rem;
-  margin-bottom: 30px;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero-tagline {
-  font-size: 1.6rem;
-  margin-bottom: 40px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
   font-style: italic;
 }
 
 .hero-verse blockquote {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-style: italic;
-  border-left: 5px solid #ffd700;
-  padding-left: 30px;
-  margin: 40px 0;
+  border-left: 4px solid #ffd700;
+  padding-left: 20px;
+  margin: 30px 0;
 }
 
 .hero-image {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Mobile Optimization – Much Smaller Hero */
 @media (max-width: 768px) {
   .hero {
-    min-height: 60vh;
+    min-height: 50vh; /* Significantly reduced for mobile – no more "too big" */
+    align-items: flex-end; /* Text moves toward bottom for better proportion */
+    padding-bottom: 40px;
   }
 
   .hero-content {
@@ -300,13 +306,26 @@ p {
     text-align: center;
   }
 
-  .hero-text h2 {
-    font-size: 2.2rem;
+  .hero-text {
+    padding: 20px;
   }
 
-  .hero-image {
-    max-width: 80%;
-    margin: 0 auto;
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.3rem;
+  }
+
+  .hero-verse blockquote {
+    font-size: 1.2rem;
+    padding-left: 15px;
+    margin: 20px 0;
+  }
+
+  .hero-image-wrapper {
+    display: none; /* Hide the right-side foreground image on mobile to save space */
   }
 }
 
@@ -551,3 +570,4 @@ p {
   font-style: italic;
   font-size: 1.1rem;
 }
+
