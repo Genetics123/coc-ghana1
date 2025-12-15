@@ -24,15 +24,15 @@
       <!-- RIGHT SIDE: NAVIGATION -->
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#sermons">Sermons</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#leadership">Leadership</a></li>
-          <li><a href="#announcements">Announcements</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="announcements.html">Announcements</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <!-- MOBILE MENU BUTTON -->
@@ -71,255 +71,21 @@
         </p>
       </div>
     </section>
-    <!-- ABOUT -->
-    <section id="about" class="section">
+    <!-- BRIEF WELCOME / ABOUT ON HOME PAGE -->
+    <section class="section">
       <div class="container">
-        <h2>About The Fosco Chapter</h2>
+        <h2>Welcome to Fosco Chapter</h2>
         <hr class="section-divider" />
-        <p class="about-text">
-          The Church of Christ Ministry – Fosco Chapter, Assin Fosu, meets at Fosu College of Education.
-          We are a campus-based congregation committed to New Testament Christianity, spiritual growth,
+        <p class="section-intro">
+          The Church of Christ Ministry – Fosco Chapter at Fosu College of Education. 
+          A royal priesthood committed to New Testament Christianity, spiritual growth, 
           and the training of students to become faithful servants in the Lord’s church.
         </p>
-      </div>
-    </section>
-    <!-- RESOURCES -->
-    <section id="resources" class="section">
-      <div class="container">
-        <h2>Resources</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">Study materials to strengthen your faith.</p>
-        <input type="text" id="resourceSearch" class="resources-search-input" placeholder="Search resources..." />
-        <p id="noResults" style="display:none; text-align:center; margin-top:10px; color:#777;">
-          No results found
+        <p style="text-align:center; margin-top:40px;">
+          <a href="about.html" style="background:#004080; color:white; padding:12px 30px; border-radius:30px; text-decoration:none; font-weight:bold;">
+            Learn More About Us
+          </a>
         </p>
-        <div class="resources-grid" id="resourcesList">
-          <!-- FAITH CATEGORY -->
-          <div class="resource-card collapsible"
-            data-keywords="faith tithing dispensation beliefs joseph moses holy spirit spiritual gifts sin salvation obedience prayer">
-            <div class="collapsible-header">
-              <h3>Faith</h3>
-              <i data-feather="chevron-down" class="collapse-icon"></i>
-            </div>
-            <div class="collapsible-content">
-              <ul>
-                <li><a href="tithing.pdf" download>Tithing</a></li>
-                <li><a href="dispensation-in-the-bible.pdf" download>Dispensation in the Bible</a></li>
-                <li><a href="beliefs-of-the-churches-of-christ.pdf" download>Beliefs of the Churches of Christ</a></li>
-                <li><a href="the-life-of-joseph.pdf" download>The Life of Joseph</a></li>
-                <li><a href="the-life-of-moses.pdf" download>The Life of Moses</a></li>
-                <li><a href="the-holy-spirit.pdf" download>The Holy Spirit</a></li>
-                <li><a href="spiritual-gifts.pdf" download>Spiritual Gifts</a></li>
-                <li><a href="sin-and-gods-plan-for-salvation.pdf" download>Sin and God's Plan for Salvation</a></li>
-                <li><a href="after-church-whats-next.pdf" download>After Church, What's Next</a></li>
-                <li><a href="obedience.pdf" download>Obedience</a></li>
-                <li><a href="the-need-for-the-church-to-be-a-house-of-prayer.pdf" download>The Need for the Church to Be a House of Prayer</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- PURITY CATEGORY -->
-          <div class="resource-card collapsible"
-            data-keywords="purity sabbath revelation 666 prophecy holiness">
-            <div class="collapsible-header">
-              <h3>Purity</h3>
-              <i data-feather="chevron-down" class="collapse-icon"></i>
-            </div>
-            <div class="collapsible-content">
-              <ul>
-                <li><a href="the-sabbaths.pdf" download>The Sabbaths</a></li>
-                <li><a href="revelation-13-666.pdf" download>Revelation 13 (666)</a></li>
-                <li><a href="revelation-11.pdf" download>Revelation 11</a></li>
-                <li><a href="revelation-21.pdf" download>Revelation 21</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- EVANGELISM CATEGORY -->
-          <div class="resource-card collapsible"
-            data-keywords="evangelism false teachers prophets prophecy gospel teaching">
-            <div class="collapsible-header">
-              <h3>Evangelism</h3>
-              <i data-feather="chevron-down" class="collapse-icon"></i>
-            </div>
-            <div class="collapsible-content">
-              <ul>
-                <li><a href="false-teachers-and-preachers.pdf" download>False Teachers and Preachers</a></li>
-                <li><a href="the-bible-and-prophets.pdf" download>The Bible and Prophets</a></li>
-                <li><a href="the-bible-and-prophetic-telescoping.pdf" download>The Bible and Prophetic Telescoping</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- HYMNS CATEGORY -->
-          <div class="resource-card collapsible"
-            data-keywords="hymns songs music worship">
-            <div class="collapsible-header">
-              <h3>Hymns</h3>
-              <i data-feather="chevron-down" class="collapse-icon"></i>
-            </div>
-            <div class="collapsible-content">
-              <ul>
-                <li><a href="https://genetics123.github.io/coc-hymns/" target="_blank">CoC Hymns Web App</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERMONS -->
-    <section id="sermons" class="section">
-      <div class="container">
-        <h2>Sermons</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">Listen to or read recent sermons delivered at our chapter.</p>
-        <div class="resources-grid">
-          <div class="resource-card">
-            <img src="https://media.gettyimages.com/id/1484840164/photo/pastor-stand-preaching-with-arms-raised-in-front-of-congregation.jpg?s=612x612&w=gi&k=20&c=jLuUpOXrK6ohjnXyolOvbAxdXS32gIIgsF7wbuOwIGg=" alt="Preacher delivering sermon" style="width:100%; height:200px; object-fit:cover; border-radius:10px 10px 0 0;" />
-            <div style="padding:20px;">
-              <h3>Recent Sermon Title</h3>
-              <p>By Pre. Korsah • December 2025</p>
-              <a href="#" class="whatsapp-btn" style="background:#004080;">Read / Listen</a>
-            </div>
-          </div>
-          <!-- Add more sermon cards here when ready -->
-        </div>
-        <p style="text-align:center; margin-top:30px;">More sermons coming soon!</p>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <h2>Gallery</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">A visual glimpse of worship, fellowship, and campus ministry life.</p>
-        <div class="gallery-grid">
-          <img src="leadership-ceremony.jpeg" alt="Fosco Chapter leadership ceremony with student officers" />
-          <img src="community-gathering.jpeg" alt="Community gathering in front of green building with welcome sign" />
-          <!-- Add more images here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- EVENTS -->
-    <section id="events" class="section">
-      <div class="container">
-        <h2>Upcoming Events</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">Join us for fellowship, Bible studies, and campus outreach.</p>
-        <div class="gallery-grid">
-          <div style="text-align:center; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-            <img src="https://campuschurch.com/wp-content/uploads/2021/08/Bible-fellowship-groups-1024x683.jpg" alt="Bible study fellowship group" style="width:100%; height:200px; object-fit:cover; border-radius:10px;" />
-            <h3>Weekly Bible Study</h3>
-            <p>Every Wednesday • 6:00 PM</p>
-          </div>
-          <div style="text-align:center; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-            <img src="https://media.istockphoto.com/id/174792161/photo/multi-ethnic-young-adults-in-a-bible-study-church-group.jpg?s=612x612&w=0&k=20&c=6EFiktfVmwjoqyn2ofxdYnvVapN-XHf98lU-D6P2aLo=" alt="Church gathering event" style="width:100%; height:200px; object-fit:cover; border-radius:10px;" />
-            <h3>Sunday Worship</h3>
-            <p>Every Sunday • 9:00 AM</p>
-          </div>
-          <!-- Add more events here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- LEADERSHIP PROFILES -->
-    <section id="leadership" class="section">
-      <div class="container">
-        <h2>Leadership</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">Meet our dedicated student and preacher leadership team.</p>
-        <div class="gallery-grid">
-          <div class="resource-card" style="text-align:center;">
-            <img src="https://omag.b-cdn.net/wp-content/uploads/2017/09/17-Feature_3-Reasons-You-Need-to-a-Build-a-Diverse-Leadership-Team_1021x640-0912.jpg" alt="Bro. Odoom - President" style="width:100%; height:250px; object-fit:cover; border-radius:10px;" />
-            <h3>Bro. Odoom</h3>
-            <p>President</p>
-            <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-btn">Contact</a>
-          </div>
-          <div class="resource-card" style="text-align:center;">
-            <img src="https://blog.chemistrystaffing.com/hubfs/Why%20Staff%20Culture%20is%20Everyones%20Job.png" alt="Pre. Korsah - Preacher" style="width:100%; height:250px; object-fit:cover; border-radius:10px;" />
-            <h3>Pre. Korsah</h3>
-            <p>Preacher</p>
-            <a href="https://wa.me/233508343029" target="_blank" class="whatsapp-btn">Contact</a>
-          </div>
-          <!-- Add more leaders here -->
-        </div>
-        <p style="text-align:center; margin-top:30px;">More profiles coming soon!</p>
-      </div>
-    </section>
-
-    <!-- WEEKLY ANNOUNCEMENTS -->
-    <section id="announcements" class="section">
-      <div class="container">
-        <h2>Weekly Announcements</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">Stay updated with what's happening this week.</p>
-        <div style="background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center;">
-          <img src="https://i.pinimg.com/736x/9c/e4/ab/9ce4abd7ce33b784d6f27a1359e7b531.jpg" alt="Church announcements board" style="width:100%; max-width:600px; border-radius:10px; margin-bottom:20px;" />
-          <h3>This Week (December 2025)</h3>
-          <ul style="text-align:left; max-width:600px; margin:20px auto; line-height:2;">
-            <li>Wednesday Bible Study: Theme - Faith and Obedience</li>
-            <li>Sunday Worship: Guest Speaker</li>
-            <li>Campus Outreach: Friday Evangelism</li>
-          </ul>
-          <p>Check back every week for updates!</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <hr class="section-divider" />
-        <div class="contact-layout">
-          <div class="contact-details">
-            <p>You can reach The Church of Christ Ministry – Fosco Chapter, Assin Fosu, through the following phone numbers:</p>
-            <ul class="contact-list">
-              <li>
-                📞 Pre. Korsah – 0508343029
-                <a href="https://wa.me/233508343029" target="_blank" class="whatsapp-btn">
-                  💬 Chat/Call on WhatsApp
-                </a>
-              </li>
-              <li>
-                📞 Pre. Frederick – 0559248632
-                <a href="https://wa.me/233559248632" target="_blank" class="whatsapp-btn">
-                  💬 Chat/Call on WhatsApp
-                </a>
-              </li>
-              <li>
-                📞 Bro. Odoom (President) – 0549561655
-                <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-btn">
-                  💬 Chat/Call on WhatsApp
-                </a>
-              </li>
-              <li>
-                📞 Emmanuel Ponsu – 0249939707
-                <a href="https://wa.me/233249939707" target="_blank" class="whatsapp-btn">
-                  💬 Chat/Call on WhatsApp
-                </a>
-              </li>
-              <li>
-                📞 Bright Donkor – 0592362621
-                <a href="https://wa.me/233592362621" target="_blank" class="whatsapp-btn">
-                  💬 Chat/Call on WhatsApp
-                </a>
-              </li>
-            </ul>
-            <p class="contact-location">
-              📍 <strong>Location:</strong> Fosu College of Education, Assin Fosu
-            </p>
-          </div>
-          <div class="contact-form-card">
-            <p>This form is for demonstration only.</p>
-            <form class="contact-form">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea rows="4" placeholder="Your Message" required></textarea>
-              <button type="submit" disabled>Send Message (Demo)</button>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
   </main>
@@ -333,6 +99,7 @@
   <script src="script.js"></script>
   <script>
     feather.replace();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
