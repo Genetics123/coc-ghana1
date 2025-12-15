@@ -241,14 +241,11 @@ p {
 }
 
 /* ==============================================
-   HERO SECTION – Mobile-Optimized Height
-   ============================================== */
-/* ==============================================
    HERO SECTION – Reduced Height for Mobile
    ============================================== */
 .hero {
   position: relative;
-  min-height: 65vh; /* Reduced from 70vh for desktop */
+  min-height: 65vh; /* Slightly reduced for desktop */
   display: flex;
   align-items: center;
   color: white;
@@ -570,4 +567,3 @@ p {
   font-style: italic;
   font-size: 1.1rem;
 }
-
