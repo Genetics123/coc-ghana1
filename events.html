@@ -1,36 +1,89 @@
-<div class="language-switcher">
-  <select id="languageSelect">
-    <option value="en">🇬🇧 English</option>
-    <option value="tw">🇬🇭 Twi</option>
-  </select>
-</div>
-<main>
-  <section class="section">
-    <div class="container">
-      <h2>Our Meeting Schedule</h2>
-      <hr class="section-divider" />
-      <p class="section-intro">Join us for worship, Bible study, and fellowship at Fosu College of Education.</p>
-      <div class="gallery-grid">
-        <div style="text-align:center; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-          <h3>Wednesday Bible Study</h3>
-          <p style="font-size:1.5rem; margin:20px 0; color:#004080;"><strong>6:30 PM</strong></p>
-          <p>In-depth study of God's Word</p>
-        </div>
-        <div style="text-align:center; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-          <h3>Saturday Hymnal Learning</h3>
-          <p style="font-size:1.5rem; margin:20px 0; color:#004080;"><strong>3:00 PM</strong></p>
-          <p>Practice and learn acapella hymns together</p>
-        </div>
-        <div style="text-align:center; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-          <h3>Sunday Worship Service</h3>
-          <p style="font-size:1.5rem; margin:20px 0; color:#004080;"><strong>6:15 AM</strong></p>
-          <p>Come worship the Lord in spirit and truth</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Fosco Chapter – Church of Christ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="fosco-logo.jpeg" alt="Logo" class="brand-logo" />
+        <div class="brand-text">
+          <p class="brand-subtitle">The Church of Christ Ministry</p>
+          <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
-      <p style="text-align:center; margin-top:40px; font-size:1.1rem;">
-        All meetings held at <strong>Fosu College of Education</strong>.<br>
-        Everyone is welcome – bring a friend!
-      </p>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
     </div>
-  </section>
-</main>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 data-i18n="events">Our Meeting Schedule</h2>
+        <hr class="section-divider" />
+        <p class="section-intro" data-i18n="events_intro">Join us for worship, Bible study, and fellowship at Fosu College of Education.</p>
+        <div class="gallery-grid">
+          <div style="text-align:center; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+            <h3>Wednesday Bible Study</h3>
+            <p style="font-size:1.5rem; margin:20px 0; color:#004080;"><strong>6:30 PM</strong></p>
+            <p>In-depth study of God's Word</p>
+          </div>
+          <div style="text-align:center; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+            <h3>Saturday Hymnal Learning</h3>
+            <p style="font-size:1.5rem; margin:20px 0; color:#004080;"><strong>3:00 PM</strong></p>
+            <p>Practice and learn acapella hymns together</p>
+          </div>
+          <div style="text-align:center; background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+            <h3>Sunday Worship Service</h3>
+            <p style="font-size:1.5rem; margin:20px 0; color:#004080;"><strong>6:15 AM</strong></p>
+            <p>Come worship the Lord in spirit and truth</p>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top:40px; font-size:1.1rem;">
+          All meetings held at <strong>Fosu College of Education</strong>.<br>
+          Everyone is welcome – bring a friend!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
+      <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+  <script>
+    feather.replace();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
