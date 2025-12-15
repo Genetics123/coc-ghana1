@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership | Fosco Chapter – Church of Christ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="fosco-logo.jpeg" alt="Logo" class="brand-logo" />
+        <div class="brand-text">
+          <p class="brand-subtitle">The Church of Christ Ministry</p>
+          <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="announcements.html">Announcements</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Leadership</h2>
+        <hr class="section-divider" />
+        <p class="section-intro">Meet our dedicated student and preacher leadership team.</p>
+        <div class="gallery-grid">
+          <div class="resource-card" style="text-align:center;">
+            <img src="https://omag.b-cdn.net/wp-content/uploads/2017/09/17-Feature_3-Reasons-You-Need-to-a-Build-a-Diverse-Leadership-Team_1021x640-0912.jpg" alt="Bro. Odoom - President" style="width:100%; height:250px; object-fit:cover; border-radius:10px;" />
+            <h3>Bro. Odoom</h3>
+            <p>President</p>
+            <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-btn">Contact</a>
+          </div>
+          <div class="resource-card" style="text-align:center;">
+            <img src="https://blog.chemistrystaffing.com/hubfs/Why%20Staff%20Culture%20is%20Everyones%20Job.png" alt="Pre. Korsah - Preacher" style="width:100%; height:250px; object-fit:cover; border-radius:10px;" />
+            <h3>Pre. Korsah</h3>
+            <p>Preacher</p>
+            <a href="https://wa.me/233508343029" target="_blank" class="whatsapp-btn">Contact</a>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top:30px;">More profiles coming soon!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
+      <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    feather.replace();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
