@@ -17,24 +17,25 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
-        <div class="language-switcher">
-  <select id="languageSelect">
-    <option value="en">🇬🇧 English</option>
-    <option value="tw">🇬🇭 Twi</option>
-  </select>
-</div>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
     </div>
@@ -43,33 +44,23 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Weekly Announcements</h2>
+        <h2 data-i18n="announcements">Announcements</h2>
         <hr class="section-divider" />
-        <p class="section-intro">Stay updated with what's happening this week at Fosco Chapter.</p>
+        <p class="section-intro" data-i18n="announcements_intro">Stay updated with what's happening at Fosco Chapter.</p>
         
-        <div style="background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); margin-bottom:40px;">
-          <h3 style="text-align:center; margin-bottom:20px; color:#004080;">Week of December 15 – 21, 2025</h3>
-          <ul style="line-height:2.2; font-size:1.1rem; max-width:800px; margin:0 auto;">
-            <li><strong>Wednesday Bible Study</strong> – December 17<br>
-                Theme: "Walking by Faith" (2 Corinthians 5:7)<br>
-                Time: 6:30 PM | Location: usual meeting hall</li>
-            <li><strong>Saturday Hymnal Learning</strong> – December 20<br>
-                Practice new hymns for Christmas season<br>
-                Time: 3:00 PM | Bring your hymn books!</li>
-            <li><strong>Sunday Worship Service</strong> – December 21<br>
-                Sermon: "The Birth of Christ – Hope for All"<br>
-                Time: 6:15 AM | Lord's Supper observed</li>
-            <li><strong>End-of-Semester Fellowship</strong> – December 21 after worship<br>
-                Light refreshments and sharing testimonies<br>
-                All members encouraged to attend</li>
-            <li><strong>Prayer Request</strong>: Remember our sick members and final exam preparations for students</li>
-          </ul>
-        </div>
-
-        <div style="background:#f0f0f0; padding:25px; border-radius:10px; text-align:center;">
-          <p style="font-style:italic; color:#555;">
-            Announcements are updated every Monday.<br>
-            Check back weekly or join our WhatsApp group for instant updates!
+        <div style="background:white; padding:40px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1); text-align:center;">
+          <h3 style="margin-bottom:20px; color:#004080;">Semester Vacation Has Begun!</h3>
+          <p style="font-size:1.2rem; line-height:1.8;">
+            Dear brothers and sisters,<br><br>
+            We have officially vacated for the holidays. Thank you for a blessed semester filled with worship, Bible study, and fellowship.<br><br>
+            <strong>We wish you all a safe journey home and a joyful holiday season with your families.</strong><br><br>
+            May the Lord keep you safe on the roads and bless your time of rest and renewal.<br><br>
+            Regular meetings will resume in the new semester. Stay strong in the faith!<br><br>
+            — Fosco Chapter Leadership
+          </p>
+          <p style="margin-top:40px; font-style:italic; color:#555;">
+            Announcements will be updated when activities resume.<br>
+            Stay connected through our WhatsApp group.
           </p>
         </div>
       </div>
@@ -83,6 +74,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
