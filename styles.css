@@ -385,7 +385,7 @@ p {
 }
 
 /* ==============================================
-   RESOURCES SECTION (Full Page)
+   RESOURCES SECTION (Full Page) - FIXED VERSION
    ============================================== */
 .resources-search-input {
   width: 100%;
@@ -416,6 +416,7 @@ p {
   transform: translateY(-5px);
 }
 
+/* Header – always visible */
 .collapsible-header {
   background: #004080;
   color: white;
@@ -425,6 +426,7 @@ p {
   justify-content: space-between;
   align-items: center;
   font-size: 1.6rem;
+  user-select: none;
 }
 
 .collapsible-header h3 {
@@ -434,30 +436,48 @@ p {
 
 .collapse-icon {
   transition: transform 0.3s ease;
+  font-size: 1.4rem;
 }
 
+/* Rotate arrow when open */
 .collapsible.open .collapse-icon {
   transform: rotate(180deg);
 }
 
+/* Content – expanded by default, collapses only when JS adds .collapsed */
 .collapsible-content {
-  max-height: 0;
+  max-height: 2000px;           /* Large enough for all content */
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 30px;
 }
 
-.collapsible.open .collapsible-content {
-  max-height: 2000px;
+/* Collapsed state (triggered by JavaScript) */
+.collapsible.collapsed .collapsible-content {
+  max-height: 0;
+  padding: 0 30px;              /* Keeps horizontal alignment during transition */
+}
+
+/* Fallback: if JavaScript is disabled, everything stays visible */
+.no-js .collapsible-content {
+  max-height: none;
+  padding: 30px;
 }
 
 .collapsible-content ul {
   list-style: none;
-  padding: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .collapsible-content li {
   padding: 12px 0;
   font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.collapsible-content li:last-child {
+  border-bottom: none;
 }
 
 .collapsible-content a {
@@ -613,3 +633,4 @@ p {
   font-style: italic;
   font-size: 1.1rem;
 }
+
