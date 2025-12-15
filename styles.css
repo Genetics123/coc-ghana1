@@ -1,5 +1,5 @@
 /* ==============================================
-   GLOBAL RESET & BASE STYLES – Professional & Mobile-Optimized
+   GLOBAL RESET & BASE STYLES – Updated for Professional Look
    ============================================== */
 *,
 *::before,
@@ -14,15 +14,15 @@ html {
 }
 
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Georgia', 'Times New Roman', serif; /* Elegant, classic serif for church/ministry feel */
   line-height: 1.7;
   color: #333;
   background: #f8f9fa;
-  font-size: 17px;
+  font-size: 17px; /* Slightly larger base font for better readability */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif; /* Beautiful, professional serif headings */
   font-weight: 700;
   color: #004080;
   margin-bottom: 20px;
@@ -45,11 +45,11 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 30px; /* More breathing room on sides */
 }
 
 .section {
-  padding: 100px 0;
+  padding: 100px 0; /* More vertical space for elegance */
 }
 
 .section-divider {
@@ -70,7 +70,7 @@ p {
 }
 
 /* ==============================================
-   HEADER & NAVIGATION – Fixed for Mobile
+   HEADER & NAVIGATION – Refined
    ============================================== */
 .site-header {
   background: #004080;
@@ -172,7 +172,7 @@ p {
   padding: 10px;
 }
 
-/* Mobile Navigation – Fixed to show all links */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .header-inner {
     padding: 15px;
@@ -207,11 +207,9 @@ p {
     left: 0;
     width: 100%;
     background: #004080;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    max-height: 80vh;
-    overflow-y: auto;
   }
 
   .main-nav.open {
@@ -220,19 +218,17 @@ p {
 
   .nav-list {
     flex-direction: column;
-    gap: 15px;
-    padding: 10px 0;
+    gap: 25px;
   }
 
   .nav-list a {
     display: block;
     padding: 15px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .nav-list a:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
   }
 
   .nav-toggle {
@@ -241,11 +237,11 @@ p {
 }
 
 /* ==============================================
-   HERO SECTION – Foreground image shows on mobile
+   HERO SECTION
    ============================================== */
 .hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   color: white;
@@ -255,76 +251,48 @@ p {
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
 }
 
 .hero-text {
-  padding: 20px;
+  padding: 30px;
 }
 
 .hero-text h2 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 30px;
   line-height: 1.2;
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
   font-style: italic;
 }
 
 .hero-verse blockquote {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-style: italic;
-  border-left: 4px solid #ffd700;
-  padding-left: 20px;
-  margin: 30px 0;
+  border-left: 5px solid #ffd700;
+  padding-left: 30px;
+  margin: 40px 0;
 }
 
 .hero-image {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Mobile – Smaller hero, foreground image visible */
 @media (max-width: 768px) {
-  .hero {
-    min-height: 55vh;
-    align-items: center;
-    padding: 20px 0;
-  }
-
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 30px;
     text-align: center;
   }
 
   .hero-text h2 {
-    font-size: 2.1rem;
-  }
-
-  .hero-tagline {
-    font-size: 1.3rem;
-  }
-
-  .hero-verse blockquote {
-    font-size: 1.2rem;
-  }
-
-  .hero-image-wrapper {
-    display: block;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 15px;
+    font-size: 2.4rem;
   }
 }
 
@@ -341,51 +309,7 @@ p {
 }
 
 /* ==============================================
-   EXPLORE OUR MINISTRY CARDS – Made Smaller & More Compact
-   ============================================== */
-.gallery-grid .resource-card { /* Quick link cards on home page */
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-grid .resource-card > div:first-child { /* Blue header */
-  padding: 15px;
-  border-radius: 12px 12px 0 0;
-}
-
-.gallery-grid .resource-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.gallery-grid .resource-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
-/* Mobile – Even more compact */
-@media (max-width: 768px) {
-  .gallery-grid .resource-card {
-    padding: 12px;
-  }
-
-  .gallery-grid .resource-card > div:first-child {
-    padding: 12px;
-  }
-
-  .gallery-grid .resource-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .gallery-grid .resource-card p {
-    font-size: 0.95rem;
-  }
-}
-
-/* ==============================================
-   RESOURCES SECTION (Full Page)
+   RESOURCES SECTION
    ============================================== */
 .resources-search-input {
   width: 100%;
@@ -475,7 +399,7 @@ p {
    ============================================== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
