@@ -3,34 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Church of Christ Ministry – Fosco Chapter, Assin Fosu</title>
-  <meta name="description" content="The Church of Christ Ministry – Fosco Chapter, Assin Fosu at Fosu College of Education. A royal priesthood committed to New Testament Christianity, spiritual growth, and student ministry in Ghana." />
-  <meta name="keywords" content="Church of Christ Ghana, Fosu College of Education, campus ministry, Church of Christ Ministry Fosco Chapter, Assin Fosu, youth ministry, Bible study" />
+  <title>Fosco Chapter – Church of Christ | Assin Fosu Campus Ministry</title>
+  <meta name="description" content="Campus ministry of the Church of Christ at Fosu College of Education. Bible study, worship, and fellowship in Assin Fosu, Ghana." />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="fosco-logo.jpeg" alt="Church of Christ Campus Ministry Fosco Chapter logo" class="brand-logo" />
+        <img src="fosco-logo.jpeg" alt="Fosco Chapter Logo" class="brand-logo" />
         <div class="brand-text">
           <p class="brand-subtitle">The Church of Christ Ministry</p>
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -42,46 +49,41 @@
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <div class="hero-text">
-          <h2>Welcome to The Church of Christ Ministry – Fosco Chapter, Assin Fosu</h2>
-          <p class="hero-tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
+          <h2 data-i18n="welcome">Welcome to The Church of Christ Ministry – Fosco Chapter, Assin Fosu</h2>
+          <p class="hero-tagline" data-i18n="tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
           <figure class="hero-verse">
-            <blockquote>
+            <blockquote data-i18n="verse">
               <em>“Greet one another with a holy kiss. The churches of Christ greet you.”</em>
             </blockquote>
             <figcaption><em>Romans 16:16</em></figcaption>
           </figure>
           <p style="margin-top:30px;">
-            <a href="contact.html" style="background:#ffd700; color:#004080; padding:12px 30px; border-radius:30px; text-decoration:none; font-weight:bold; font-size:1.1rem;">
+            <a href="contact.html" data-i18n="join" style="background:#ffd700; color:#004080; padding:12px 30px; border-radius:30px; text-decoration:none; font-weight:bold; font-size:1.1rem;">
               Join Us or Get Involved
             </a>
           </p>
         </div>
         <div class="hero-image-wrapper">
-          <img
-            src="group-photo.jpeg"
-            alt="Fosco Chapter group photo in front of stone building"
-            class="hero-image"
-          />
+          <img src="group-photo-large.jpeg" alt="Fosco Chapter members group photo" class="hero-image" />
         </div>
       </div>
     </section>
-    <!-- VERSE BANNER -->
     <section class="verse-banner">
       <div class="container verse-banner-inner">
-        <p class="verse-banner-text">
+        <p class="verse-banner-text" data-i18n="verse">
           “Greet one another with a holy kiss. The churches of Christ greet you.” – <strong>Romans 16:16</strong>
         </p>
       </div>
     </section>
-    <!-- QUICK LINKS / FEATURES -->
+    <!-- QUICK LINKS -->
     <section class="section">
       <div class="container">
-        <h2 style="text-align:center;">Explore Our Ministry</h2>
+        <h2 style="text-align:center;" data-i18n="explore">Explore Our Ministry</h2>
         <hr class="section-divider" />
         <div class="gallery-grid" style="margin-top:40px;">
           <a href="resources.html" class="resource-card" style="text-align:center; text-decoration:none; color:inherit;">
             <div style="background:#004080; color:white; padding:20px; border-radius:10px 10px 0 0;">
-              <h3>Bible Study Resources</h3>
+              <h3 data-i18n="bible_resources">Bible Study Resources</h3>
             </div>
             <div style="padding:20px;">
               <p>Download PDFs on Faith, Purity, Evangelism, and more.</p>
@@ -89,7 +91,7 @@
           </a>
           <a href="sermons.html" class="resource-card" style="text-align:center; text-decoration:none; color:inherit;">
             <div style="background:#004080; color:white; padding:20px; border-radius:10px 10px 0 0;">
-              <h3>Sermons</h3>
+              <h3 data-i18n="sermons_title">Sermons</h3>
             </div>
             <div style="padding:20px;">
               <p>Recent messages to strengthen your walk with Christ.</p>
@@ -97,7 +99,7 @@
           </a>
           <a href="gallery.html" class="resource-card" style="text-align:center; text-decoration:none; color:inherit;">
             <div style="background:#004080; color:white; padding:20px; border-radius:10px 10px 0 0;">
-              <h3>Gallery</h3>
+              <h3 data-i18n="gallery_title">Gallery</h3>
             </div>
             <div style="padding:20px;">
               <p>Photos from worship, fellowship, and outreach.</p>
@@ -105,34 +107,36 @@
           </a>
           <a href="events.html" class="resource-card" style="text-align:center; text-decoration:none; color:inherit;">
             <div style="background:#004080; color:white; padding:20px; border-radius:10px 10px 0 0;">
-              <h3>Events</h3>
+              <h3 data-i18n="meeting_times">Meeting Times</h3>
             </div>
             <div style="padding:20px;">
-              <p>Upcoming Bible studies, worship, and activities.</p>
+              <p data-i18n="wed_study">Wed 6:30 PM – Bible Study</p>
+              <p data-i18n="sat_hymns">Sat 3:00 PM – Hymnal Learning</p>
+              <p data-i18n="sun_worship">Sun 6:15 AM – Worship</p>
             </div>
           </a>
         </div>
       </div>
     </section>
-    <!-- FEATURED RESOURCES TEASER -->
+    <!-- FEATURED RESOURCES -->
     <section class="section" style="background:#f0f0f0;">
       <div class="container">
-        <h2 style="text-align:center;">Featured Study Materials</h2>
+        <h2 style="text-align:center;" data-i18n="featured">Featured Study Materials</h2>
         <hr class="section-divider" />
         <p class="section-intro">Popular resources to deepen your understanding of God's Word.</p>
         <div class="resources-grid">
           <div class="resource-card">
             <div style="padding:20px; text-align:center;">
-              <h3>Beliefs of the Churches of Christ</h3>
+              <h3 data-i18n="beliefs">Beliefs of the Churches of Christ</h3>
               <p>A clear overview of New Testament Christianity.</p>
-              <a href="resources.html" style="background:#004080; color:white; padding:10px 20px; border-radius:30px; text-decoration:none;">View All Resources →</a>
+              <a href="resources.html" data-i18n="view_all" style="background:#004080; color:white; padding:10px 20px; border-radius:30px; text-decoration:none;">View All Resources →</a>
             </div>
           </div>
           <div class="resource-card">
             <div style="padding:20px; text-align:center;">
-              <h3>Sin and God's Plan for Salvation</h3>
+              <h3 data-i18n="salvation">Sin and God's Plan for Salvation</h3>
               <p>Understand grace, faith, and obedience.</p>
-              <a href="resources.html" style="background:#004080; color:white; padding:10px 20px; border-radius:30px; text-decoration:none;">View All Resources →</a>
+              <a href="resources.html" data-i18n="view_all" style="background:#004080; color:white; padding:10px 20px; border-radius:30px; text-decoration:none;">View All Resources →</a>
             </div>
           </div>
         </div>
@@ -141,21 +145,25 @@
     <!-- CALL TO ACTION -->
     <section class="section">
       <div class="container" style="text-align:center;">
-        <h2>Join Our Campus Fellowship</h2>
+        <h2 data-i18n="join_fellowship">Join Our Campus Fellowship</h2>
         <p class="section-intro">We meet regularly for worship, Bible study, and fellowship at Fosu College of Education.</p>
-        <a href="contact.html" style="background:#ffd700; color:#004080; padding:15px 40px; border-radius:30px; text-decoration:none; font-weight:bold; font-size:1.2rem; margin:20px 0; display:inline-block;">
+        <a href="contact.html" data-i18n="contact_today" style="background:#ffd700; color:#004080; padding:15px 40px; border-radius:30px; text-decoration:none; font-weight:bold; font-size:1.2rem; margin:20px 0; display:inline-block;">
           Contact Us Today
         </a>
       </div>
     </section>
   </main>
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
       <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
     </div>
   </footer>
+
+  <!-- ChurchBot Live Chat Widget -->
+  <script src="https://account.churchbot.chat/wp-content/chatbot/church-of-christ-fosco-chapter/embed.js"></script>
+
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
