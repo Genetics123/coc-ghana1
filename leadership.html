@@ -17,17 +17,24 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -37,21 +44,24 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Leadership</h2>
+        <h2 data-i18n="leadership">Leadership</h2>
         <hr class="section-divider" />
-        <p class="section-intro">Meet our dedicated student and preacher leadership team.</p>
+        <p class="section-intro" data-i18n="leadership_intro">Meet our dedicated student and preacher leadership team.</p>
         <div class="gallery-grid">
+          <!-- Preacher Korsah -->
           <div class="resource-card" style="text-align:center;">
-            <img src="https://omag.b-cdn.net/wp-content/uploads/2017/09/17-Feature_3-Reasons-You-Need-to-a-Build-a-Diverse-Leadership-Team_1021x640-0912.jpg" alt="Bro. Odoom - President" style="width:100%; height:250px; object-fit:cover; border-radius:10px;" />
-            <h3>Bro. Odoom</h3>
-            <p>President</p>
-            <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-btn">Contact</a>
-          </div>
-          <div class="resource-card" style="text-align:center;">
-            <img src="https://blog.chemistrystaffing.com/hubfs/Why%20Staff%20Culture%20is%20Everyones%20Job.png" alt="Pre. Korsah - Preacher" style="width:100%; height:250px; object-fit:cover; border-radius:10px;" />
+            <img src="preacher-korsah.jpeg" alt="Preacher Korsah" style="width:100%; height:300px; object-fit:cover; border-radius:10px;" />
             <h3>Pre. Korsah</h3>
             <p>Preacher</p>
             <a href="https://wa.me/233508343029" target="_blank" class="whatsapp-btn">Contact</a>
+          </div>
+          
+          <!-- Current President (Bro. Odoom) -->
+          <div class="resource-card" style="text-align:center;">
+            <img src="president-odoom.jpeg" alt="Bro. Odoom - President" style="width:100%; height:300px; object-fit:cover; border-radius:10px;" />
+            <h3>Bro. Odoom</h3>
+            <p>President</p>
+            <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-btn">Contact</a>
           </div>
         </div>
         <p style="text-align:center; margin-top:30px;">More profiles coming soon!</p>
@@ -66,6 +76,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
