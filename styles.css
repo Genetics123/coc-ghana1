@@ -1,5 +1,5 @@
 /* ==============================================
-   GLOBAL RESET & BASE STYLES – Updated for Professional Look
+   GLOBAL RESET & BASE STYLES – Professional & Mobile-Optimized
    ============================================== */
 *,
 *::before,
@@ -14,15 +14,15 @@ html {
 }
 
 body {
-  font-family: 'Georgia', 'Times New Roman', serif; /* Elegant, classic serif for church/ministry feel */
+  font-family: 'Georgia', 'Times New Roman', serif;
   line-height: 1.7;
   color: #333;
   background: #f8f9fa;
-  font-size: 17px; /* Slightly larger base font for better readability */
+  font-size: 17px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif; /* Beautiful, professional serif headings */
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
   color: #004080;
   margin-bottom: 20px;
@@ -45,11 +45,11 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px; /* More breathing room on sides */
+  padding: 0 30px;
 }
 
 .section {
-  padding: 100px 0; /* More vertical space for elegance */
+  padding: 100px 0;
 }
 
 .section-divider {
@@ -70,7 +70,7 @@ p {
 }
 
 /* ==============================================
-   HEADER & NAVIGATION – Refined
+   HEADER & NAVIGATION – Fixed for Mobile
    ============================================== */
 .site-header {
   background: #004080;
@@ -172,7 +172,7 @@ p {
   padding: 10px;
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation – Fixed to show all links */
 @media (max-width: 768px) {
   .header-inner {
     padding: 15px;
@@ -207,9 +207,11 @@ p {
     left: 0;
     width: 100%;
     background: #004080;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
   }
 
   .main-nav.open {
@@ -218,17 +220,19 @@ p {
 
   .nav-list {
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
+    padding: 10px 0;
   }
 
   .nav-list a {
     display: block;
     padding: 15px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .nav-list a:hover {
     background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
   }
 
   .nav-toggle {
@@ -237,11 +241,11 @@ p {
 }
 
 /* ==============================================
-   HERO SECTION
+   HERO SECTION – Mobile-Optimized Height
    ============================================== */
 .hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   color: white;
@@ -286,13 +290,23 @@ p {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
+    gap: 20px;
     text-align: center;
   }
 
   .hero-text h2 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+  }
+
+  .hero-image {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
