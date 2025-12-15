@@ -385,7 +385,7 @@ p {
 }
 
 /* ==============================================
-   RESOURCES SECTION (Full Page) - FIXED VERSION
+   RESOURCES SECTION (Full Page) - TITLES ONLY VISIBLE INITIALLY
    ============================================== */
 .resources-search-input {
   width: 100%;
@@ -416,7 +416,7 @@ p {
   transform: translateY(-5px);
 }
 
-/* Header – always visible */
+/* Header – always visible with title */
 .collapsible-header {
   background: #004080;
   color: white;
@@ -439,29 +439,22 @@ p {
   font-size: 1.4rem;
 }
 
-/* Rotate arrow when open */
 .collapsible.open .collapse-icon {
   transform: rotate(180deg);
 }
 
-/* Content – expanded by default, collapses only when JS adds .collapsed */
+/* Content – HIDDEN by default */
 .collapsible-content {
-  max-height: 2000px;           /* Large enough for all content */
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  padding: 30px;
+  padding: 0 30px;   /* No vertical padding when closed */
 }
 
-/* Collapsed state (triggered by JavaScript) */
-.collapsible.collapsed .collapsible-content {
-  max-height: 0;
-  padding: 0 30px;              /* Keeps horizontal alignment during transition */
-}
-
-/* Fallback: if JavaScript is disabled, everything stays visible */
-.no-js .collapsible-content {
-  max-height: none;
-  padding: 30px;
+/* When opened via click (JS adds .open class) */
+.collapsible.open .collapsible-content {
+  max-height: 2000px;   /* Large enough for any content */
+  padding: 30px;        /* Full padding when open */
 }
 
 .collapsible-content ul {
@@ -633,4 +626,5 @@ p {
   font-style: italic;
   font-size: 1.1rem;
 }
+
 
