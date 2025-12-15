@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Announcements | Fosco Chapter – Church of Christ</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="fosco-logo.jpeg" alt="Logo" class="brand-logo" />
+        <div class="brand-text">
+          <p class="brand-subtitle">The Church of Christ Ministry</p>
+          <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="sermons.html">Sermons</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="announcements.html">Announcements</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Weekly Announcements</h2>
+        <hr class="section-divider" />
+        <p class="section-intro">Stay updated with what's happening this week at Fosco Chapter.</p>
+        <div style="background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+          <h3 style="text-align:center; margin-bottom:20px;">Current Week – December 2025</h3>
+          <ul style="line-height:2; font-size:1.1rem; max-width:800px; margin:0 auto;">
+            <li><strong>Wednesday Bible Study</strong>: Theme – Faith and Obedience | 6:00 PM</li>
+            <li><strong>Sunday Worship Service</strong>: Guest Speaker | 9:00 AM</li>
+            <li><strong>Friday Campus Outreach</strong>: Evangelism on campus – meet at main gate</li>
+            <li><strong>Leadership Meeting</strong>: Saturday for officers only</li>
+          </ul>
+          <p style="text-align:center; margin-top:30px; font-style:italic;">
+            Check back every week for the latest updates!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
+      <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    feather.replace();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
