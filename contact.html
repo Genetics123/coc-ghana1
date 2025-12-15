@@ -17,17 +17,24 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -37,11 +44,11 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Contact Us</h2>
+        <h2 data-i18n="contact">Contact Us</h2>
         <hr class="section-divider" />
         <div class="contact-layout">
           <div class="contact-details">
-            <p>You can reach The Church of Christ Ministry – Fosco Chapter, Assin Fosu, through the following phone numbers:</p>
+            <p data-i18n="contact_intro">You can reach The Church of Christ Ministry – Fosco Chapter, Assin Fosu, through the following phone numbers:</p>
             <ul class="contact-list">
               <li>
                 📞 Pre. Korsah – 0508343029
@@ -74,7 +81,7 @@
                 </a>
               </li>
             </ul>
-            <p class="contact-location">
+            <p class="contact-location" data-i18n="location">
               📍 <strong>Location:</strong> Fosu College of Education, Assin Fosu
             </p>
           </div>
@@ -99,6 +106,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
