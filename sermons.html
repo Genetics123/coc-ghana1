@@ -17,17 +17,24 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">🇬🇧 English</option>
+          <option value="tw">🇬🇭 Twi</option>
+          <option value="fr">🇫🇷 Français</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -37,20 +44,17 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Sermons</h2>
+        <h2 data-i18n="sermons_title">Sermons</h2>
         <hr class="section-divider" />
-        <p class="section-intro">Listen to or read recent sermons delivered at our chapter.</p>
+        <p class="section-intro" data-i18n="sermons_intro">Recent messages to strengthen your walk with Christ.</p>
         <div class="resources-grid">
           <div class="resource-card">
-            <img src="https://media.gettyimages.com/id/1484840164/photo/pastor-stand-preaching-with-arms-raised-in-front-of-congregation.jpg?s=612x612&w=gi&k=20&c=jLuUpOXrK6ohjnXyolOvbAxdXS32gIIgsF7wbuOwIGg=" alt="Preacher delivering sermon" style="width:100%; height:200px; object-fit:cover; border-radius:10px 10px 0 0;" />
-            <div style="padding:20px;">
-              <h3>Recent Sermon Title</h3>
-              <p>By Pre. Korsah • December 2025</p>
-              <a href="#" class="whatsapp-btn" style="background:#004080;">Read / Listen</a>
+            <div style="padding:20px; text-align:center;">
+              <h3>More sermons coming soon!</h3>
+              <p>Check back for audio and notes from our Sunday worship services.</p>
             </div>
           </div>
         </div>
-        <p style="text-align:center; margin-top:30px;">More sermons coming soon!</p>
       </div>
     </section>
   </main>
@@ -62,6 +66,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
