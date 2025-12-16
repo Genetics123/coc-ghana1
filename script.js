@@ -1,8 +1,9 @@
-// script.js – Complete JavaScript for the Fosco Chapter website
+// script.js – Complete JavaScript for the Fosco Chapter website (December 16, 2025)
 // Handles:
 // - Feather icons replacement
 // - Mobile menu toggle (with ✕ close icon)
-// - Resource collapsibles: ONLY ONE OPEN AT A TIME (others collapse automatically)
+// - Resource collapsibles: ONLY ONE OPEN AT A TIME
+// - Resource search filter (searches titles, keywords, link text)
 // - Auto-update copyright year
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,7 +44,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Update copyright year
+  // 4. Resource search filter
+  const searchInput = document.getElementById('resourceSearch');
+  const resourcesList = document.getElementById('resourcesList');
+  const noResults = document.getElementById('noResults');
+
+  if (searchInput && resourcesList && noResults) {
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      resourcesList.querySelectorAll('.resource-card').forEach(card => {
+        const keywords = card.getAttribute('data-keywords') || '';
+        const headerText = card.querySelector('.collapsible-header h3')?.textContent.toLowerCase() || '';
+        const linkTexts = Array.from(card.querySelectorAll('.collapsible-content a'))
+          .map(a => a.textContent.toLowerCase())
+          .join(' ');
+
+        const searchText = `${keywords} ${headerText} ${linkTexts}`;
+
+        if (query === '' || searchText.includes(query)) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+  }
+
+  // 5. Update copyright year
   const yearSpan = document.getElementById('year');
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
