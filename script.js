@@ -114,3 +114,29 @@ if (searchInput && resourceCards.length > 0) {
     }
   });
 }
+
+// script.js – Collapsible resources + mobile menu toggle + feather icons
+document.addEventListener('DOMContentLoaded', () => {
+  // Feather icons
+  if (typeof feather !== 'undefined') {
+    feather.replace();
+  }
+
+  // Mobile menu toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  }
+
+  // Collapsible resource categories
+  const headers = document.querySelectorAll('.collapsible-header');
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const collapsible = header.parentElement;
+      collapsible.classList.toggle('open');
+    });
+  });
+});
