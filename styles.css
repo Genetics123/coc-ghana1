@@ -799,6 +799,19 @@ svg.feather {
     width: 100%;
   }
 }
+/* ==============================================
+   HOMEPAGE CARD LINKS – REMOVE UNDERLINES
+   ============================================== */
+.homepage-card a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.homepage-card a:hover {
+  color: #004080; /* or any accent color you prefer */
+}
 
 
 
