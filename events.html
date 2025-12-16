@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events | Fosco Chapter – Church of Christ</title>
+  <title>Events & Meeting Times | Fosco Chapter – Church of Christ</title>
+  <meta name="description" content="Meeting schedule and events for the Fosco Chapter of the Church of Christ at Fosu College of Education." />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -17,17 +20,21 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">En</option>
+          <option value="tw">Twi</option>
+          <option value="fr">Fr</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -37,21 +44,33 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Upcoming Events</h2>
+        <h2 data-i18n="events">Our Meeting Schedule</h2>
         <hr class="section-divider" />
-        <p class="section-intro">Join us for fellowship, Bible studies, and campus outreach.</p>
+        <p class="section-intro" data-i18n="events_intro">Join us for worship, Bible study, and fellowship at Fosu College of Education.</p>
         <div class="gallery-grid">
-          <div style="text-align:center; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-            <img src="https://campuschurch.com/wp-content/uploads/2021/08/Bible-fellowship-groups-1024x683.jpg" alt="Bible study fellowship group" style="width:100%; height:200px; object-fit:cover; border-radius:10px;" />
-            <h3>Weekly Bible Study</h3>
-            <p>Every Wednesday • 6:00 PM</p>
+          <div class="resource-card" style="text-align:center;">
+            <div style="background:#004080; color:white; padding:30px; border-radius:10px;">
+              <h3 data-i18n="wed_study">Wednesday Bible Study</h3>
+              <p style="font-size:1.2rem; margin-top:10px;">6:30 PM</p>
+            </div>
           </div>
-          <div style="text-align:center; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-            <img src="https://media.istockphoto.com/id/174792161/photo/multi-ethnic-young-adults-in-a-bible-study-church-group.jpg?s=612x612&w=0&k=20&c=6EFiktfVmwjoqyn2ofxdYnvVapN-XHf98lU-D6P2aLo=" alt="Church gathering event" style="width:100%; height:200px; object-fit:cover; border-radius:10px;" />
-            <h3>Sunday Worship</h3>
-            <p>Every Sunday • 6:00-7:30 AM</p>
+          <div class="resource-card" style="text-align:center;">
+            <div style="background:#004080; color:white; padding:30px; border-radius:10px;">
+              <h3 data-i18n="sat_hymns">Saturday Hymnal Learning</h3>
+              <p style="font-size:1.2rem; margin-top:10px;">3:00 PM</p>
+            </div>
+          </div>
+          <div class="resource-card" style="text-align:center;">
+            <div style="background:#004080; color:white; padding:30px; border-radius:10px;">
+              <h3 data-i18n="sun_worship">Sunday Worship</h3>
+              <p style="font-size:1.2rem; margin-top:10px;">6:15 AM</p>
+            </div>
           </div>
         </div>
+        <p style="text-align:center; margin-top:40px; font-size:1.1rem;">
+          All meetings held at <strong>Fosu College of Education</strong>.<br>
+          Everyone is welcome – bring a friend!
+        </p>
       </div>
     </section>
   </main>
@@ -63,6 +82,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
