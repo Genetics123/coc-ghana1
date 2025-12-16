@@ -829,6 +829,23 @@ svg.feather {
   color: #004080;
   text-decoration: none;
 }
+/* Remove underline from homepage explore cards */
+.explore-card {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Remove underline from text inside the card */
+.explore-card h3,
+.explore-card p {
+  text-decoration: none !important;
+}
+
+/* Optional: hover effect */
+.explore-card:hover {
+  color: #004080; /* or your preferred accent color */
+  text-decoration: none !important;
+}
 
 
 
