@@ -111,7 +111,7 @@
           </h3>
 
           <img 
-            src="images/2025-annual-evangelism.jpg"
+            src="images/2025-annual-evangelism.jpeg"
             alt="2025 Annual Evangelism Flyer"
             style="width:100%; max-width:600px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);"
           >
@@ -160,34 +160,42 @@
 
   <!-- Countdown + Share Script -->
   <script>
-    // SET YOUR EVENT DATE HERE
-    const eventDate = new Date("2025-03-10T09:00:00").getTime();
+    const nowDate = new Date();
+    const year = nowDate.getFullYear();
+    const month = nowDate.getMonth(); // 0-indexed
+
+    const eventStart = new Date(year, month, 20, 0, 0, 0).getTime();
+    const eventEnd   = new Date(year, month, 29, 23, 59, 59).getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
-      const distance = eventDate - now;
 
-      if (distance <= 0) {
+      if (now < eventStart) {
+        const distance = eventStart - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          "Starts in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      } 
+      else if (now >= eventStart && now <= eventEnd) {
         document.getElementById("countdown").innerHTML = "The event is happening now!";
-        return;
+      } 
+      else {
+        document.getElementById("countdown").innerHTML = "The event has ended.";
       }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     }
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // WHATSAPP SHARE BUTTON
+    // WhatsApp Share
     document.getElementById("shareEvent").addEventListener("click", function () {
       const message = encodeURIComponent(
-        "Join me for the 2025 Annual Evangelism Program at Fosco Chapter! View details here: https://yourwebsite.com/events.html"
+        "Join me for the 2025 Annual Evangelism Program happening 20th–29th this month at Fosco Chapter! View details here: https://yourwebsite.com/events.html"
       );
 
       window.open("https://wa.me/?text=" + message, "_blank");
