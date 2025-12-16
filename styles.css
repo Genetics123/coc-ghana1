@@ -737,7 +737,68 @@ svg.feather {
   font-style: italic;
   font-size: 1rem;
 }
+/* ==============================================
+   HOMEPAGE SEARCH BAR + BUTTON STYLING
+   ============================================== */
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 40px auto;
+  max-width: 700px;
+}
 
+.search-section input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-section input[type="text"]:focus {
+  border-color: #004080;
+  box-shadow: 0 0 0 3px rgba(0,64,128,0.15);
+}
+
+/* Search button */
+.search-section button {
+  padding: 14px 24px;
+  background-color: #004080;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,64,128,0.2);
+}
+
+.search-section button:hover {
+  background-color: #0066cc;
+  transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .search-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-section input[type="text"],
+  .search-section button {
+    width: 100%;
+  }
+}
 
 
 
