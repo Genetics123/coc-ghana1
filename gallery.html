@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Fosco Chapter – Church of Christ</title>
+  <meta name="description" content="Photos of worship, fellowship, and campus ministry life from the Fosco Chapter of the Church of Christ." />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -17,17 +20,21 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+      <div class="language-switcher">
+        <select id="languageSelect">
+          <option value="en">En</option>
+          <option value="tw">Twi</option>
+          <option value="fr">Fr</option>
+        </select>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="sermons.html">Sermons</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="announcements.html">Announcements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -37,20 +44,18 @@
   <main>
     <section class="section">
       <div class="container">
-        <h2>Gallery</h2>
+        <h2 data-i18n="gallery_title">Gallery</h2>
         <hr class="section-divider" />
-        <p class="section-intro">A visual glimpse of worship, fellowship, and campus ministry life in Churches of Christ – Ghana.</p>
+        <p class="section-intro" data-i18n="gallery_intro">A visual glimpse of worship, fellowship, and campus ministry life in Churches of Christ – Ghana and West Africa.</p>
         <div class="gallery-grid">
+          <img src="group-photo-large.jpeg" alt="Fosco Chapter large group photo on campus steps" />
           <img src="leadership-ceremony.jpeg" alt="Fosco Chapter leadership ceremony" />
           <img src="community-gathering.jpeg" alt="Fosco Chapter community gathering" />
-          <img src="https://dht7q8fif4gks.cloudfront.net/2022-09/Anie-Church-of-Christ-in-Togo-2000x1500.jpg" alt="Church of Christ congregation worship in West Africa" />
-          <img src="https://christianchronicle.org/wp-content/uploads/2023/09/p05_GhanianSinging_1023-600x400.jpg" alt="Ghanaian Church of Christ members singing in worship" />
-          <img src="https://christianchronicle.org/wp-content/uploads/2023/09/p05_GhanianChild_1023-1024x683.jpg" alt="Young member in Ghanaian Church of Christ fellowship" />
+          <img src="https://christianchronicle.org/wp-content/uploads/2023/09/p05_GhanianSinging_1023-600x400.jpg" alt="Ghanaian Church of Christ members singing hymns in worship" />
+          <img src="https://christianchronicle.org/wp-content/uploads/2023/09/p05_GhanianChild_1023-1024x683.jpg" alt="Young member participating in Ghanaian Church of Christ fellowship" />
           <img src="https://ghanaiantimes.com.gh/wp-content/uploads/2024/12/Nsumia-Womens-Ministry-Some-members-of-the-Women-Ministry-of-Nsumia-Church-of-Christ-singing-to-the-glory-of-God.jpg" alt="Women's ministry singing in Nsumia Church of Christ, Ghana" />
-          <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=163727226308877" alt="Youth group of Church of Christ in Nkoranza, Ghana" />
-          <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=835014678819844" alt="Youth camp announcement – Sunyani Central Church of Christ" />
-          <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10160686519161920" alt="Book donation to Ghana campus ministry" />
-          <img src="https://christianchronicle.org/wp-content/uploads/2017/09/mdcong.jpg" alt="African Church of Christ congregation in fellowship" />
+          <img src="https://christianchronicle.org/wp-content/uploads/2017/09/mdcong.jpg" alt="Church of Christ congregation in fellowship, Africa" />
+          <img src="https://dht7q8fif4gks.cloudfront.net/2022-09/Anie-Church-of-Christ-in-Togo-2000x1500.jpg" alt="Church of Christ worship service in West Africa" />
         </div>
         <p style="text-align:center; margin-top:30px;">Inspired by Churches of Christ across Ghana – more from our Fosco Chapter coming soon!</p>
       </div>
@@ -64,6 +69,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
     feather.replace();
