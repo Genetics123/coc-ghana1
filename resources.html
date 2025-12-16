@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | Fosco Chapter – Church of Christ</title>
+  <meta name="description" content="Free Bible study materials, PDFs, and hymns from the Fosco Chapter of the Church of Christ." />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -19,9 +22,9 @@
       </div>
       <div class="language-switcher">
         <select id="languageSelect">
-          <option value="en">🇬🇧 English</option>
-          <option value="tw">🇬🇭 Twi</option>
-          <option value="fr">🇫🇷 Français</option>
+          <option value="en">En</option>
+          <option value="tw">Twi</option>
+          <option value="fr">Fr</option>
         </select>
       </div>
       <nav class="main-nav">
@@ -29,11 +32,8 @@
           <li><a href="index.html" data-i18n="home">Home</a></li>
           <li><a href="about.html" data-i18n="about">About</a></li>
           <li><a href="resources.html" data-i18n="resources">Resources</a></li>
-          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
-          <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
           <li><a href="events.html" data-i18n="events">Events</a></li>
           <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
-          <li><a href="announcements.html" data-i18n="announcements">Announcements</a></li>
           <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
@@ -52,7 +52,6 @@
           No results found
         </p>
         <div class="resources-grid" id="resourcesList">
-          <!-- FAITH CATEGORY -->
           <div class="resource-card collapsible" data-keywords="faith tithing dispensation beliefs joseph moses holy spirit spiritual gifts sin salvation obedience prayer">
             <div class="collapsible-header">
               <h3 data-i18n="faith">Faith</h3>
@@ -75,7 +74,6 @@
             </div>
           </div>
 
-          <!-- PURITY CATEGORY -->
           <div class="resource-card collapsible" data-keywords="purity sabbath revelation 666 prophecy holiness">
             <div class="collapsible-header">
               <h3 data-i18n="purity">Purity</h3>
@@ -91,7 +89,6 @@
             </div>
           </div>
 
-          <!-- EVANGELISM CATEGORY -->
           <div class="resource-card collapsible" data-keywords="evangelism false teachers prophets prophecy gospel teaching">
             <div class="collapsible-header">
               <h3 data-i18n="evangelism">Evangelism</h3>
@@ -106,7 +103,6 @@
             </div>
           </div>
 
-          <!-- HYMNS CATEGORY -->
           <div class="resource-card collapsible" data-keywords="hymns songs music worship">
             <div class="collapsible-header">
               <h3 data-i18n="hymns">Hymns</h3>
@@ -120,7 +116,6 @@
             </div>
           </div>
 
-          <!-- ADDITIONAL BIBLE STUDY RESOURCES -->
           <div class="resource-card collapsible" data-keywords="bible study workbook lesson new testament salvation church">
             <div class="collapsible-header">
               <h3>Additional Bible Studies</h3>
@@ -152,27 +147,8 @@
   <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
-    // Initialize Feather icons
     feather.replace();
-
-    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Collapsible functionality
-    document.querySelectorAll('.collapsible-header').forEach(header => {
-      header.addEventListener('click', function () {
-        const card = this.parentElement;
-        card.classList.toggle('open');
-
-        // Re-render Feather icon to update rotation (if needed)
-        const icon = this.querySelector('.collapse-icon');
-        if (icon) {
-          feather.replace({ 'chevron-down': card.classList.contains('open') ? 'chevron-up' : 'chevron-down' });
-          icon.setAttribute('data-feather', card.classList.contains('open') ? 'chevron-up' : 'chevron-down');
-          feather.replace();
-        }
-      });
-    });
   </script>
 </body>
 </html>
