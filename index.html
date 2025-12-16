@@ -11,6 +11,7 @@
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
+  <!-- Header – Mastercard black with white text -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -38,78 +39,112 @@
   </header>
 
   <main id="home">
-    <!-- Hero – Mastercard style: full-width image background, centered white text, search bar, CTA button -->
+    <!-- Hero – Mastercard style: image background, white text, prominent search bar, CTA -->
     <section class="hero">
-      <div class="hero-background"></div>
+      <div class="hero-background" style="background-image: url('group-photo-large.jpeg');"></div>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <h2 data-i18n="welcome">Welcome to The Church of Christ Ministry – Fosco Chapter, Assin Fosu</h2>
-        <p class="hero-subtitle" data-i18n="tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
-        <blockquote class="hero-verse" data-i18n="verse">
-          “Greet one another with a holy kiss. The churches of Christ greet you.”<br>
-          <cite>Romans 16:16</cite>
-        </blockquote>
+        <p class="hero-tagline" data-i18n="tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
+        <figure class="hero-verse">
+          <blockquote data-i18n="verse">
+            <em>“Greet one another with a holy kiss. The churches of Christ greet you.”</em>
+          </blockquote>
+          <figcaption><em>Romans 16:16</em></figcaption>
+        </figure>
         <div class="hero-search">
-          <input type="text" id="resourceSearch" placeholder="Search resources, events, or sermons..." />
+          <input type="text" id="resourceSearch" placeholder="Search resources, sermons, or events..." />
           <button>Search</button>
         </div>
         <a href="contact.html" class="hero-cta" data-i18n="join">Join Us or Get Involved</a>
       </div>
     </section>
 
-    <!-- Explore Our Ministry – Mastercard-style large card grid with hover effects -->
+    <!-- Verse Banner – Mastercard simple yellow banner -->
+    <section class="verse-banner">
+      <div class="container">
+        <p data-i18n="verse">
+          “Greet one another with a holy kiss. The churches of Christ greet you.” – <strong>Romans 16:16</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Explore Our Ministry – Mastercard card grid with hover -->
     <section class="section explore-section">
       <div class="container">
         <h2 data-i18n="explore">Explore Our Ministry</h2>
+        <hr class="section-divider" />
         <div class="explore-grid">
           <a href="resources.html" class="explore-card">
-            <div class="card-icon">📖</div>
-            <h3 data-i18n="bible_resources">Bible Study Resources</h3>
-            <p>Download PDFs on Faith, Purity, Evangelism, and more.</p>
+            <div class="card-header">
+              <h3 data-i18n="bible_resources">Bible Study Resources</h3>
+            </div>
+            <div class="card-body">
+              <p>Download PDFs on Faith, Purity, Evangelism, and more.</p>
+            </div>
           </a>
           <a href="sermons.html" class="explore-card">
-            <div class="card-icon">🎤</div>
-            <h3 data-i18n="sermons_title">Sermons</h3>
-            <p>Recent messages to strengthen your walk with Christ.</p>
+            <div class="card-header">
+              <h3 data-i18n="sermons_title">Sermons</h3>
+            </div>
+            <div class="card-body">
+              <p>Recent messages to strengthen your walk with Christ.</p>
+            </div>
           </a>
           <a href="about.html#gallery-section" class="explore-card">
-            <div class="card-icon">📸</div>
-            <h3 data-i18n="gallery_title">Gallery</h3>
-            <p>Photos from worship, fellowship, and outreach.</p>
+            <div class="card-header">
+              <h3 data-i18n="gallery_title">Gallery</h3>
+            </div>
+            <div class="card-body">
+              <p>Photos from worship, fellowship, and outreach.</p>
+            </div>
           </a>
           <a href="events.html" class="explore-card">
-            <div class="card-icon">🗓️</div>
-            <h3 data-i18n="meeting_times">Meeting Times</h3>
-            <p>Regular Bible study, hymnal learning, and worship services.</p>
+            <div class="card-header">
+              <h3 data-i18n="meeting_times">Meeting Times</h3>
+            </div>
+            <div class="card-body">
+              <p>Wed 6:30 PM – Bible Study<br>Sat 3:00 PM – Hymnal Learning<br>Sun 6:15 AM – Worship</p>
+            </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Featured Study Materials – Mastercard-style grid -->
+    <!-- Featured Study Materials – Mastercard grid -->
     <section class="section featured-section">
       <div class="container">
         <h2 data-i18n="featured">Featured Study Materials</h2>
+        <hr class="section-divider" />
+        <p class="section-intro">Popular resources to deepen your understanding of God's Word.</p>
         <div class="featured-grid">
           <div class="featured-card">
-            <h3 data-i18n="beliefs">Beliefs of the Churches of Christ</h3>
-            <p>A clear overview of New Testament Christianity.</p>
-            <a href="resources.html" class="card-link">View Resource →</a>
+            <div class="card-header">
+              <h3 data-i18n="beliefs">Beliefs of the Churches of Christ</h3>
+            </div>
+            <div class="card-body">
+              <p>A clear overview of New Testament Christianity.</p>
+            </div>
+            <a href="resources.html" class="card-link" data-i18n="view_all">View All Resources →</a>
           </div>
           <div class="featured-card">
-            <h3 data-i18n="salvation">Sin and God's Plan for Salvation</h3>
-            <p>Understand grace, faith, and obedience.</p>
-            <a href="resources.html" class="card-link">View Resource →</a>
+            <div class="card-header">
+              <h3 data-i18n="salvation">Sin and God's Plan for Salvation</h3>
+            </div>
+            <div class="card-body">
+              <p>Understand grace, faith, and obedience.</p>
+            </div>
+            <a href="resources.html" class="card-link" data-i18n="view_all">View All Resources →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action – Mastercard-style full-width CTA -->
+    <!-- Call to Action – Mastercard full-width -->
     <section class="section cta-section">
       <div class="container">
         <h2 data-i18n="join_fellowship">Join Our Campus Fellowship</h2>
-        <p class="cta-text">We meet regularly for worship, Bible study, and fellowship at Fosu College of Education.</p>
+        <p class="section-intro">We meet regularly for worship, Bible study, and fellowship at Fosu College of Education.</p>
         <a href="contact.html" class="cta-button" data-i18n="contact_today">Contact Us Today</a>
       </div>
     </section>
