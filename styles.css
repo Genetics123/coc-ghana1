@@ -482,14 +482,40 @@ p {
   }
 }
 /* ==============================================
-   LEADERSHIP PAGE IMAGES
+   LEADERSHIP PAGE IMAGES – FIXED FACE CROPPING
    ============================================== */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.leader-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* FIXED IMAGE CROPPING */
 .leader-card img {
   width: 100%;
-  height: 340px; /* slightly taller for better face visibility */
-  object-fit: cover;
-  object-position: center; /* center the face */
-  border-bottom: 4px solid #f0f0f0; /* optional clean divider */
+  height: 340px;              /* Taller for better visibility */
+  object-fit: cover;          /* Fill tile without distortion */
+  object-position: 50% 10%;   /* Pulls crop upward to show faces */
+  border-bottom: 4px solid #f0f0f0;
+}
+
+/* Mobile leadership */
+@media (max-width: 768px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .leader-card img {
+    height: 280px;
+    object-position: 50% 10%; /* Maintain face visibility on mobile */
+  }
 }
 /* ==============================================
    RESOURCES PAGE COLLAPSIBLES – Fix overlapping
@@ -668,4 +694,5 @@ svg.feather {
   font-style: italic;
   font-size: 1rem;
 }
+
 
