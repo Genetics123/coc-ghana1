@@ -812,6 +812,23 @@ svg.feather {
 .homepage-card a:hover {
   color: #004080; /* or any accent color you prefer */
 }
+/* ==============================================
+   HOMEPAGE MINISTRY CARDS – REMOVE LINK UNDERLINES
+   ============================================== */
+.ministry-card a,
+.card-section a,
+.info-box a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Optional: hover effect */
+.ministry-card a:hover,
+.card-section a:hover,
+.info-box a:hover {
+  color: #004080;
+  text-decoration: none;
+}
 
 
 
