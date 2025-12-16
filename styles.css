@@ -94,11 +94,6 @@ p {
   font-size: 1.3rem;
   font-weight: 600;
 }
-.brand-subtitle {
-  font-size: 0.85rem;
-  opacity: 0.7;
-  font-style: normal;
-}
 .header-right {
   display: flex;
   align-items: center;
@@ -180,9 +175,6 @@ p {
   }
   .brand-title {
     font-size: 1.1rem;
-  }
-  .brand-subtitle {
-    display: none;
   }
   .header-right {
     gap: 10px;
@@ -338,6 +330,7 @@ p {
 .explore-card {
   background: white;
   border-radius: 8px;
+  border: 1px solid #ddd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 25px;
   text-align: center;
@@ -353,6 +346,8 @@ p {
 }
 .explore-card h3 {
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #004080;
   margin-bottom: 8px;
 }
 .explore-card p {
@@ -391,6 +386,7 @@ p {
 .featured-card {
   background: white;
   border-radius: 8px;
+  border: 1px solid #ddd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 25px;
   transition: box-shadow 0.3s ease;
@@ -400,6 +396,8 @@ p {
 }
 .featured-card h3 {
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #004080;
   margin-bottom: 8px;
 }
 .featured-card p {
@@ -428,6 +426,68 @@ p {
   }
   .featured-card p {
     font-size: 0.95rem;
+  }
+}
+/* ==============================================
+   CTA SECTION
+   ============================================== */
+.cta-section {
+  background: #f8f9fa;
+  text-align: center;
+}
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #003366;
+}
+/* Ensure visible on mobile */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 0;
+  }
+  .cta-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+/* ==============================================
+   LEADERSHIP PAGE IMAGES
+   ============================================== */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.leader-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-align: center;
+}
+.leader-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Changed to contain to fit whole image without cropping */
+  max-height: 400px; /* Prevent overly tall images */
+}
+/* Mobile leadership */
+@media (max-width: 768px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .leader-card img {
+    max-height: 300px;
   }
 }
 /* ==============================================
