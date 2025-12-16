@@ -3,7 +3,7 @@
 // - Feather icons replacement
 // - Mobile menu toggle (with ✕ close icon)
 // - Resource collapsibles: ONLY ONE OPEN AT A TIME
-// - Resource search filter: shows matching categories (header always visible), opens them automatically, hides non-matching
+// - Resource search filter: shows matching categories (header always visible), opens matching ones, hides non-matching
 // - Auto-update copyright year
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'block';
           visibleCount++;
           if (query !== '') {
-            card.classList.add('open'); // Auto-open matching categories
+            card.classList.add('open'); // Auto-open matching
           } else {
-            card.classList.remove('open'); // Close when search cleared
+            card.classList.remove('open'); // Close when cleared
           }
         } else {
           card.style.display = 'none';
