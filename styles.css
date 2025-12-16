@@ -1,7 +1,6 @@
 /* ==============================================
-   COMPLETE styles.css - FINAL PROFESSIONAL VERSION (December 16, 2025)
-   Homepage tiles and layout fully professional: clean cards, better spacing, modern shadows, responsive grid
-   Header text aligned, gallery stretch fixed, all pages consistent
+   COMPLETE styles.css - Mastercard-Inspired Professional Design (December 16, 2025)
+   Black header, red/yellow accents, Roboto font, hover animations, responsive
    ============================================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -14,227 +13,88 @@ html {
 }
 
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  line-height: 1.7;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
   color: #333;
-  background: #f8f9fa;
-  font-size: 17px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  color: #004080;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 2.6rem;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.8rem;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  background: #fff;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
-.section {
-  padding: 100px 0;
-}
-
-.section-divider {
-  width: 100px;
-  height: 5px;
-  background: #ffd700;
-  margin: 25px auto;
-  border: none;
-}
-
-.section-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
-  font-size: 1.2rem;
-  color: #555;
-  font-style: italic;
-}
-
-/* ==============================================
-   HEADER & NAVIGATION – Perfect alignment on all devices
-   ============================================== */
+/* Header – Mastercard black */
 .site-header {
-  background: #004080;
-  color: white;
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 18px;
 }
 
 .brand-logo {
-  width: 70px;
-  height: 70px;
+  height: 60px;
   border-radius: 50%;
-  border: 4px solid white;
-  object-fit: cover;
-  flex-shrink: 0;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 70px; /* Matches logo height */
-  line-height: 1.3;
-}
-
-.brand-subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  opacity: 1;
-  margin-bottom: 4px;
-  font-style: normal;
-}
-
-.brand-title {
-  font-size: 1.7rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.language-switcher {
-  margin-left: auto;
-  margin-right: 30px;
-}
-
-#languageSelect {
-  padding: 10px 15px;
-  border-radius: 10px;
-  border: none;
-  background: white;
-  color: #004080;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.main-nav {
-  transition: all 0.3s ease;
+.language-switcher select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
 }
 
 .nav-list {
   display: flex;
-  list-style: none;
   gap: 40px;
-  flex-wrap: wrap;
+  list-style: none;
 }
 
 .nav-list a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.15rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
 }
 
 .nav-list a:hover {
-  opacity: 0.8;
+  color: #eb001b; /* Mastercard red hover */
 }
 
 .nav-toggle {
   display: none;
   background: none;
   border: none;
-  color: white;
-  font-size: 2.2rem;
+  color: #fff;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* Mobile Header – Alignment fixed */
+/* Mobile Header */
 @media (max-width: 768px) {
-  .header-inner {
-    padding: 12px 15px;
-  }
-
-  .brand-logo {
-    width: 55px;
-    height: 55px;
-  }
-
-  .brand-text {
-    min-height: 55px;
-  }
-
-  .brand-title {
-    font-size: 1.4rem;
-  }
-
-  .brand-subtitle {
-    font-size: 1rem;
-  }
-
-  .brand {
-    gap: 12px;
-  }
-
-  .language-switcher {
-    margin-right: 10px;
-  }
-
-  #languageSelect {
-    padding: 6px 10px;
-    font-size: 0.9rem;
-  }
-
-  .main-nav {
+  .nav-list {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: #004080;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: #000;
+    padding: 20px;
   }
 
-  .main-nav.open {
-    display: block;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-list a {
-    display: block;
-    padding: 15px;
-    font-size: 1.3rem;
+  .main-nav.open .nav-list {
+    display: flex;
   }
 
   .nav-toggle {
@@ -242,26 +102,23 @@ p {
   }
 }
 
-/* ==============================================
-   HERO SECTION – Professional with swapped images
-   ============================================== */
+/* Hero – Mastercard style */
 .hero {
   position: relative;
-  min-height: 70vh;
+  height: 80vh;
   display: flex;
   align-items: center;
-  color: white;
+  text-align: center;
+  color: #fff;
 }
 
-.hero::before {
-  content: '';
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url('group-photo-large.jpeg') center/cover no-repeat;
-  filter: blur(5px);
   z-index: 1;
 }
 
@@ -271,418 +128,223 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 64, 128, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 
 .hero-content {
   position: relative;
   z-index: 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero-text {
-  padding: 20px;
+.hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
-.hero-text h2 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-}
-
-.hero-tagline {
-  font-size: 1.6rem;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+.hero-subtitle {
+  font-size: 1.8rem;
   margin-bottom: 30px;
 }
 
-.hero-verse blockquote {
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-  border-left: 4px solid #ffd700;
-  padding-left: 20px;
-  margin: 30px 0;
+.hero-verse {
+  font-size: 1.4rem;
+  margin: 40px 0;
+  font-style: italic;
 }
 
-.hero-verse figcaption {
-  color: #ffd700;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+.hero-verse cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #f79e1b; /* Mastercard yellow */
 }
 
-.hero-image-wrapper {
-  text-align: center;
+.hero-search {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
 }
 
-.hero-image {
-  width: 100%;
-  max-width: 500px;
-  border: 8px solid white;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+.hero-search input {
+  flex: 1;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
 }
 
-/* Mobile Hero */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 60vh;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-text h2 {
-    font-size: 2.2rem;
-  }
-
-  .hero-tagline {
-    font-size: 1.3rem;
-  }
-
-  .hero-verse blockquote {
-    font-size: 1.2rem;
-  }
-
-  .hero-image {
-    max-width: 300px;
-  }
-}
-
-/* ==============================================
-   VERSE BANNER
-   ============================================== */
-.verse-banner {
-  background: #ffd700;
-  color: #004080;
-  padding: 40px 0;
-  text-align: center;
-  font-size: 1.5rem;
+.hero-search button {
+  padding: 15px 30px;
+  background: #eb001b;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
   font-weight: bold;
 }
 
-/* ==============================================
-   EXPLORE OUR MINISTRY – Professional cards
-   ============================================== */
-.gallery-grid {
+.hero-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 40px;
+  background: #eb001b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.hero-cta:hover {
+  background: #c00015;
+}
+
+/* Explore Section – Mastercard large cards with hover */
+.explore-section {
+  padding: 100px 0;
+  background: #f5f5f5;
+}
+
+.explore-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
 
-.gallery-grid .resource-card {
-  background: white;
-  border-radius: 15px;
+.explore-card {
+  background: #fff;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-decoration: none;
   color: inherit;
 }
 
-.gallery-grid .resource-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+.explore-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-.gallery-grid .resource-card > div:first-child {
-  background: #004080;
-  color: white;
-  padding: 30px;
+.card-icon {
+  font-size: 4rem;
+  padding: 40px;
   text-align: center;
 }
 
-.gallery-grid .resource-card h3 {
+.explore-card h3 {
+  text-align: center;
+  padding: 0 20px 20px;
   font-size: 1.6rem;
-  margin-bottom: 15px;
 }
 
-.gallery-grid .resource-card p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-.gallery-grid .resource-card > div:last-child {
-  padding: 25px;
+.explore-card p {
+  padding: 0 20px 40px;
   text-align: center;
+  color: #666;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .gallery-grid .resource-card > div:first-child {
-    padding: 25px;
-  }
-
-  .gallery-grid .resource-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .gallery-grid .resource-card p {
-    font-size: 1rem;
-  }
+/* Featured Section */
+.featured-section {
+  padding: 100px 0;
 }
 
-/* ==============================================
-   FEATURED RESOURCES – Professional grid
-   ============================================== */
-.resources-grid {
+.featured-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
 }
 
-.resources-grid .resource-card {
-  background: white;
-  border-radius: 15px;
+.featured-card {
+  background: #fff;
   padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
-.resources-grid .resource-card:hover {
+.featured-card:hover {
   transform: translateY(-10px);
 }
 
-.resources-grid h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.resources-grid p {
-  margin-bottom: 30px;
-}
-
-.resources-grid a {
-  background: #004080;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 30px;
+.card-link {
+  color: #eb001b;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* ==============================================
-   CALL TO ACTION
-   ============================================== */
-.section:last-child {
-  background: #004080;
-  color: white;
+/* CTA Section – Mastercard full-width red */
+.cta-section {
+  background: #eb001b;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
 }
 
-.section:last-child h2 {
-  color: white;
+.cta-text {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.section:last-child .section-intro {
-  color: rgba(255,255,255,0.9);
-}
-
-.section:last-child a {
-  background: #ffd700;
-  color: #004080;
+.cta-button {
+  background: #fff;
+  color: #eb001b;
   padding: 18px 50px;
   border-radius: 50px;
-  font-size: 1.3rem;
-}
-
-/* ==============================================
-   RESOURCES PAGE COLLAPSIBLES – Professional
-   ============================================== */
-.resources-search-input {
-  width: 100%;
-  max-width: 700px;
-  margin: 30px auto;
-  display: block;
-  padding: 15px 25px;
-  font-size: 1.2rem;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-}
-
-.resources-grid {
-  display: grid;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.resource-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.resource-card:hover {
-  transform: translateY(-8px);
-}
-
-.collapsible-header {
-  background: #004080;
-  color: white;
-  padding: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-}
-
-.collapsible-header h3 {
-  color: white !important;
-  margin: 0;
-  font-size: 1.9rem;
-}
-
-.collapse-icon {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
-}
-
-.collapsible.open .collapse-icon {
-  transform: rotate(180deg);
-}
-
-.collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease, padding 0.6s ease;
-  padding: 0 30px;
-}
-
-.collapsible.open .collapsible-content {
-  max-height: 3000px;
-  padding: 30px;
-}
-
-.collapsible-content ul {
-  list-style: none;
-}
-
-.collapsible-content li {
-  padding: 15px 0;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.collapsible-content li:last-child {
-  border-bottom: none;
-}
-
-.collapsible-content a {
-  color: #004080;
   text-decoration: none;
-  font-weight: 500;
-}
-
-.collapsible-content a:hover {
-  text-decoration: underline;
-}
-
-svg.feather {
-  stroke: white;
-  width: 30px;
-  height: 30px;
-  stroke-width: 2;
-  fill: none;
-}
-
-/* ==============================================
-   GALLERY – Perfect stretch on all devices
-   ============================================== */
-.gallery-grid .gallery-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
-}
-
-.gallery-grid .gallery-card img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.gallery-caption {
-  padding: 20px;
-  font-style: italic;
-  color: #555;
-  font-size: 1.1rem;
-}
-
-/* Mobile gallery */
-@media (max-width: 768px) {
-  .gallery-grid .gallery-card img {
-    height: 300px;
-  }
-}
-
-/* ==============================================
-   CONTACT – WhatsApp Buttons
-   ============================================== */
-.whatsapp-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
   font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  margin-top: 10px;
+  font-size: 1.3rem;
+  transition: background 0.3s, color 0.3s;
 }
 
-.whatsapp-btn:hover {
-  background: #128C7E;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+.cta-button:hover {
+  background: #000;
+  color: #fff;
 }
 
-/* ==============================================
-   FOOTER
-   ============================================== */
+/* Footer – Mastercard dark */
 .site-footer {
-  background: #004080;
-  color: white;
+  background: #000;
+  color: #fff;
+  padding: 60px 0;
   text-align: center;
-  padding: 80px 20px;
-  margin-top: 80px;
 }
 
 .footer-subtext {
   margin-top: 20px;
-  opacity: 0.9;
-  font-style: italic;
-  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
-/* Fix overlapping when expanding collapsibles */
-.resources-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 40px;
-}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
 
-.resource-card {
-  width: 100%;
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
 
-.resource-card:hover {
-  transform: translateY(-8px);
+  .hero-search {
+    flex-direction: column;
+  }
+
+  .hero-search input, .hero-search button {
+    border-radius: 4px;
+  }
+
+  .hero-search button {
+    margin-top: 10px;
+  }
+
+  .explore-grid, .featured-grid {
+    grid-template-columns: 1fr;
+  }
 }
