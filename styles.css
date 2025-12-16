@@ -1,350 +1,84 @@
-/* ==============================================
-   COMPLETE styles.css - Mastercard-Inspired Professional Design (December 16, 2025)
-   Black header, red/yellow accents, Roboto font, hover animations, responsive
-   ============================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Add/Replace these in styles.css – Fixes all issues */
+
+/* Gallery Images – Perfect stretch, no auto-zoom */
+.gallery-image-wrapper {
+  width: 100%;
+  height: 400px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+.gallery-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #fff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header – Mastercard black */
-.site-header {
-  background: #000;
-  color: #fff;
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand-logo {
-  height: 60px;
-  border-radius: 50%;
-}
-
-.language-switcher select {
-  padding: 8px 12px;
-  border-radius: 4px;
-  background: #fff;
-  color: #000;
-}
-
-.nav-list {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-
-.nav-list a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.nav-list a:hover {
-  color: #eb001b; /* Mastercard red hover */
-}
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* Mobile Header */
+/* Mobile gallery */
 @media (max-width: 768px) {
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #000;
-    padding: 20px;
-  }
-
-  .main-nav.open .nav-list {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
+  .gallery-image-wrapper {
+    height: 300px;
   }
 }
 
-/* Hero – Mastercard style */
-.hero {
-  position: relative;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('group-photo-large.jpeg') center/cover no-repeat;
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-content h2 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-}
-
-.hero-subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-}
-
-.hero-verse {
-  font-size: 1.4rem;
-  margin: 40px 0;
-  font-style: italic;
-}
-
-.hero-verse cite {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #f79e1b; /* Mastercard yellow */
-}
-
-.hero-search {
-  max-width: 600px;
-  margin: 40px auto;
-  display: flex;
-}
-
-.hero-search input {
-  flex: 1;
-  padding: 15px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 4px 0 0 4px;
-}
-
-.hero-search button {
-  padding: 15px 30px;
-  background: #eb001b;
-  color: #fff;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.hero-cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 40px;
-  background: #eb001b;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.hero-cta:hover {
-  background: #c00015;
-}
-
-/* Explore Section – Mastercard large cards with hover */
-.explore-section {
-  padding: 100px 0;
-  background: #f5f5f5;
-}
-
-.explore-grid {
+/* Contact Grid – Organized layout */
+.contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  margin-top: 40px;
 }
 
-.explore-card {
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+.contact-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* WhatsApp Buttons – Fixed display */
+.whatsapp-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #25D366;
+  color: white;
   text-decoration: none;
-  color: inherit;
-}
-
-.explore-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.card-icon {
-  font-size: 4rem;
-  padding: 40px;
-  text-align: center;
-}
-
-.explore-card h3 {
-  text-align: center;
-  padding: 0 20px 20px;
-  font-size: 1.6rem;
-}
-
-.explore-card p {
-  padding: 0 20px 40px;
-  text-align: center;
-  color: #666;
-}
-
-/* Featured Section */
-.featured-section {
-  padding: 100px 0;
-}
-
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-}
-
-.featured-card {
-  background: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.featured-card:hover {
-  transform: translateY(-10px);
-}
-
-.card-link {
-  color: #eb001b;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* CTA Section – Mastercard full-width red */
-.cta-section {
-  background: #eb001b;
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.cta-text {
-  font-size: 1.4rem;
-  margin-bottom: 40px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-button {
-  background: #fff;
-  color: #eb001b;
-  padding: 18px 50px;
   border-radius: 50px;
-  text-decoration: none;
+  font-size: 1.1rem;
   font-weight: bold;
-  font-size: 1.3rem;
-  transition: background 0.3s, color 0.3s;
-}
-
-.cta-button:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* Footer – Mastercard dark */
-.site-footer {
-  background: #000;
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.footer-subtext {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
   margin-top: 20px;
-  opacity: 0.8;
 }
 
-/* Mobile Responsiveness */
+.whatsapp-btn:hover {
+  background: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Leadership page – Use same wrapper for consistency */
+.gallery-grid .resource-card .gallery-image-wrapper {
+  height: 400px;
+}
+
 @media (max-width: 768px) {
-  .hero-content h2 {
-    font-size: 2.5rem;
+  .gallery-grid .resource-card .gallery-image-wrapper {
+    height: 300px;
   }
+}
 
-  .hero-subtitle {
-    font-size: 1.4rem;
-  }
+/* General page organization */
+.section {
+  padding: 100px 0;
+}
 
-  .hero-search {
-    flex-direction: column;
-  }
-
-  .hero-search input, .hero-search button {
-    border-radius: 4px;
-  }
-
-  .hero-search button {
-    margin-top: 10px;
-  }
-
-  .explore-grid, .featured-grid {
-    grid-template-columns: 1fr;
-  }
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
 }
