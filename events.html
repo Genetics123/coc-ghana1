@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 Annual Evangelism – Events | Church of Christ</title>
+    <title>Events | Church of Christ – Fosco Chapter</title>
 
     <style>
         body {
@@ -17,33 +17,38 @@
         header {
             background: #0a3d62;
             color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
 
-        .container {
+        .section {
             max-width: 900px;
             margin: 30px auto;
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1, h2 {
-            text-align: center;
+        h2 {
             color: #0a3d62;
+            text-align: center;
+            margin-bottom: 15px;
         }
 
-        .flyer {
-            text-align: center;
-            margin-bottom: 20px;
+        .schedule-item {
+            background: #eef4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
         }
 
         .flyer img {
             width: 100%;
             max-width: 600px;
             border-radius: 12px;
+            display: block;
+            margin: 0 auto;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
@@ -53,12 +58,6 @@
             font-weight: bold;
             margin: 20px 0;
             color: #0a3d62;
-        }
-
-        .details {
-            margin-top: 20px;
-            line-height: 1.7;
-            font-size: 18px;
         }
 
         .share-btn {
@@ -88,16 +87,38 @@
 <body>
 
 <header>
-    <h1>2025 Annual Evangelism</h1>
+    <h1>Church of Christ – Fosco Chapter</h1>
+    <p>Events & Activities</p>
 </header>
 
-<div class="container">
+<!-- Worship Schedule -->
+<div class="section">
+    <h2>Days of Worship & Activities</h2>
+
+    <div class="schedule-item">
+        <strong>Wednesday — Bible Studies & Prayers</strong><br>
+        ⏰ 6:30pm – 7:00pm
+    </div>
+
+    <div class="schedule-item">
+        <strong>Saturday — Hymn Learning</strong><br>
+        ⏰ 3:00pm – 4:30pm
+    </div>
+
+    <div class="schedule-item">
+        <strong>Sunday — Worship Service</strong><br>
+        ⏰ 6:15am – 7:30am
+    </div>
+</div>
+
+<!-- Upcoming Event -->
+<div class="section">
+    <h2>Upcoming Event: 2025 Annual Evangelism</h2>
 
     <div class="flyer">
         <img src="images/2025-annual-evangelism.jpg" alt="2025 Annual Evangelism Flyer">
     </div>
 
-    <h2>Countdown to the Event</h2>
     <div id="countdown" class="countdown">Loading countdown...</div>
 
     <script>
@@ -127,18 +148,20 @@
         updateCountdown();
     </script>
 
-    <h2>Event Details</h2>
-    <div class="details">
-        <p><strong>Theme:</strong> Annual Evangelism 2025</p>
-        <p><strong>Date:</strong> March 3, 2025</p>
-        <p><strong>Location:</strong> Church of Christ – Colleges of Education</p>
-        <p><strong>Description:</strong> Join us for a powerful evangelism outreach as we spread the gospel across campuses and communities. All members, students, and congregations are invited.</p>
-    </div>
-
     <a class="share-btn" href="https://wa.me/?text=Join%20me%20for%20the%202025%20Annual%20Evangelism%20on%20March%203!%20Check%20the%20details%20here:%20https://foscococ.org/events.html" target="_blank">
         Share on WhatsApp
     </a>
+</div>
 
+<!-- Past Events -->
+<div class="section">
+    <h2>Past Events</h2>
+
+    <p><strong>2024 Annual Evangelism:</strong> A successful outreach program across the community, involving students and members.</p>
+
+    <p><strong>Hymns & Worship Workshop:</strong> A special training session to improve congregational singing and harmony.</p>
+
+    <p><strong>Youth Bible Seminar:</strong> A spiritually uplifting session focused on strengthening the faith of young Christians.</p>
 </div>
 
 <footer>
