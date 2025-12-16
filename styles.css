@@ -70,7 +70,7 @@ p {
 }
 
 /* ==============================================
-   HEADER & NAVIGATION – Fixed for Mobile
+   HEADER & NAVIGATION
    ============================================== */
 .site-header {
   background: #004080;
@@ -172,7 +172,7 @@ p {
   padding: 10px;
 }
 
-/* Mobile Navigation – Fixed to show all links */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .header-inner {
     padding: 15px;
@@ -210,8 +210,6 @@ p {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    max-height: 80vh;
-    overflow-y: auto;
   }
 
   .main-nav.open {
@@ -221,7 +219,6 @@ p {
   .nav-list {
     flex-direction: column;
     gap: 15px;
-    padding: 10px 0;
   }
 
   .nav-list a {
@@ -230,18 +227,13 @@ p {
     font-size: 1.3rem;
   }
 
-  .nav-list a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-  }
-
   .nav-toggle {
     display: block;
   }
 }
 
 /* ==============================================
-   HERO SECTION – Foreground image shows on mobile
+   HERO SECTION
    ============================================== */
 .hero {
   position: relative;
@@ -257,10 +249,6 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
-}
-
-.hero-text {
-  padding: 20px;
 }
 
 .hero-text h2 {
@@ -289,17 +277,14 @@ p {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Mobile – Smaller hero, foreground image visible */
 @media (max-width: 768px) {
   .hero {
     min-height: 55vh;
-    align-items: center;
     padding: 20px 0;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 30px;
     text-align: center;
   }
 
@@ -307,24 +292,10 @@ p {
     font-size: 2.1rem;
   }
 
-  .hero-tagline {
-    font-size: 1.3rem;
-  }
-
-  .hero-verse blockquote {
-    font-size: 1.2rem;
-  }
-
-  .hero-image-wrapper {
-    display: block;
+  .hero-image {
     max-width: 300px;
     margin: 0 auto;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 15px;
+    display: block;
   }
 }
 
@@ -341,51 +312,29 @@ p {
 }
 
 /* ==============================================
-   EXPLORE OUR MINISTRY CARDS – Made Smaller & More Compact
+   QUICK LINKS / GALLERY GRID
    ============================================== */
-.gallery-grid .resource-card { /* Quick link cards on home page */
-  padding: 15px;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.gallery-grid .resource-card {
+  background: white;
   border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.gallery-grid .resource-card > div:first-child { /* Blue header */
-  padding: 15px;
-  border-radius: 12px 12px 0 0;
-}
-
-.gallery-grid .resource-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.gallery-grid .resource-card p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
-/* Mobile – Even more compact */
-@media (max-width: 768px) {
-  .gallery-grid .resource-card {
-    padding: 12px;
-  }
-
-  .gallery-grid .resource-card > div:first-child {
-    padding: 12px;
-  }
-
-  .gallery-grid .resource-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .gallery-grid .resource-card p {
-    font-size: 0.95rem;
-  }
+.gallery-grid .resource-card:hover {
+  transform: translateY(-5px);
 }
 
 /* ==============================================
-   RESOURCES SECTION (Full Page) - TITLES ONLY VISIBLE INITIALLY
+   RESOURCES SECTION - FULLY FIXED
    ============================================== */
 .resources-search-input {
   width: 100%;
@@ -416,7 +365,7 @@ p {
   transform: translateY(-5px);
 }
 
-/* Header – always visible with title */
+/* Header - always visible, white text on blue */
 .collapsible-header {
   background: #004080;
   color: white;
@@ -430,31 +379,33 @@ p {
 }
 
 .collapsible-header h3 {
+  color: white;
   margin: 0;
   font-size: 1.8rem;
 }
 
 .collapse-icon {
+  width: 24px;
+  height: 24px;
   transition: transform 0.3s ease;
-  font-size: 1.4rem;
 }
 
 .collapsible.open .collapse-icon {
   transform: rotate(180deg);
 }
 
-/* Content – HIDDEN by default */
+/* Content - collapsed by default */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.5s ease;
-  padding: 0 30px;   /* No vertical padding when closed */
+  padding: 0 30px;
 }
 
-/* When opened via click (JS adds .open class) */
+/* Open state */
 .collapsible.open .collapsible-content {
-  max-height: 2000px;   /* Large enough for any content */
-  padding: 30px;        /* Full padding when open */
+  max-height: 2000px; /* large enough for all content */
+  padding: 30px;
 }
 
 .collapsible-content ul {
@@ -484,15 +435,8 @@ p {
 }
 
 /* ==============================================
-   GALLERY - UNIFORM SIZE
+   GALLERY
    ============================================== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
 .gallery-grid img {
   width: 100%;
   height: 350px;
@@ -500,113 +444,11 @@ p {
   object-position: center;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .gallery-grid img:hover {
   transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-/* ==============================================
-   CONTACT
-   ============================================== */
-.contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-top: 40px;
-}
-
-.contact-details {
-  font-size: 1.2rem;
-}
-
-.contact-list {
-  list-style: none;
-  margin: 30px 0;
-}
-
-.contact-list li {
-  padding: 20px 0;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-.contact-location {
-  margin-top: 40px;
-  font-size: 1.2rem;
-}
-
-.contact-form-card {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1.1rem;
-}
-
-.contact-form button {
-  background: #004080;
-  color: white;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.contact-form button:hover {
-  background: #003060;
-}
-
-.contact-form button:disabled {
-  background: #aaa;
-  cursor: not-allowed;
-}
-
-/* WhatsApp Buttons */
-.whatsapp-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  align-self: flex-start;
-}
-
-.whatsapp-btn:hover {
-  background: #128C7E;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-}
-
-@media (max-width: 768px) {
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-list li {
-    align-items: flex-start;
-  }
 }
 
 /* ==============================================
@@ -627,16 +469,15 @@ p {
   font-size: 1.1rem;
 }
 
-/* Fix: Make resource category titles visible on blue header */
-.collapsible-header h3 {
-  color: white !important;
-  margin: 0;
-  font-size: 1.8rem;
+/* ==============================================
+   FEATHER ICONS (for chevrons)
+   ============================================== */
+svg.feather {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
-
-/* Optional: Add a bit more spacing if needed */
-.collapsible-header {
-  justify-content: space-between;
-  align-items: center;
-}
-
