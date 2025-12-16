@@ -665,3 +665,24 @@ svg.feather {
   font-style: italic;
   font-size: 1.2rem;
 }
+
+/* Fix overlapping when expanding collapsibles */
+.resources-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.resource-card {
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+}
