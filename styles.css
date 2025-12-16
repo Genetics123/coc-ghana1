@@ -482,39 +482,92 @@ p {
   }
 }
 /* ==============================================
-   LEADERSHIP PAGE IMAGES – FIXED FACE CROPPING
+   LEADERSHIP PAGE – PROFESSIONAL CARD DESIGN
    ============================================== */
+
 .leadership-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .leader-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* IMAGE fills the entire top tile */
+.leader-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: 50% 5%; /* ensures faces show */
+  display: block;
+}
+
+/* CONTENT sits at the bottom */
+.leader-info {
+  padding: 22px;
   text-align: center;
 }
 
-/* FIXED IMAGE CROPPING */
-.leader-card img {
-  width: 100%;
-  height: 340px;              /* Taller for better visibility */
-  object-fit: cover;          /* Fill tile without distortion */
-  object-position: 50% 10%;   /* Pulls crop upward to show faces */
-  border-bottom: 4px solid #f0f0f0;
+.leader-info h3 {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+  color: #004080;
+  font-weight: 700;
 }
 
-/* Mobile leadership */
+.leader-info p {
+  margin: 0 0 18px;
+  font-size: 1.15rem;
+  color: #555;
+}
+
+/* WhatsApp button */
+.leader-info .whatsapp-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25);
+}
+
+.leader-info .whatsapp-btn:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(37, 211, 102, 0.35);
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .leadership-grid {
-    grid-template-columns: 1fr;
-  }
   .leader-card img {
-    height: 280px;
-    object-position: 50% 10%; /* Maintain face visibility on mobile */
+    height: 300px;
+    object-position: 50% 5%;
+  }
+
+  .leader-info h3 {
+    font-size: 1.35rem;
+  }
+
+  .leader-info p {
+    font-size: 1.05rem;
   }
 }
 /* ==============================================
@@ -694,5 +747,6 @@ svg.feather {
   font-style: italic;
   font-size: 1rem;
 }
+
 
 
