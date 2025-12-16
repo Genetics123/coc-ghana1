@@ -847,11 +847,20 @@ svg.feather {
   text-decoration: none !important;
 }
 .event-flyer {
-    width: 280px;       /* smaller size */
-    margin: 0 auto;     /* center horizontally */
+    width: 280px;
+    margin: 0 auto;
     display: block;
     border-radius: 10px;
 }
+
+.tile {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
 
 
 
