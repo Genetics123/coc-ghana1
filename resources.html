@@ -152,8 +152,27 @@
   <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script>
+    // Initialize Feather icons
     feather.replace();
+
+    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Collapsible functionality
+    document.querySelectorAll('.collapsible-header').forEach(header => {
+      header.addEventListener('click', function () {
+        const card = this.parentElement;
+        card.classList.toggle('open');
+
+        // Re-render Feather icon to update rotation (if needed)
+        const icon = this.querySelector('.collapse-icon');
+        if (icon) {
+          feather.replace({ 'chevron-down': card.classList.contains('open') ? 'chevron-up' : 'chevron-down' });
+          icon.setAttribute('data-feather', card.classList.contains('open') ? 'chevron-up' : 'chevron-down');
+          feather.replace();
+        }
+      });
+    });
   </script>
 </body>
 </html>
