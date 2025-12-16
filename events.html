@@ -123,32 +123,46 @@
 
     <script>
         function updateCountdown() {
-            const eventDate = new Date("March 3, 2025 00:00:00").getTime();
+            const startDate = new Date("December 20, 2025 00:00:00").getTime();
+            const endDate = new Date("December 29, 2025 23:59:59").getTime();
             const now = new Date().getTime();
-            const diff = eventDate - now;
 
-            if (diff <= 0) {
-                document.getElementById("countdown").innerHTML = "The event is happening now!";
+            // Before event starts
+            if (now < startDate) {
+                const diff = startDate - now;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML =
+                    days + " Days • " +
+                    hours + " Hrs • " +
+                    minutes + " Min • " +
+                    seconds + " Sec until event begins";
                 return;
             }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            // During the event
+            if (now >= startDate && now <= endDate) {
+                document.getElementById("countdown").innerHTML =
+                    "The Annual Evangelism is happening now!";
+                return;
+            }
 
-            document.getElementById("countdown").innerHTML =
-                days + " Days • " +
-                hours + " Hrs • " +
-                minutes + " Min • " +
-                seconds + " Sec";
+            // After the event
+            if (now > endDate) {
+                document.getElementById("countdown").innerHTML =
+                    "The Annual Evangelism has ended.";
+            }
         }
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
 
-    <a class="share-btn" href="https://wa.me/?text=Join%20me%20for%20the%202025%20Annual%20Evangelism%20on%20March%203!%20Check%20the%20details%20here:%20https://foscococ.org/events.html" target="_blank">
+    <a class="share-btn" href="https://wa.me/?text=Join%20me%20for%20the%202025%20Annual%20Evangelism%20from%20December%2020%20to%2029!%20Check%20the%20details%20here:%20https://foscococ.org/events.html" target="_blank">
         Share on WhatsApp
     </a>
 </div>
