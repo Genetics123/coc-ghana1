@@ -535,3 +535,34 @@ svg.feather {
   font-style: italic;
   font-size: 1.1rem;
 }
+
+/* Gallery Cards – Perfect Stretch on Mobile & Desktop */
+.gallery-grid .gallery-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-grid .gallery-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-caption {
+  padding: 15px;
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Mobile – Shorter cards */
+@media (max-width: 768px) {
+  .gallery-grid .gallery-card img {
+    height: 300px;
+  }
+}
