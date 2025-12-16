@@ -1,6 +1,6 @@
 /* ==============================================
    COMPLETE styles.css - FINAL VERSION (December 16, 2025)
-   Header improved: "The Church of Christ Ministry" subtitle and title perfectly in line with logo center
+   Header fixed: Text perfectly centered with logo on BOTH desktop & mobile
    All previous fixes included
    ============================================== */
 *, *::before, *::after {
@@ -70,7 +70,7 @@ p {
 }
 
 /* ==============================================
-   HEADER & NAVIGATION – Text perfectly centered with logo
+   HEADER & NAVIGATION – Text perfectly centered with logo on desktop & mobile
    ============================================== */
 .site-header {
   background: #004080;
@@ -108,7 +108,8 @@ p {
 .brand-text {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Perfect vertical centering with logo */
+  justify-content: center; /* Ensures perfect vertical centering */
+  min-height: 70px; /* Matches logo height for alignment */
   line-height: 1.3;
 }
 
@@ -173,7 +174,7 @@ p {
   cursor: pointer;
 }
 
-/* Mobile Navigation – Text still centered with logo */
+/* Mobile Navigation – Text centered with smaller logo */
 @media (max-width: 768px) {
   .header-inner {
     padding: 12px 15px;
@@ -182,6 +183,10 @@ p {
   .brand-logo {
     width: 55px;
     height: 55px;
+  }
+
+  .brand-text {
+    min-height: 55px; /* Matches smaller logo height */
   }
 
   .brand-title {
@@ -239,7 +244,7 @@ p {
   }
 }
 
-/* Rest of the CSS (hero, verse banner, quick links, resources, gallery, contact, footer) remains the same as previous final version */
+/* Rest of the CSS remains unchanged from previous final version */
 .hero {
   position: relative;
   min-height: 65vh;
