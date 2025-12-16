@@ -11,7 +11,6 @@
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
-  <!-- Header – Mastercard black with white text -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -39,7 +38,7 @@
   </header>
 
   <main id="home">
-    <!-- Hero – Mastercard style: image background, white text, prominent search bar, CTA -->
+    <!-- Hero – Mastercard style: full-width image background, white text, improved search bar -->
     <section class="hero">
       <div class="hero-background" style="background-image: url('group-photo-large.jpeg');"></div>
       <div class="hero-overlay"></div>
@@ -52,10 +51,10 @@
           </blockquote>
           <figcaption><em>Romans 16:16</em></figcaption>
         </figure>
-        <div class="hero-search">
+        <form id="hero-search-form" class="hero-search">
           <input type="text" id="resourceSearch" placeholder="Search resources, sermons, or events..." />
-          <button>Search</button>
-        </div>
+          <button type="submit">Search</button>
+        </form>
         <a href="contact.html" class="hero-cta" data-i18n="join">Join Us or Get Involved</a>
       </div>
     </section>
@@ -111,7 +110,7 @@
       </div>
     </section>
 
-    <!-- Featured Study Materials – Mastercard grid -->
+    <!-- Featured Study Materials – Mastercard grid with tiles -->
     <section class="section featured-section">
       <div class="container">
         <h2 data-i18n="featured">Featured Study Materials</h2>
@@ -165,6 +164,13 @@
   <script>
     feather.replace();
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Homepage search bar – Redirect to resources.html with query
+    document.getElementById('hero-search-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const query = document.getElementById('resourceSearch').value;
+      window.location.href = 'resources.html?search=' + encodeURIComponent(query);
+    });
   </script>
 </body>
 </html>
