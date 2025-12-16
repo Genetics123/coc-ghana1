@@ -1,13 +1,13 @@
-// script.js – Complete JavaScript for the Fosco Chapter website (December 16, 2025)
+// script.js – Complete JavaScript for the Fosco Chapter website
 // Handles:
 // - Feather icons replacement
 // - Mobile menu toggle (with ✕ close icon)
 // - Resource collapsibles: ONLY ONE OPEN AT A TIME
-// - Resource search filter (searches titles, keywords, link text)
+// - Resource search filter: shows matching categories (header always visible), opens them automatically, hides non-matching
 // - Auto-update copyright year
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Replace Feather icons (chevrons in headers)
+  // 1. Replace Feather icons
   if (typeof feather !== 'undefined') {
     feather.replace();
   }
@@ -28,23 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
     header.addEventListener('click', () => {
       const currentCard = header.parentElement;
 
-      // If the clicked one is already open, close it
       if (currentCard.classList.contains('open')) {
         currentCard.classList.remove('open');
         return;
       }
 
-      // Close all cards first
+      // Close all
       document.querySelectorAll('.resource-card.collapsible').forEach(card => {
         card.classList.remove('open');
       });
 
-      // Open the clicked one
+      // Open clicked
       currentCard.classList.add('open');
     });
   });
 
-  // 4. Resource search filter
+  // 4. Resource search filter – shows matching categories (header always visible), opens matching ones, hides non-matching
   const searchInput = document.getElementById('resourceSearch');
   const resourcesList = document.getElementById('resourcesList');
   const noResults = document.getElementById('noResults');
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const query = searchInput.value.toLowerCase().trim();
       let visibleCount = 0;
 
-      resourcesList.querySelectorAll('.resource-card').forEach(card => {
+      resourcesList.querySelectorAll('.resource-card.collapsible').forEach(card => {
         const keywords = card.getAttribute('data-keywords') || '';
         const headerText = card.querySelector('.collapsible-header h3')?.textContent.toLowerCase() || '';
         const linkTexts = Array.from(card.querySelectorAll('.collapsible-content a'))
@@ -62,12 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
           .join(' ');
 
         const searchText = `${keywords} ${headerText} ${linkTexts}`;
+        const matches = query === '' || searchText.includes(query);
 
-        if (query === '' || searchText.includes(query)) {
+        if (matches) {
           card.style.display = 'block';
           visibleCount++;
+          if (query !== '') {
+            card.classList.add('open'); // Auto-open matching categories
+          } else {
+            card.classList.remove('open'); // Close when search cleared
+          }
         } else {
           card.style.display = 'none';
+          card.classList.remove('open');
         }
       });
 
@@ -80,4 +86,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
-});
+});v
