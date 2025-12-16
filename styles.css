@@ -1,9 +1,8 @@
 /* ==============================================
-   COMPLETE styles.css - FULLY FIXED & OPTIMIZED (December 2025)
+   COMPLETE styles.css - FINAL VERSION (December 16, 2025)
+   Everything fixed: titles visible, sections collapsed by default, smooth expand/collapse
    ============================================== */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -157,7 +156,7 @@ p {
   cursor: pointer;
 }
 
-/* Mobile */
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .header-inner {
     padding: 15px;
@@ -302,7 +301,7 @@ p {
 }
 
 /* ==============================================
-   RESOURCES PAGE - FULLY WORKING COLLAPSIBLES
+   RESOURCES PAGE - PERFECT COLLAPSIBLES (TITLES VISIBLE, CLOSED BY DEFAULT)
    ============================================== */
 .resources-search-input {
   width: 100%;
@@ -333,7 +332,7 @@ p {
   transform: translateY(-5px);
 }
 
-/* Header - white text, always visible */
+/* Header - always visible, white text on blue */
 .collapsible-header {
   background: #004080;
   color: white;
@@ -345,13 +344,14 @@ p {
   user-select: none;
 }
 
+/* CRITICAL: Force title text to white */
 .collapsible-header h3 {
-  color: white;
+  color: white !important;
   margin: 0;
   font-size: 1.8rem;
 }
 
-/* Icon styling */
+/* Chevron icon */
 .collapse-icon {
   width: 28px;
   height: 28px;
@@ -362,17 +362,17 @@ p {
   transform: rotate(180deg);
 }
 
-/* Content - collapsed by default */
+/* Content - completely hidden when closed */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
+  transition: max-height 0.6s ease, padding 0.6s ease;
   padding: 0 30px;
 }
 
-/* Expanded state */
+/* Open state - expands smoothly */
 .collapsible.open .collapsible-content {
-  max-height: 3000px; /* large enough */
+  max-height: 3000px; /* more than enough for any category */
   padding: 30px;
 }
 
@@ -433,9 +433,11 @@ p {
   font-size: 1.1rem;
 }
 
-/* Feather icons in headers */
+/* Feather icons styling (chevrons in headers) */
 svg.feather {
   stroke: white;
   width: 28px;
   height: 28px;
+  stroke-width: 2;
+  fill: none;
 }
