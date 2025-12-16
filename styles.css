@@ -846,6 +846,12 @@ svg.feather {
   color: #004080; /* or your preferred accent color */
   text-decoration: none !important;
 }
+.event-flyer {
+    width: 280px;       /* smaller size */
+    margin: 0 auto;     /* center horizontally */
+    display: block;
+    border-radius: 10px;
+}
 
 
 
