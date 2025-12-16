@@ -627,4 +627,16 @@ p {
   font-size: 1.1rem;
 }
 
+/* Fix: Make resource category titles visible on blue header */
+.collapsible-header h3 {
+  color: white !important;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Optional: Add a bit more spacing if needed */
+.collapsible-header {
+  justify-content: space-between;
+  align-items: center;
+}
 
