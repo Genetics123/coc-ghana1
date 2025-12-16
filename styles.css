@@ -1,6 +1,8 @@
 /* ==============================================
    COMPLETE styles.css - FINAL VERSION (December 16, 2025)
-   Everything fixed: titles visible, sections collapsed by default, smooth expand/collapse
+   Fixed: Collapsibles now expand/collapse smoothly, titles always visible
+   WhatsApp buttons restored
+   All previous professional improvements kept
    ============================================== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -56,6 +58,7 @@ p {
   height: 5px;
   background: #ffd700;
   margin: 25px auto;
+  border: none;
 }
 
 .section-intro {
@@ -129,6 +132,10 @@ p {
   font-size: 1rem;
 }
 
+.main-nav {
+  transition: all 0.3s ease;
+}
+
 .nav-list {
   display: flex;
   list-style: none;
@@ -175,6 +182,15 @@ p {
     font-size: 0.9rem;
   }
 
+  .language-switcher {
+    margin-right: 15px;
+  }
+
+  #languageSelect {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
   .main-nav {
     display: none;
     position: absolute;
@@ -185,6 +201,8 @@ p {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
   }
 
   .main-nav.open {
@@ -208,7 +226,7 @@ p {
 }
 
 /* ==============================================
-   HERO & VERSE BANNER
+   HERO SECTION – Mobile-Optimized
    ============================================== */
 .hero {
   position: relative;
@@ -226,13 +244,19 @@ p {
   align-items: center;
 }
 
+.hero-text {
+  padding: 20px;
+}
+
 .hero-text h2 {
   font-size: 2.8rem;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero-tagline {
   font-size: 1.5rem;
+  margin-bottom: 30px;
   font-style: italic;
 }
 
@@ -241,6 +265,7 @@ p {
   font-style: italic;
   border-left: 4px solid #ffd700;
   padding-left: 20px;
+  margin: 30px 0;
 }
 
 .hero-image {
@@ -249,13 +274,17 @@ p {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Mobile Hero */
 @media (max-width: 768px) {
   .hero {
     min-height: 55vh;
+    align-items: center;
+    padding: 20px 0;
   }
 
   .hero-content {
     grid-template-columns: 1fr;
+    gap: 30px;
     text-align: center;
   }
 
@@ -263,12 +292,30 @@ p {
     font-size: 2.1rem;
   }
 
-  .hero-image {
+  .hero-tagline {
+    font-size: 1.3rem;
+  }
+
+  .hero-verse blockquote {
+    font-size: 1.2rem;
+  }
+
+  .hero-image-wrapper {
+    display: block;
     max-width: 300px;
     margin: 0 auto;
   }
+
+  .hero-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+  }
 }
 
+/* ==============================================
+   VERSE BANNER
+   ============================================== */
 .verse-banner {
   background: #ffd700;
   color: #004080;
@@ -279,29 +326,50 @@ p {
 }
 
 /* ==============================================
-   QUICK LINKS / GALLERY GRID
+   QUICK LINK CARDS (Explore Our Ministry) – Compact
    ============================================== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
 .gallery-grid .resource-card {
-  background: white;
+  padding: 15px;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
-.gallery-grid .resource-card:hover {
-  transform: translateY(-5px);
+.gallery-grid .resource-card > div:first-child {
+  padding: 15px;
+  border-radius: 12px 12px 0 0;
+}
+
+.gallery-grid .resource-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.gallery-grid .resource-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Mobile Quick Links */
+@media (max-width: 768px) {
+  .gallery-grid .resource-card {
+    padding: 12px;
+  }
+
+  .gallery-grid .resource-card > div:first-child {
+    padding: 12px;
+  }
+
+  .gallery-grid .resource-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-grid .resource-card p {
+    font-size: 0.95rem;
+  }
 }
 
 /* ==============================================
-   RESOURCES PAGE - PERFECT COLLAPSIBLES (TITLES VISIBLE, CLOSED BY DEFAULT)
+   RESOURCES PAGE COLLAPSIBLES – Fixed (titles visible, expand/collapse works)
    ============================================== */
 .resources-search-input {
   width: 100%;
@@ -332,7 +400,7 @@ p {
   transform: translateY(-5px);
 }
 
-/* Header - always visible, white text on blue */
+/* Header – always visible */
 .collapsible-header {
   background: #004080;
   color: white;
@@ -344,14 +412,13 @@ p {
   user-select: none;
 }
 
-/* CRITICAL: Force title text to white */
 .collapsible-header h3 {
   color: white !important;
   margin: 0;
   font-size: 1.8rem;
 }
 
-/* Chevron icon */
+/* Chevron */
 .collapse-icon {
   width: 28px;
   height: 28px;
@@ -362,7 +429,7 @@ p {
   transform: rotate(180deg);
 }
 
-/* Content - completely hidden when closed */
+/* Content – hidden by default */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
@@ -370,9 +437,9 @@ p {
   padding: 0 30px;
 }
 
-/* Open state - expands smoothly */
+/* Open state – expands */
 .collapsible.open .collapsible-content {
-  max-height: 3000px; /* more than enough for any category */
+  max-height: 3000px;
   padding: 30px;
 }
 
@@ -402,13 +469,23 @@ p {
   text-decoration: underline;
 }
 
+/* Feather icons for chevrons */
+svg.feather {
+  stroke: white;
+  width: 28px;
+  height: 28px;
+  stroke-width: 2;
+  fill: none;
+}
+
 /* ==============================================
-   GALLERY & FOOTER
+   GALLERY
    ============================================== */
 .gallery-grid img {
   width: 100%;
   height: 350px;
   object-fit: cover;
+  object-position: center;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s ease;
@@ -418,6 +495,32 @@ p {
   transform: scale(1.05);
 }
 
+/* ==============================================
+   CONTACT – WhatsApp Buttons Restored
+   ============================================== */
+.whatsapp-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+  background: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
 .site-footer {
   background: #004080;
   color: white;
@@ -431,13 +534,4 @@ p {
   opacity: 0.9;
   font-style: italic;
   font-size: 1.1rem;
-}
-
-/* Feather icons styling (chevrons in headers) */
-svg.feather {
-  stroke: white;
-  width: 28px;
-  height: 28px;
-  stroke-width: 2;
-  fill: none;
 }
