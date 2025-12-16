@@ -10,6 +10,7 @@
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -20,6 +21,7 @@
           <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
         </div>
       </div>
+
       <div class="language-switcher">
         <select id="languageSelect">
           <option value="en">En</option>
@@ -27,6 +29,7 @@
           <option value="fr">Fr</option>
         </select>
       </div>
+
       <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="index.html" data-i18n="home">Home</a></li>
@@ -37,52 +40,60 @@
           <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
+
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
     </div>
   </header>
 
   <main>
+
+    <!-- REGULAR MEETING SCHEDULE -->
     <section class="section" style="background:#f0f0f0;">
       <div class="container">
         <h2 data-i18n="events">Our Regular Meeting Schedule</h2>
         <hr class="section-divider" />
-        <p class="section-intro" data-i18n="events_intro">Join us for worship, Bible study, and fellowship at Fosu College of Education. Everyone is welcome!</p>
+        <p class="section-intro" data-i18n="events_intro">
+          Join us for worship, Bible study, and fellowship at Fosu College of Education. Everyone is welcome!
+        </p>
+
         <div class="gallery-grid">
-          <!-- Wednesday Bible Study -->
+
+          <!-- Wednesday -->
           <div class="resource-card" style="text-align:center;">
             <div style="background:#004080; color:white; padding:40px; border-radius:15px 15px 0 0;">
-              <h3 style="margin:0; font-size:2rem; font-weight:bold; color:white;">Wednesday</h3>
+              <h3 style="margin:0; font-size:2rem; font-weight:bold;">Wednesday</h3>
               <p style="margin:15px 0 0; font-size:1.5rem; opacity:0.9;">Bible Study</p>
             </div>
             <div style="padding:30px; background:white; border-radius:0 0 15px 15px;">
-              <p style="font-size:2rem; font-weight:bold; color:#004080; margin:0;">6:30 PM – 8:00 PM</p>
+              <p style="font-size:2rem; font-weight:bold; color:#004080;">6:30 PM – 8:00 PM</p>
               <p style="margin-top:10px; color:#555;">(1 hour 30 minutes)</p>
             </div>
           </div>
 
-          <!-- Saturday Hymnal Learning -->
+          <!-- Saturday -->
           <div class="resource-card" style="text-align:center;">
             <div style="background:#004080; color:white; padding:40px; border-radius:15px 15px 0 0;">
-              <h3 style="margin:0; font-size:2rem; font-weight:bold; color:white;">Saturday</h3>
+              <h3 style="margin:0; font-size:2rem; font-weight:bold;">Saturday</h3>
               <p style="margin:15px 0 0; font-size:1.5rem; opacity:0.9;">Hymnal Learning</p>
             </div>
             <div style="padding:30px; background:white; border-radius:0 0 15px 15px;">
-              <p style="font-size:2rem; font-weight:bold; color:#004080; margin:0;">3:00 PM – 4:30 PM</p>
+              <p style="font-size:2rem; font-weight:bold; color:#004080;">3:00 PM – 4:30 PM</p>
               <p style="margin-top:10px; color:#555;">(1 hour 30 minutes)</p>
             </div>
           </div>
 
-          <!-- Sunday Worship -->
+          <!-- Sunday -->
           <div class="resource-card" style="text-align:center;">
             <div style="background:#004080; color:white; padding:40px; border-radius:15px 15px 0 0;">
-              <h3 style="margin:0; font-size:2rem; font-weight:bold; color:white;">Sunday</h3>
+              <h3 style="margin:0; font-size:2rem; font-weight:bold;">Sunday</h3>
               <p style="margin:15px 0 0; font-size:1.5rem; opacity:0.9;">Worship Service</p>
             </div>
             <div style="padding:30px; background:white; border-radius:0 0 15px 15px;">
-              <p style="font-size:2rem; font-weight:bold; color:#004080; margin:0;">6:15 AM – 7:45 AM</p>
+              <p style="font-size:2rem; font-weight:bold; color:#004080;">6:15 AM – 7:45 AM</p>
               <p style="margin-top:10px; color:#555;">(1 hour 30 minutes)</p>
             </div>
           </div>
+
         </div>
 
         <div style="text-align:center; margin-top:50px;">
@@ -97,17 +108,54 @@
       </div>
     </section>
 
-    <!-- Upcoming Events Section -->
+    <!-- UPCOMING EVENTS -->
     <section class="section">
       <div class="container">
         <h2>Upcoming Events</h2>
         <hr class="section-divider" />
-        <p class="section-intro">Special events and activities will be announced here when scheduled.</p>
+
         <div style="text-align:center; padding:40px; background:white; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-          <p style="font-size:1.2rem; color:#555;">No upcoming events at this time. Check back soon!</p>
+
+          <h3 style="margin-bottom:20px; color:#004080; font-size:1.8rem;">
+            2025 Annual Evangelism Program
+          </h3>
+
+          <img 
+            src="images/2025-annual-evangelism.jpg"
+            alt="2025 Annual Evangelism Flyer"
+            style="width:100%; max-width:600px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);"
+          >
+
+          <p style="margin-top:20px; font-size:1.2rem; color:#555;">
+            Join us for our annual evangelism outreach program. All are invited!
+          </p>
+
+          <!-- Countdown Timer -->
+          <div id="countdown" style="margin-top:25px; font-size:1.6rem; font-weight:bold; color:#004080;"></div>
+
+          <!-- WhatsApp Share Button -->
+          <a 
+            id="shareEvent"
+            href="#"
+            style="
+              display:inline-block;
+              margin-top:25px;
+              background:#25D366;
+              color:white;
+              padding:12px 25px;
+              border-radius:30px;
+              font-size:1.2rem;
+              font-weight:bold;
+              text-decoration:none;
+            "
+          >
+            Share on WhatsApp
+          </a>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -119,9 +167,45 @@
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
+
+  <!-- Countdown + Share Script -->
   <script>
+    // COUNTDOWN TIMER
+    const eventDate = new Date("2025-03-10T09:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "The event is happening now!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // WHATSAPP SHARE BUTTON
+    document.getElementById("shareEvent").addEventListener("click", function () {
+      const message = encodeURIComponent(
+        "Join me for the 2025 Annual Evangelism Program at Fosco Chapter! Check out the flyer here: https://yourwebsite.com/events.html"
+      );
+
+      window.open("https://wa.me/?text=" + message, "_blank");
+    });
+
     feather.replace();
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
