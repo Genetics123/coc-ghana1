@@ -1,12 +1,12 @@
 // script.js – Complete JavaScript for the Fosco Chapter website
 // Handles:
-// - Feather icons (chevrons in resource headers)
-// - Mobile menu toggle (hamburger opens/closes with ✕ icon)
-// - Resource collapsible tiles (expand/collapse on click)
-// - Auto-update copyright year in footer
+// - Feather icons replacement
+// - Mobile menu toggle (with ✕ close icon)
+// - Resource collapsibles: ONLY ONE OPEN AT A TIME (others collapse automatically)
+// - Auto-update copyright year
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Replace Feather icons
+  // 1. Replace Feather icons (chevrons in headers)
   if (typeof feather !== 'undefined') {
     feather.replace();
   }
@@ -17,17 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => {
       mainNav.classList.toggle('open');
-      // Change icon to ✕ when open, ☰ when closed
       navToggle.textContent = mainNav.classList.contains('open') ? '✕' : '☰';
     });
   }
 
-  // 3. Collapsible resource categories (Faith, Purity, etc.)
+  // 3. Collapsible resources – ONLY ONE OPEN AT A TIME
   const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
   collapsibleHeaders.forEach(header => {
     header.addEventListener('click', () => {
-      const card = header.parentElement; // the .resource-card
-      card.classList.toggle('open');
+      const currentCard = header.parentElement;
+
+      // If the clicked one is already open, close it
+      if (currentCard.classList.contains('open')) {
+        currentCard.classList.remove('open');
+        return;
+      }
+
+      // Close all cards first
+      document.querySelectorAll('.resource-card.collapsible').forEach(card => {
+        card.classList.remove('open');
+      });
+
+      // Open the clicked one
+      currentCard.classList.add('open');
     });
   });
 
