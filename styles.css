@@ -342,26 +342,26 @@ p {
 }
 .explore-card {
   background: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   text-align: center;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .explore-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 .card-icon {
-  font-size: 2.5em;
-  margin-bottom: 12px;
+  font-size: 3em;
+  margin-bottom: 15px;
   color: #004080;
 }
 .explore-card h3 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #004080;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   letter-spacing: 0.2px;
 }
 .explore-card p {
@@ -375,10 +375,10 @@ p {
     grid-template-columns: 1fr;
   }
   .explore-card {
-    padding: 20px;
+    padding: 25px;
   }
   .card-icon {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
   .explore-card h3 {
     font-size: 1.4rem;
@@ -400,26 +400,26 @@ p {
 }
 .featured-card {
   background: white;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  transition: box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .featured-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 .featured-card h3 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #004080;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   letter-spacing: 0.2px;
 }
 .featured-card p {
   font-size: 1.1rem;
   color: #333;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   line-height: 1.7;
 }
 .card-link {
@@ -437,7 +437,7 @@ p {
     grid-template-columns: 1fr;
   }
   .featured-card {
-    padding: 20px;
+    padding: 25px;
   }
   .featured-card h3 {
     font-size: 1.4rem;
@@ -498,9 +498,9 @@ p {
 }
 .leader-card img {
   width: 100%;
-  height: auto;
-  object-fit: contain; /* Changed to contain to fit whole image without cropping */
-  max-height: 400px; /* Prevent overly tall images */
+  height: 300px; /* Fixed height for consistency */
+  object-fit: cover;
+  object-position: top; /* Focus on top to show faces */
 }
 /* Mobile leadership */
 @media (max-width: 768px) {
@@ -508,7 +508,7 @@ p {
     grid-template-columns: 1fr;
   }
   .leader-card img {
-    max-height: 300px;
+    height: 250px;
   }
 }
 /* ==============================================
