@@ -1,209 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events & Meeting Times | Fosco Chapter – Church of Christ</title>
-  <meta name="description" content="Regular meeting schedule and upcoming events for the Fosco Chapter of the Church of Christ at Fosu College of Education." />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
-  <script src="https://unpkg.com/feather-icons"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Annual Evangelism – Events | Church of Christ</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #0a3d62;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #0a3d62;
+        }
+
+        .flyer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .flyer img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .countdown {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #0a3d62;
+        }
+
+        .details {
+            margin-top: 20px;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .share-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #25D366;
+            color: white;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #0a3d62;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="fosco-logo.jpeg" alt="Logo" class="brand-logo" />
-        <div class="brand-text">
-          <p class="brand-subtitle">The Church of Christ Ministry</p>
-          <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
-        </div>
-      </div>
 
-      <div class="language-switcher">
-        <select id="languageSelect">
-          <option value="en">En</option>
-          <option value="tw">Twi</option>
-          <option value="fr">Fr</option>
-        </select>
-      </div>
+<header>
+    <h1>2025 Annual Evangelism</h1>
+</header>
 
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<div class="container">
 
-      <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    <div class="flyer">
+        <img src="images/2025-annual-evangelism.jpg" alt="2025 Annual Evangelism Flyer">
     </div>
-  </header>
 
-  <main>
+    <h2>Countdown to the Event</h2>
+    <div id="countdown" class="countdown">Loading countdown...</div>
 
-    <!-- REGULAR MEETING SCHEDULE -->
-    <section class="section" style="background:#f0f0f0;">
-      <div class="container">
-        <h2>Our Regular Meeting Schedule</h2>
-        <hr class="section-divider" />
-        <p class="section-intro">
-          Join us for worship, Bible study, and fellowship at Fosu College of Education. Everyone is welcome!
-        </p>
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("March 3, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = eventDate - now;
 
-        <div class="gallery-grid">
+            if (diff <= 0) {
+                document.getElementById("countdown").innerHTML = "The event is happening now!";
+                return;
+            }
 
-          <!-- Wednesday -->
-          <div class="resource-card" style="text-align:center;">
-            <div style="background:#004080; color:white; padding:40px; border-radius:15px 15px 0 0;">
-              <h3 style="margin:0; font-size:2rem; font-weight:bold;">Wednesday</h3>
-              <p style="margin:15px 0 0; font-size:1.5rem; opacity:0.9;">Bible Study</p>
-            </div>
-            <div style="padding:30px; background:white; border-radius:0 0 15px 15px;">
-              <p style="font-size:2rem; font-weight:bold; color:#004080;">6:30 PM – 8:00 PM</p>
-              <p style="margin-top:10px; color:#555;">(1 hour 30 minutes)</p>
-            </div>
-          </div>
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-          <!-- Saturday -->
-          <div class="resource-card" style="text-align:center;">
-            <div style="background:#004080; color:white; padding:40px; border-radius:15px 15px 0 0;">
-              <h3 style="margin:0; font-size:2rem; font-weight:bold;">Saturday</h3>
-              <p style="margin:15px 0 0; font-size:1.5rem; opacity:0.9;">Hymnal Learning</p>
-            </div>
-            <div style="padding:30px; background:white; border-radius:0 0 15px 15px;">
-              <p style="font-size:2rem; font-weight:bold; color:#004080;">3:00 PM – 4:30 PM</p>
-              <p style="margin-top:10px; color:#555;">(1 hour 30 minutes)</p>
-            </div>
-          </div>
+            document.getElementById("countdown").innerHTML =
+                days + " Days • " +
+                hours + " Hrs • " +
+                minutes + " Min • " +
+                seconds + " Sec";
+        }
 
-          <!-- Sunday -->
-          <div class="resource-card" style="text-align:center;">
-            <div style="background:#004080; color:white; padding:40px; border-radius:15px 15px 0 0;">
-              <h3 style="margin:0; font-size:2rem; font-weight:bold;">Sunday</h3>
-              <p style="margin:15px 0 0; font-size:1.5rem; opacity:0.9;">Worship Service</p>
-            </div>
-            <div style="padding:30px; background:white; border-radius:0 0 15px 15px;">
-              <p style="font-size:2rem; font-weight:bold; color:#004080;">6:15 AM – 7:45 AM</p>
-              <p style="margin-top:10px; color:#555;">(1 hour 30 minutes)</p>
-            </div>
-          </div>
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- UPCOMING EVENT -->
-    <section class="section">
-      <div class="container">
-        <h2>Upcoming Events</h2>
-        <hr class="section-divider" />
-
-        <div class="event-box" style="text-align:center; padding:40px; background:white; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
-
-          <h3 style="margin-bottom:20px; color:#004080; font-size:1.8rem;">
-            2025 Annual Evangelism Program
-          </h3>
-
-          <img 
-            src="images/2025-annual-evangelism.jpeg"
-            alt="2025 Annual Evangelism Flyer"
-            style="width:100%; max-width:600px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);"
-          >
-
-          <p style="margin-top:20px; font-size:1.2rem; color:#555;">
-            Join us for our annual evangelism outreach program. All are invited!
-          </p>
-
-          <!-- Countdown Timer -->
-          <div id="countdown" style="margin-top:25px; font-size:1.6rem; font-weight:bold; color:#004080;"></div>
-
-          <!-- WhatsApp Share Button -->
-          <a 
-            id="shareEvent"
-            href="#"
-            style="
-              display:inline-block;
-              margin-top:25px;
-              background:#25D366;
-              color:white;
-              padding:12px 25px;
-              border-radius:30px;
-              font-size:1.2rem;
-              font-weight:bold;
-              text-decoration:none;
-            "
-          >
-            Share on WhatsApp
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
-      <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
+    <h2>Event Details</h2>
+    <div class="details">
+        <p><strong>Theme:</strong> Annual Evangelism 2025</p>
+        <p><strong>Date:</strong> March 3, 2025</p>
+        <p><strong>Location:</strong> Church of Christ – Colleges of Education</p>
+        <p><strong>Description:</strong> Join us for a powerful evangelism outreach as we spread the gospel across campuses and communities. All members, students, and congregations are invited.</p>
     </div>
-  </footer>
 
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+    <a class="share-btn" href="https://wa.me/?text=Join%20me%20for%20the%202025%20Annual%20Evangelism%20on%20March%203!%20Check%20the%20details%20here:%20https://foscococ.org/events.html" target="_blank">
+        Share on WhatsApp
+    </a>
 
-  <!-- Countdown + Share Script -->
-  <script>
-    const nowDate = new Date();
-    const year = nowDate.getFullYear();
-    const month = nowDate.getMonth(); // 0-indexed
+</div>
 
-    const eventStart = new Date(year, month, 20, 0, 0, 0).getTime();
-    const eventEnd   = new Date(year, month, 29, 23, 59, 59).getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-
-      if (now < eventStart) {
-        const distance = eventStart - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown").innerHTML =
-          "Starts in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-      } 
-      else if (now >= eventStart && now <= eventEnd) {
-        document.getElementById("countdown").innerHTML = "The event is happening now!";
-      } 
-      else {
-        document.getElementById("countdown").innerHTML = "The event has ended.";
-      }
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    // WhatsApp Share
-    document.getElementById("shareEvent").addEventListener("click", function () {
-      const message = encodeURIComponent(
-        "Join me for the 2025 Annual Evangelism Program happening 20th–29th this month at Fosco Chapter! View details here: https://yourwebsite.com/events.html"
-      );
-
-      window.open("https://wa.me/?text=" + message, "_blank");
-    });
-
-    feather.replace();
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer>
+    &copy; 2025 Church of Christ – Fosco Chapter, Assin Fosu
+</footer>
 
 </body>
 </html>
