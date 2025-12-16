@@ -32,12 +32,12 @@
 
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="index.html" data-i18n="home">Home</a></li>
-          <li><a href="about.html" data-i18n="about">About</a></li>
-          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
-          <li><a href="events.html" data-i18n="events">Events</a></li>
-          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
-          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -50,9 +50,9 @@
     <!-- REGULAR MEETING SCHEDULE -->
     <section class="section" style="background:#f0f0f0;">
       <div class="container">
-        <h2 data-i18n="events">Our Regular Meeting Schedule</h2>
+        <h2>Our Regular Meeting Schedule</h2>
         <hr class="section-divider" />
-        <p class="section-intro" data-i18n="events_intro">
+        <p class="section-intro">
           Join us for worship, Bible study, and fellowship at Fosu College of Education. Everyone is welcome!
         </p>
 
@@ -95,26 +95,16 @@
           </div>
 
         </div>
-
-        <div style="text-align:center; margin-top:50px;">
-          <p style="font-size:1.3rem; max-width:800px; margin:0 auto 30px;">
-            All meetings are held at <strong>Fosu College of Education, Assin Fosu</strong>.<br>
-            We look forward to welcoming you – bring a friend!
-          </p>
-          <a href="contact.html" style="background:#ffd700; color:#004080; padding:15px 40px; border-radius:30px; text-decoration:none; font-weight:bold; font-size:1.2rem; display:inline-block;">
-            Get Directions or Ask Questions
-          </a>
-        </div>
       </div>
     </section>
 
-    <!-- UPCOMING EVENTS -->
+    <!-- UPCOMING EVENT -->
     <section class="section">
       <div class="container">
         <h2>Upcoming Events</h2>
         <hr class="section-divider" />
 
-        <div style="text-align:center; padding:40px; background:white; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+        <div class="event-box" style="text-align:center; padding:40px; background:white; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
 
           <h3 style="margin-bottom:20px; color:#004080; font-size:1.8rem;">
             2025 Annual Evangelism Program
@@ -170,14 +160,14 @@
 
   <!-- Countdown + Share Script -->
   <script>
-    // COUNTDOWN TIMER
+    // SET YOUR EVENT DATE HERE
     const eventDate = new Date("2025-03-10T09:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
       const distance = eventDate - now;
 
-      if (distance < 0) {
+      if (distance <= 0) {
         document.getElementById("countdown").innerHTML = "The event is happening now!";
         return;
       }
@@ -197,7 +187,7 @@
     // WHATSAPP SHARE BUTTON
     document.getElementById("shareEvent").addEventListener("click", function () {
       const message = encodeURIComponent(
-        "Join me for the 2025 Annual Evangelism Program at Fosco Chapter! Check out the flyer here: https://yourwebsite.com/events.html"
+        "Join me for the 2025 Annual Evangelism Program at Fosco Chapter! View details here: https://yourwebsite.com/events.html"
       );
 
       window.open("https://wa.me/?text=" + message, "_blank");
