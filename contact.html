@@ -147,9 +147,16 @@
   </footer>
 
   <script>
-    feather.replace();
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+   <script>
+  feather.replace();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Success Popup Before Mailto Opens
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', function () {
+    alert("Thank you! Your message is being prepared. Your email app will open shortly.");
+  });
+</script>
 
 </body>
 </html>
