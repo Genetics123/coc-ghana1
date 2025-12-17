@@ -3,55 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Fosco Chapter – Church of Christ | Assin Fosu Campus Ministry</title>
- <meta name="description" content="Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, Bible study, sermons, and campus fellowship in Assin Fosu, Ghana.">
+  <title>Fosco Chapter – Church of Christ | Assin Fosu Campus Ministry</title>
+  <meta name="description" content="Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, Bible study, sermons, and campus fellowship in Assin Fosu, Ghana.">
   <meta name="keywords" content="Church of Christ, Fosco Chapter, Assin Fosu, Fosu College of Education, Bible Study, Ghana Churches, Campus Ministry, Evangelism, Sermons, Worship">
-<meta property="og:title" content="Fosco Chapter – Church of Christ Assin Fosu Campus Ministry" />
-<meta property="og:description" content="Discover the Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, fellowship, and Bible study in Assin Fosu." />
-<meta property="og:url" content="https://www.churchofchristfosco.org/" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://www.churchofchristfosco.org/images/og-image.jpg" />
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Fosco Chapter – Church of Christ Assin Fosu Campus Ministry" />
-<meta name="twitter:description" content="Discover the Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, fellowship, and Bible study in Assin Fosu." />
-<meta name="twitter:image" content="https://www.churchofchristfosco.org/images/og-image.jpg" />
+  <!-- Open Graph Tags (for WhatsApp/Facebook previews) -->
+  <meta property="og:title" content="Fosco Chapter – Church of Christ Assin Fosu Campus Ministry" />
+  <meta property="og:description" content="Discover the Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, fellowship, and Bible study in Assin Fosu." />
+  <meta property="og:url" content="https://www.churchofchristfosco.org/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.churchofchristfosco.org/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fosco Chapter – Church of Christ Assin Fosu Campus Ministry" />
+  <meta name="twitter:description" content="Discover the Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, fellowship, and Bible study in Assin Fosu." />
+  <meta name="twitter:image" content="https://www.churchofchristfosco.org/images/og-image.jpg" />
+
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Announcement Banner Styles -->
+  <!-- Announcement Banner Styles (Fixed for seamless infinite scroll) -->
   <style>
     .announcement-wrapper {
       width: 100%;
       overflow: hidden;
       background: #0a3d62;
       color: white;
-      padding: 10px 0;
+      padding: 12px 0;
       position: relative;
     }
-
     .announcement-track {
       display: flex;
       white-space: nowrap;
-      animation: slideAnnouncements 18s linear infinite;
+      animation: slideAnnouncements 35s linear infinite;
     }
-
     .announcement {
-      padding: 0 50px;
+      padding: 0 60px;
       font-size: 16px;
       font-weight: 600;
       display: inline-block;
+      flex-shrink: 0;
     }
-
     @keyframes slideAnnouncements {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(-50%); }
+    }
+    /* Mobile adjustments for better readability */
+    @media (max-width: 768px) {
+      .announcement {
+        font-size: 14px;
+        padding: 0 40px;
+      }
+      .announcement-track {
+        animation-duration: 40s; /* Slower on mobile */
+      }
     }
   </style>
 </head>
-
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -59,7 +68,6 @@
         <img src="fosco-logo.jpeg" alt="Fosco Chapter Logo" class="brand-logo" />
         <h1 class="brand-title" data-i18n="brand_title">Fosco Chapter – Church of Christ</h1>
       </div>
-
       <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="index.html" data-i18n="home">Home</a></li>
@@ -71,7 +79,6 @@
           <li><a href="contact.html" data-i18n="contact">Contact</a></li>
         </ul>
       </nav>
-
       <div class="header-right">
         <div class="language-switcher">
           <select id="languageSelect">
@@ -84,12 +91,11 @@
           <i data-feather="search"></i>
         </button>
       </div>
-
       <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
     </div>
   </header>
 
-  <!-- ⭐ ANNOUNCEMENT BANNER ADDED HERE -->
+  <!-- ANNOUNCEMENT BANNER (Now seamless with no gaps/jumps) -->
   <div class="announcement-wrapper">
     <div class="announcement-track" id="announcementTrack">
       <div class="announcement">Welcome to the Fosco Chapter – Church of Christ!</div>
@@ -97,31 +103,27 @@
       <div class="announcement">Wednesday Bible Studies & Prayers – 6:30pm</div>
       <div class="announcement">Saturday Hymn Learning – 3:00pm</div>
       <div class="announcement">Sunday Worship Service – 6:15am</div>
+      <!-- JS will duplicate this set for perfect looping -->
     </div>
   </div>
-  <!-- END ANNOUNCEMENT BANNER -->
 
   <main id="home">
     <section class="hero">
       <div class="container hero-content">
         <h2 data-i18n="welcome">Welcome to Fosco Chapter, Assin Fosu</h2>
         <p class="hero-subtitle" data-i18n="tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
-
         <blockquote class="hero-verse" data-i18n="verse">
           “Greet one another with a holy kiss. The churches of Christ greet you.”<br>
           <cite>Romans 16:16</cite>
         </blockquote>
-
         <div class="hero-search">
           <input type="text" id="resourceSearch" data-i18n-placeholder="search_placeholder" placeholder="Search resources, events, or sermons..." />
           <button data-i18n="search">Search</button>
         </div>
-
         <a href="contact.html" class="hero-cta" data-i18n="join">Join Us or Get Involved</a>
       </div>
     </section>
 
-    <!-- (Your remaining sections stay unchanged) -->
     <section class="section explore-section">
       <div class="container">
         <h2 data-i18n="explore">Explore Our Ministry</h2>
@@ -131,19 +133,16 @@
             <h3 data-i18n="bible_resources">Bible Study Resources</h3>
             <p>Access updated 2025 PDFs on Faith, Purity, Evangelism, and digital study guides.</p>
           </a>
-
           <a href="sermons.html" class="explore-card">
             <div class="card-icon">🎙️</div>
             <h3 data-i18n="sermons_title">Sermons</h3>
             <p>Listen to recent audio messages and videos to inspire your faith journey.</p>
           </a>
-
           <a href="about.html#gallery-section" class="explore-card">
             <div class="card-icon">📸</div>
             <h3 data-i18n="gallery_title">Gallery</h3>
             <p>Photos from worship, fellowship, and outreach.</p>
           </a>
-
           <a href="events.html" class="explore-card">
             <div class="card-icon">🗓️</div>
             <h3 data-i18n="meeting_times">Meeting Times</h3>
@@ -162,13 +161,11 @@
             <p>An in-depth overview of New Testament principles for modern living.</p>
             <a href="resources.html#beliefs" class="card-link">View Resource →</a>
           </div>
-
           <div class="featured-card">
             <h3 data-i18n="salvation">Sin and God's Plan for Salvation</h3>
             <p>Explore grace, faith, obedience, and redemption through Scripture.</p>
             <a href="resources.html#salvation" class="card-link">View Resource →</a>
           </div>
-
           <div class="featured-card">
             <h3 data-i18n="christian_living">Christian Living in 2025</h3>
             <p>Practical guidance on faith amid contemporary challenges.</p>
@@ -197,26 +194,19 @@
   <!-- ChurchBot Live Chat -->
   <script src="https://account.churchbot.chat/wp-content/chatbot/church-of-christ-fosco-chapter/embed.js"></script>
 
-  <!-- Seamless Loop Script -->
+  <!-- Seamless Loop for Announcement Banner -->
   <script>
     const track = document.getElementById("announcementTrack");
-    track.innerHTML += track.innerHTML;
+    if (track) {
+      track.innerHTML += track.innerHTML; // Duplicates for perfect seamless loop
+    }
   </script>
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
-
   <script>
     feather.replace();
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
-
-
-
-
-
-
-
