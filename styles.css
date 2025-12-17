@@ -912,6 +912,42 @@ svg.feather {
   background: #004999;
 }
 
+.directions-card {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.directions-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.directions-card p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.btn-directions {
+  display: inline-block;
+  background: #0066cc;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-directions:hover {
+  background: #004999;
+}
 
 
 
