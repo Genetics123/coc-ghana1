@@ -19,6 +19,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    /* Contact Form Styling */
+    .contact-form {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form .form-group {
+      margin-bottom: 15px;
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0066cc;
+      outline: none;
+    }
+    .contact-form .btn-submit {
+      display: inline-block;
+      background: #0066cc;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-form .btn-submit:hover {
+      background: #004999;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -101,35 +149,9 @@
         <h3 style="margin-top:40px;">📧 Email</h3>
         <p>Email: <a href="mailto:churchofchristfosco.org@gmail.com">churchofchristfosco.org@gmail.com</a></p>
 
-        <!-- Optional Contact Form -->
-        <form action="mailto:churchofchristfosco.org@gmail.com" method="post" enctype="text/plain" style="margin-top:30px;">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
-      <p class="footer-subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
-    </div>
-  </footer>
-
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
-  <script>
-    feather.replace();
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        <!-- Professional Contact Form -->
+        <h3 style="margin-top:40px;">📩 Send Us a Message</h3>
+        <form action="mailto:churchofchristfosco.org@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full
