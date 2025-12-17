@@ -7,7 +7,7 @@
   <meta name="description" content="Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, Bible study, sermons, and campus fellowship in Assin Fosu, Ghana.">
   <meta name="keywords" content="Church of Christ, Fosco Chapter, Assin Fosu, Fosu College of Education, Bible Study, Ghana Churches, Campus Ministry, Evangelism, Sermons, Worship">
 
-  <!-- Open Graph Tags (for WhatsApp/Facebook previews) -->
+  <!-- Open Graph Tags for WhatsApp/Facebook Previews -->
   <meta property="og:title" content="Fosco Chapter – Church of Christ Assin Fosu Campus Ministry" />
   <meta property="og:description" content="Discover the Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, fellowship, and Bible study in Assin Fosu." />
   <meta property="og:url" content="https://www.churchofchristfosco.org/" />
@@ -23,7 +23,7 @@
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Announcement Banner Styles (Seamless) -->
+  <!-- Announcement Banner Styles (Seamless Loop) -->
   <style>
     .announcement-wrapper {
       width: 100%;
@@ -59,48 +59,42 @@
       }
     }
   </style>
-
-  <!-- Daily Verse Styles -->
-  <style>
-    .daily-verse-section {
-      background: white;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .daily-verse-card {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .daily-verse-text {
-      font-size: 1.6rem;
-      font-style: italic;
-      color: #004080;
-      margin: 20px 0;
-      line-height: 1.7;
-    }
-    .daily-verse-reference {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #004080;
-    }
-    @media (max-width: 768px) {
-      .daily-verse-text {
-        font-size: 1.4rem;
-      }
-      .daily-verse-reference {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
 </head>
 <body>
-  <!-- Your header (unchanged) -->
   <header class="site-header">
-    <!-- ... (keep your existing header code) ... -->
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="fosco-logo.jpeg" alt="Fosco Chapter Logo" class="brand-logo" />
+        <h1 class="brand-title" data-i18n="brand_title">Fosco Chapter – Church of Christ</h1>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="about.html" data-i18n="about">About</a></li>
+          <li><a href="resources.html" data-i18n="resources">Resources</a></li>
+          <li><a href="events.html" data-i18n="events">Events</a></li>
+          <li><a href="sermons.html" data-i18n="sermons">Sermons</a></li>
+          <li><a href="leadership.html" data-i18n="leadership">Leadership</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="language-switcher">
+          <select id="languageSelect">
+            <option value="en">En</option>
+            <option value="tw">Twi</option>
+            <option value="fr">Fr</option>
+          </select>
+        </div>
+        <button class="search-icon" aria-label="Search">
+          <i data-feather="search"></i>
+        </button>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
   </header>
 
-  <!-- Announcement Banner -->
+  <!-- Announcement Banner (Scrolling & Seamless) -->
   <div class="announcement-wrapper">
     <div class="announcement-track" id="announcementTrack">
       <div class="announcement">Welcome to the Fosco Chapter – Church of Christ!</div>
@@ -111,52 +105,99 @@
     </div>
   </div>
 
-  <!-- NEW: Daily Memory Verse Section -->
-  <section class="daily-verse-section">
-    <div class="container daily-verse-card">
-      <h2>Daily Memory Verse</h2>
-      <blockquote id="dailyVerse" class="daily-verse-text">
-        Loading today's verse...
-      </blockquote>
-      <p id="dailyReference" class="daily-verse-reference"></p>
-    </div>
-  </section>
-
   <main id="home">
-    <!-- Hero and other sections (keep unchanged) -->
     <section class="hero">
-      <!-- ... (your existing hero code) ... -->
+      <div class="container hero-content">
+        <h2 data-i18n="welcome">Welcome to Fosco Chapter, Assin Fosu</h2>
+        <p class="hero-subtitle" data-i18n="tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
+        <blockquote class="hero-verse" data-i18n="verse">
+          “Greet one another with a holy kiss. The churches of Christ greet you.”<br>
+          <cite>Romans 16:16</cite>
+        </blockquote>
+        <div class="hero-search">
+          <input type="text" id="resourceSearch" data-i18n-placeholder="search_placeholder" placeholder="Search resources, events, or sermons..." />
+          <button data-i18n="search">Search</button>
+        </div>
+        <a href="contact.html" class="hero-cta" data-i18n="join">Join Us or Get Involved</a>
+      </div>
     </section>
 
-    <!-- Explore, Featured, CTA sections (unchanged) -->
-    <!-- ... -->
+    <section class="section explore-section">
+      <div class="container">
+        <h2 data-i18n="explore">Explore Our Ministry</h2>
+        <div class="explore-grid">
+          <a href="resources.html" class="explore-card">
+            <div class="card-icon">📖</div>
+            <h3 data-i18n="bible_resources">Bible Study Resources</h3>
+            <p>Access updated 2025 PDFs on Faith, Purity, Evangelism, and digital study guides.</p>
+          </a>
+          <a href="sermons.html" class="explore-card">
+            <div class="card-icon">🎙️</div>
+            <h3 data-i18n="sermons_title">Sermons</h3>
+            <p>Listen to recent audio messages and videos to inspire your faith journey.</p>
+          </a>
+          <a href="about.html#gallery-section" class="explore-card">
+            <div class="card-icon">📸</div>
+            <h3 data-i18n="gallery_title">Gallery</h3>
+            <p>Photos from worship, fellowship, and outreach.</p>
+          </a>
+          <a href="events.html" class="explore-card">
+            <div class="card-icon">🗓️</div>
+            <h3 data-i18n="meeting_times">Meeting Times</h3>
+            <p>Join our weekly Bible study, hymnal sessions, and Sunday worship services.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section featured-section">
+      <div class="container">
+        <h2 data-i18n="featured">Featured Study Materials</h2>
+        <div class="featured-grid">
+          <div class="featured-card">
+            <h3 data-i18n="beliefs">Beliefs of the Churches of Christ</h3>
+            <p>An in-depth overview of New Testament principles for modern living.</p>
+            <a href="resources.html#beliefs" class="card-link">View Resource →</a>
+          </div>
+          <div class="featured-card">
+            <h3 data-i18n="salvation">Sin and God's Plan for Salvation</h3>
+            <p>Explore grace, faith, obedience, and redemption through Scripture.</p>
+            <a href="resources.html#salvation" class="card-link">View Resource →</a>
+          </div>
+          <div class="featured-card">
+            <h3 data-i18n="christian_living">Christian Living in 2025</h3>
+            <p>Practical guidance on faith amid contemporary challenges.</p>
+            <a href="resources.html#living" class="card-link">View Resource →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <h2 data-i18n="join_fellowship">Join Our Campus Fellowship</h2>
+        <p class="cta-text">We gather weekly for worship, in-depth Bible study, and community fellowship at Fosu College of Education.</p>
+        <a href="contact.html" class="cta-button" data-i18n="contact_today">Contact Us Today</a>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer (unchanged) -->
   <footer class="site-footer">
-    <!-- ... -->
+    <div class="container footer-inner">
+      <p data-i18n="copyright">&copy; <span id="year"></span> Fosco Chapter</p>
+      <p class="footer-subtext" data-i18n="footer_subtext">“A Royal Priesthood” – Campus ministry at Fosu College of Education, Assin Fosu.</p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- ChurchBot Live Chat -->
   <script src="https://account.churchbot.chat/wp-content/chatbot/church-of-christ-fosco-chapter/embed.js"></script>
 
   <!-- Seamless Announcement Loop -->
   <script>
     const track = document.getElementById("announcementTrack");
-    if (track) track.innerHTML += track.innerHTML;
-  </script>
-
-  <!-- Daily Verse Fetch from OurManna API -->
-  <script>
-    fetch('https://beta.ourmanna.com/api/v1/get?format=json')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('dailyVerse').textContent = data.verse.details.text;
-        document.getElementById('dailyReference').textContent = data.verse.details.reference;
-      })
-      .catch(err => {
-        document.getElementById('dailyVerse').textContent = "Unable to load today's verse. Please check your connection.";
-      });
+    if (track) {
+      track.innerHTML += track.innerHTML;
+    }
   </script>
 
   <script src="i18n.js"></script>
