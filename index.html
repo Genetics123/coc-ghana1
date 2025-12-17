@@ -60,35 +60,49 @@
     }
   </style>
 
-  <!-- Daily Verse Styles -->
+  <!-- Daily Verse Tile Styles -->
   <style>
-    .daily-verse-section {
+    .daily-verse-tile {
       background: white;
-      padding: 50px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
       text-align: center;
+      margin-bottom: 30px;
+      transition: box-shadow 0.3s ease;
     }
-    .daily-verse-card {
-      max-width: 900px;
-      margin: 0 auto;
+    .daily-verse-tile:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    .daily-verse-tile h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #004080;
     }
     .daily-verse-text {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-style: italic;
       color: #004080;
-      margin: 25px 0;
-      line-height: 1.8;
+      margin: 15px 0;
+      line-height: 1.7;
     }
     .daily-verse-reference {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #004080;
     }
     @media (max-width: 768px) {
+      .daily-verse-tile {
+        padding: 20px;
+      }
+      .daily-verse-tile h2 {
+        font-size: 1.6rem;
+      }
       .daily-verse-text {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
       .daily-verse-reference {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -138,15 +152,6 @@
     </div>
   </div>
 
-  <!-- Daily Memory Verse Section -->
-  <section class="daily-verse-section">
-    <div class="container daily-verse-card">
-      <h2>Daily Memory Verse</h2>
-      <blockquote id="dailyVerse" class="daily-verse-text">Loading today's verse...</blockquote>
-      <p id="dailyReference" class="daily-verse-reference"></p>
-    </div>
-  </section>
-
   <main id="home">
     <section class="hero">
       <div class="container hero-content">
@@ -166,6 +171,13 @@
 
     <section class="section explore-section">
       <div class="container">
+        <!-- Daily Memory Verse Tile (now on top of Explore section) -->
+        <div class="daily-verse-tile">
+          <h2>Daily Memory Verse</h2>
+          <blockquote id="dailyVerse" class="daily-verse-text">Loading today's verse...</blockquote>
+          <p id="dailyReference" class="daily-verse-reference"></p>
+        </div>
+
         <h2 data-i18n="explore">Explore Our Ministry</h2>
         <div class="explore-grid">
           <a href="resources.html" class="explore-card">
@@ -240,7 +252,7 @@
     if (track) track.innerHTML += track.innerHTML;
   </script>
 
-  <!-- Daily Verse from OurManna API (changes every day automatically) -->
+  <!-- Daily Verse from OurManna API -->
   <script>
     fetch('https://beta.ourmanna.com/api/v1/get?format=json')
       .then(response => response.json())
