@@ -81,7 +81,7 @@
         <h3 style="margin-top:40px;">📍 Location</h3>
         <p>We are located inside <strong>Fosu College of Education</strong>, Assin Fosu.</p>
 
-        <!-- Working Google Maps Embed -->
+        <!-- Satellite Mode Google Map -->
         <iframe 
           src="https://www.google.com/maps?q=Fosu+College+of+Education,+Assin+Fosu,+Ghana&output=embed&t=k"
           width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
@@ -106,39 +106,40 @@
         <h3 style="margin-top:40px;">📧 Email</h3>
         <p>Email: <a href="mailto:churchofchristfosco.org@gmail.com">churchofchristfosco.org@gmail.com</a></p>
 
-        <!-- Contact Form -->
+        <!-- SECURE CONTACT FORM (FormSubmit) -->
         <h3 style="margin-top:40px;">📩 Send Us a Message</h3>
 
-     <form action="https://formsubmit.co/churchofchristfosco.org@gmail.com" method="POST" class="contact-form">
+        <form action="https://formsubmit.co/churchofchristfosco.org@gmail.com" method="POST" class="contact-form">
 
-  <!-- Prevent spam -->
-  <input type="hidden" name="_captcha" value="false">
+          <!-- Disable CAPTCHA -->
+          <input type="hidden" name="_captcha" value="false">
 
-  <!-- Redirect to a thank-you page (optional) -->
-  <input type="hidden" name="_next" value="https://churchofchristfosco.org/thank-you.html">
+          <!-- Redirect to thank-you page -->
+          <input type="hidden" name="_next" value="/thank-you.html">
 
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-  </div>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
 
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-  </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
 
-  <div class="form-group">
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" placeholder="Message subject" required>
-  </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+          </div>
 
-  <div class="form-group">
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-  </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+          </div>
 
-  <button type="submit" class="btn-submit">Send Message</button>
-</form>
+          <button type="submit" class="btn-submit">Send Message</button>
+
+        </form>
 
       </div>
     </section>
@@ -152,16 +153,15 @@
   </footer>
 
   <script>
-   <script>
-  feather.replace();
-  document.getElementById('year').textContent = new Date().getFullYear();
+    feather.replace();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Success Popup Before Mailto Opens
-  const form = document.querySelector('.contact-form');
-  form.addEventListener('submit', function () {
-    alert("Thank you! Your message is being prepared. Your email app will open shortly.");
-  });
-</script>
+    // Success popup before redirect
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function () {
+      alert("Thank you! Your message is being sent.");
+    });
+  </script>
 
 </body>
 </html>
