@@ -9,11 +9,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    /* Page-specific styling */
+    .tile {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
+    }
+
+    .event-flyer {
+      width: 280px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .countdown {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #0a3d62;
+    }
+
+    .share-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #25D366;
+      color: white;
+      padding: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 25px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER (Copied exactly from your About page) -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -56,17 +97,17 @@
         <h2>Days of Worship & Activities</h2>
         <hr class="section-divider" />
 
-        <div class="schedule-item">
+        <div class="tile">
           <strong>Wednesday — Bible Studies & Prayers</strong><br>
           ⏰ 6:30pm – 7:00pm
         </div>
 
-        <div class="schedule-item">
+        <div class="tile">
           <strong>Saturday — Hymn Learning</strong><br>
           ⏰ 3:00pm – 4:30pm
         </div>
 
-        <div class="schedule-item">
+        <div class="tile">
           <strong>Sunday — Worship Service</strong><br>
           ⏰ 6:15am – 7:30am
         </div>
@@ -79,9 +120,7 @@
         <h2>2025 Annual Evangelism</h2>
         <hr class="section-divider" />
 
-        <div class="flyer">
-          <img src="images/2025-annual-evangelism.jpg" alt="2025 Annual Evangelism Flyer" class="event-flyer">
-        </div>
+        <img src="images/2025-annual-evangelism.jpg" alt="2025 Annual Evangelism Flyer" class="event-flyer">
 
         <div id="countdown" class="countdown">Loading countdown...</div>
 
@@ -134,15 +173,26 @@
         <h2>Past Events</h2>
         <hr class="section-divider" />
 
-        <p><strong>2024 Annual Evangelism:</strong> A successful outreach program across the community, involving students and members.</p>
-        <p><strong>Hymns & Worship Workshop:</strong> A special training session to improve congregational singing and harmony.</p>
-        <p><strong>Youth Bible Seminar:</strong> A spiritually uplifting session focused on strengthening the faith of young Christians.</p>
+        <div class="tile">
+          <strong>2024 Annual Evangelism</strong>
+          <p>A successful outreach program across the community, involving students and members.</p>
+        </div>
+
+        <div class="tile">
+          <strong>Hymns & Worship Workshop</strong>
+          <p>A special training session to improve congregational singing and harmony.</p>
+        </div>
+
+        <div class="tile">
+          <strong>Youth Bible Seminar</strong>
+          <p>A spiritually uplifting session focused on strengthening the faith of young Christians.</p>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER (Copied exactly from your About page) -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> The Church of Christ Ministry – Fosco Chapter</p>
