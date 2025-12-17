@@ -7,7 +7,7 @@
   <meta name="description" content="Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, Bible study, sermons, and campus fellowship in Assin Fosu, Ghana.">
   <meta name="keywords" content="Church of Christ, Fosco Chapter, Assin Fosu, Fosu College of Education, Bible Study, Ghana Churches, Campus Ministry, Evangelism, Sermons, Worship">
 
-  <!-- Open Graph Tags for WhatsApp/Facebook Previews -->
+  <!-- Open Graph Tags -->
   <meta property="og:title" content="Fosco Chapter – Church of Christ Assin Fosu Campus Ministry" />
   <meta property="og:description" content="Discover the Fosco Chapter of the Church of Christ at Fosu College of Education. Worship, fellowship, and Bible study in Assin Fosu." />
   <meta property="og:url" content="https://www.churchofchristfosco.org/" />
@@ -23,7 +23,7 @@
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Announcement Banner Styles (Seamless Loop) -->
+  <!-- Announcement Banner Styles (Seamless) -->
   <style>
     .announcement-wrapper {
       width: 100%;
@@ -56,6 +56,39 @@
       }
       .announcement-track {
         animation-duration: 40s;
+      }
+    }
+  </style>
+
+  <!-- Daily Verse Styles -->
+  <style>
+    .daily-verse-section {
+      background: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .daily-verse-card {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .daily-verse-text {
+      font-size: 1.8rem;
+      font-style: italic;
+      color: #004080;
+      margin: 25px 0;
+      line-height: 1.8;
+    }
+    .daily-verse-reference {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #004080;
+    }
+    @media (max-width: 768px) {
+      .daily-verse-text {
+        font-size: 1.5rem;
+      }
+      .daily-verse-reference {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -94,7 +127,7 @@
     </div>
   </header>
 
-  <!-- Announcement Banner (Scrolling & Seamless) -->
+  <!-- Announcement Banner -->
   <div class="announcement-wrapper">
     <div class="announcement-track" id="announcementTrack">
       <div class="announcement">Welcome to the Fosco Chapter – Church of Christ!</div>
@@ -104,6 +137,15 @@
       <div class="announcement">Sunday Worship Service – 6:15am</div>
     </div>
   </div>
+
+  <!-- Daily Memory Verse Section -->
+  <section class="daily-verse-section">
+    <div class="container daily-verse-card">
+      <h2>Daily Memory Verse</h2>
+      <blockquote id="dailyVerse" class="daily-verse-text">Loading today's verse...</blockquote>
+      <p id="dailyReference" class="daily-verse-reference"></p>
+    </div>
+  </section>
 
   <main id="home">
     <section class="hero">
@@ -195,9 +237,22 @@
   <!-- Seamless Announcement Loop -->
   <script>
     const track = document.getElementById("announcementTrack");
-    if (track) {
-      track.innerHTML += track.innerHTML;
-    }
+    if (track) track.innerHTML += track.innerHTML;
+  </script>
+
+  <!-- Daily Verse from OurManna API (changes every day automatically) -->
+  <script>
+    fetch('https://beta.ourmanna.com/api/v1/get?format=json')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.verse && data.verse.details) {
+          document.getElementById('dailyVerse').textContent = data.verse.details.text;
+          document.getElementById('dailyReference').textContent = data.verse.details.reference;
+        }
+      })
+      .catch(() => {
+        document.getElementById('dailyVerse').textContent = "Unable to load verse today. Please try again later.";
+      });
   </script>
 
   <script src="i18n.js"></script>
