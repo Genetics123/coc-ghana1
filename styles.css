@@ -1862,3 +1862,49 @@ section, .section, .contact-section, .form-section {
     display: flex;
   }
 }
+/* ============================
+   DESKTOP NAVIGATION (always visible)
+============================ */
+.main-nav .nav-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none; /* hide hamburger on desktop */
+}
+
+/* ============================
+   MOBILE NAVIGATION
+============================ */
+@media (max-width: 768px) {
+
+  /* Show hamburger icon */
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Hide nav list by default on mobile */
+  .main-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+  }
+
+  /* Show menu when toggled */
+  .main-nav .nav-list.open {
+    display: flex;
+  }
+}
