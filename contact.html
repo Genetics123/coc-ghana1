@@ -10,7 +10,7 @@
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Modern WhatsApp Button Styles -->
+  <!-- Modern WhatsApp Button Styles (kept from previous) -->
   <style>
     .whatsapp-modern-btn {
       display: inline-flex;
@@ -34,7 +34,6 @@
       width: 32px;
       height: 32px;
     }
-    /* Pulse animation for extra modern feel */
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
       70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
@@ -42,6 +41,50 @@
     }
     .whatsapp-modern-btn {
       animation: pulse 2s infinite;
+    }
+  </style>
+
+  <!-- New Tile Styles for Email & Service Times -->
+  <style>
+    .info-tile {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      margin: 30px 0;
+      text-align: left;
+    }
+    .info-tile h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #004080;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-tile ul {
+      list-style: none;
+      padding: 0;
+    }
+    .info-tile li {
+      padding: 8px 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #eee;
+    }
+    .info-tile li:last-child {
+      border-bottom: none;
+    }
+    .info-tile a {
+      color: #004080;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .info-tile {
+        padding: 20px;
+      }
+      .info-tile h3 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
@@ -77,7 +120,8 @@
       <p class="section-intro">
         You can reach The Church of Christ Ministry – Fosco Chapter, Assin Fosu, through the following contacts:
       </p>
-      <!-- WhatsApp Contacts - Modern Button -->
+
+      <!-- WhatsApp Contacts (modern buttons kept) -->
       <div class="contact-grid">
         <div class="contact-item">
           <p><strong>Pre. Korsah</strong><br><a href="tel:+233508343029">050 834 3029</a></p>
@@ -114,52 +158,59 @@
       <!-- Location -->
       <h3 style="margin-top:40px;">📍 Location</h3>
       <p>We are located inside <strong>Fosu College of Education</strong>, Assin Fosu.</p>
-      <!-- Satellite Mode Google Map -->
       <iframe
         src="https://www.google.com/maps?q=Fosu+College+of+Education,+Assin+Fosu,+Ghana&output=embed&t=k"
         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
+
       <!-- Directions Card -->
       <div class="directions-card">
         <h4>Need Help Finding Us?</h4>
-        <p>Click below to open Google Maps and get step‑by‑step directions to our location inside Fosu College of Education.</p>
+        <p>Click below to open Google Maps and get step-by-step directions to our location inside Fosu College of Education.</p>
         <a href="https://maps.app.goo.gl/JRW8BSgLEgpo3zvr7" target="_blank" class="btn-directions">🚗 Get Directions</a>
       </div>
-      <!-- Service Times -->
-      <h3 style="margin-top:40px;">🕒 Service Times</h3>
-      <ul>
-        <li>Sunday Worship: 9:00 AM</li>
-        <li>Wednesday Bible Study: 6:00 PM</li>
-        <li>Youth Fellowship: Saturday 4:00 PM</li>
-      </ul>
-      <!-- Email -->
-      <h3 style="margin-top:40px;">📧 Email</h3>
-      <p>Email: <a href="mailto:churchofchristfosco.org@gmail.com">churchofchristfosco.org@gmail.com</a></p>
-      <!-- SECURE CONTACT FORM (FormSubmit) -->
-      <h3 style="margin-top:40px;">📩 Send Us a Message</h3>
-      <form action="https://formsubmit.co/churchofchristfosco.org@gmail.com" method="POST" class="contact-form">
-        <!-- Disable CAPTCHA -->
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Redirect to thank-you page -->
-        <input type="hidden" name="_next" value="https://www.churchofchristfosco.org/thank-you.html">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Message subject" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
+
+      <!-- Service Times Tile -->
+      <div class="info-tile">
+        <h3>🕒 Service Times</h3>
+        <ul>
+          <li>Sunday Worship: 9:00 AM</li>
+          <li>Wednesday Bible Study: 6:00 PM</li>
+          <li>Youth Fellowship: Saturday 4:00 PM</li>
+        </ul>
+      </div>
+
+      <!-- Email Tile -->
+      <div class="info-tile">
+        <h3>📧 Email</h3>
+        <p>Email: <a href="mailto:churchofchristfosco.org@gmail.com">churchofchristfosco.org@gmail.com</a></p>
+      </div>
+
+      <!-- Contact Form with Title on Top -->
+      <div class="info-tile">
+        <h3 style="text-align:center; margin-bottom:20px;">📩 Send Us a Message</h3>
+        <form action="https://formsubmit.co/churchofchristfosco.org@gmail.com" method="POST" class="contact-form">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://www.churchofchristfosco.org/thank-you.html">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -176,7 +227,6 @@
 <script>
   feather.replace();
   document.getElementById('year').textContent = new Date().getFullYear();
-  // Success popup before redirect
   const form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', function () {
