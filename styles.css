@@ -1331,4 +1331,123 @@ body {
   font-size: 0.9rem;
   color: #555;
 }
+/* HERO SECTION IMPROVEMENTS */
+.hero {
+  position: relative;
+  background: url('hero-background.jpeg') center/cover no-repeat;
+  padding: 120px 0;
+  text-align: center;
+  color: white;
+}
+
+/* Soft dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Ensure hero content stays above overlay */
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Improve main heading */
+.hero h2 {
+  font-size: 3rem !important;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+/* Improve subtitle */
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* Improve Bible verse styling */
+.hero-verse {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+/* SEARCH BAR IMPROVEMENT */
+.hero-search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px auto;
+  max-width: 600px;
+}
+
+.hero-search input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.hero-search button {
+  padding: 12px 20px;
+  background: #0055aa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-search button:hover {
+  background: #003f7d;
+}
+
+/* CTA BUTTON IMPROVEMENT */
+.hero-cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #ffcc00;
+  color: #222;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-cta:hover {
+  background: #e6b800;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-search {
+    flex-direction: column;
+  }
+
+  .hero-search button {
+    width: 100%;
+  }
+}
 
