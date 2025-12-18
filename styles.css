@@ -1718,4 +1718,27 @@ a.button,
     padding-bottom: 55px;
   }
 }
+/* FIX: Ensure mobile navigation stays visible */
+header, nav, .navbar, .mobile-menu {
+  position: relative;
+  z-index: 9999;
+}
+
+/* FIX: Prevent global spacing from pushing header off-screen */
+header {
+  padding: 10px 0 !important;
+  margin: 0 !important;
+}
+
+/* FIX: Restore mobile menu icon alignment */
+.nav-toggle, .menu-toggle, .hamburger {
+  display: block !important;
+  z-index: 10000;
+}
+
+/* FIX: Ensure mobile dropdown is clickable */
+nav ul {
+  position: relative;
+  z-index: 9999;
+}
 
