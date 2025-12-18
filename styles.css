@@ -1789,3 +1789,34 @@ section, .section, .contact-section, .form-section {
     display: flex;
   }
 }
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Show toggle on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .main-nav .nav-list.open {
+    display: flex;
+  }
+}
