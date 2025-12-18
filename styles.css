@@ -1450,4 +1450,59 @@ body {
     width: 100%;
   }
 }
+/* EXPLORE SECTION IMPROVEMENTS */
+.explore-section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.explore-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* Card styling */
+.explore-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+/* Hover effect */
+.explore-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-color: #d0d0d0;
+}
+
+/* Icon styling */
+.explore-card .card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.explore-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Description */
+.explore-card p {
+  font-size: 1rem;
+  color: #555;
+}
 
