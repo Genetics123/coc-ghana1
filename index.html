@@ -106,6 +106,21 @@
       }
     }
   </style>
+
+  <!-- Hero Visibility Fix -->
+  <style>
+    .hero {
+      background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.7)), url('hero-background.jpeg') center/cover no-repeat;
+    }
+    .hero-content * {
+      color: white !important;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    .hero-cta {
+      color: #004080 !important;
+      text-shadow: none;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -155,7 +170,6 @@
   <main id="home">
     <section class="hero">
       <div class="container hero-content">
-        <!-- Fixed visibility: lighter overlay in CSS below, white text + shadow -->
         <h2 data-i18n="welcome">Welcome to Fosco Chapter, Assin Fosu</h2>
         <p class="hero-subtitle" data-i18n="tagline">“A Royal Priesthood” – Serving Christ at Fosu College of Education.</p>
         <blockquote class="hero-verse" data-i18n="verse">
@@ -176,7 +190,8 @@
         </div>
 
         <h2 data-i18n="explore">Explore Our Ministry</h2>
-        <div class="explore-grid">
+        <!-- Fixed: 4 cards always horizontal (2 rows of 2 on medium screens, 4 on large, 1 on small) -->
+        <div class="explore-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
           <a href="resources.html" class="explore-card">
             <div class="card-icon">📖</div>
             <h3 data-i18n="bible_resources">Bible Study Resources</h3>
@@ -270,20 +285,5 @@
     feather.replace();
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <!-- Hero Visibility Fix (Lighter overlay + white text with shadow) -->
-  <style>
-    .hero {
-      background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.7)), url('hero-background.jpeg') center/cover no-repeat;
-    }
-    .hero-content * {
-      color: white !important;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-    }
-    .hero-cta {
-      color: #004080 !important; /* Keep CTA text dark for gold button */
-      text-shadow: none;
-    }
-  </style>
 </body>
 </html>
