@@ -1741,4 +1741,20 @@ nav ul {
   position: relative;
   z-index: 9999;
 }
+/* FORCE HEADER TO BE ABOVE EVERYTHING ON ALL PAGES */
+header, nav {
+  position: relative;
+  z-index: 99999 !important;
+}
 
+/* FIX: Prevent any page section from covering the header */
+section, .section, .contact-section, .form-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* FIX: Ensure mobile menu toggle is always visible */
+.nav-toggle, .menu-toggle, .hamburger {
+  z-index: 100000 !important;
+  position: relative;
+   }
