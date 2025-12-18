@@ -1908,3 +1908,44 @@ section, .section, .contact-section, .form-section {
     display: flex;
   }
 }
+
+/* DESKTOP */
+.menu-toggle {
+  display: none;
+}
+
+.main-nav .nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Hide menu by default */
+  .main-nav .nav-list {
+    display: none !important;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+  }
+
+  /* Show menu when toggled */
+  .main-nav .nav-list.open {
+    display: flex !important;
+  }
+}
