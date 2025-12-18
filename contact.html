@@ -9,6 +9,41 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Modern WhatsApp Button Styles -->
+  <style>
+    .whatsapp-modern-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s ease;
+      margin-top: 12px;
+    }
+    .whatsapp-modern-btn:hover {
+      background: #128C7E;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+    }
+    .whatsapp-modern-btn i {
+      width: 32px;
+      height: 32px;
+    }
+    /* Pulse animation for extra modern feel */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    .whatsapp-modern-btn {
+      animation: pulse 2s infinite;
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -20,7 +55,6 @@
         <h1 class="brand-title">Fosco Chapter – Assin Fosu</h1>
       </div>
     </div>
-    <!-- Standard mobile toggle button -->
     <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
     <nav class="main-nav">
       <ul class="nav-list">
@@ -43,29 +77,40 @@
       <p class="section-intro">
         You can reach The Church of Christ Ministry – Fosco Chapter, Assin Fosu, through the following contacts:
       </p>
-      <!-- WhatsApp Contacts -->
+      <!-- WhatsApp Contacts - Modern Button -->
       <div class="contact-grid">
         <div class="contact-item">
           <p><strong>Pre. Korsah</strong><br><a href="tel:+233508343029">050 834 3029</a></p>
-          <a href="https://wa.me/233508343029" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/233508343029" target="_blank" class="whatsapp-modern-btn">
+            <i data-feather="message-circle"></i>
+          </a>
         </div>
         <div class="contact-item">
           <p><strong>Pre. Frederick</strong><br><a href="tel:+233559248632">055 924 8632</a></p>
-          <a href="https://wa.me/233559248632" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/233559248632" target="_blank" class="whatsapp-modern-btn">
+            <i data-feather="message-circle"></i>
+          </a>
         </div>
         <div class="contact-item">
           <p><strong>Bro. Odoom (President)</strong><br><a href="tel:+233549561655">054 956 1655</a></p>
-          <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/233549561655" target="_blank" class="whatsapp-modern-btn">
+            <i data-feather="message-circle"></i>
+          </a>
         </div>
         <div class="contact-item">
           <p><strong>Emmanuel Ponsu</strong><br><a href="tel:+233249939707">024 993 9707</a></p>
-          <a href="https://wa.me/233249939707" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/233249939707" target="_blank" class="whatsapp-modern-btn">
+            <i data-feather="message-circle"></i>
+          </a>
         </div>
         <div class="contact-item">
           <p><strong>Bright Donkor</strong><br><a href="tel:+233592362621">059 236 2621</a></p>
-          <a href="https://wa.me/233592362621" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/233592362621" target="_blank" class="whatsapp-modern-btn">
+            <i data-feather="message-circle"></i>
+          </a>
         </div>
       </div>
+
       <!-- Location -->
       <h3 style="margin-top:40px;">📍 Location</h3>
       <p>We are located inside <strong>Fosu College of Education</strong>, Assin Fosu.</p>
@@ -126,7 +171,6 @@
   </div>
 </footer>
 
-<!-- Load your script.js for the mobile menu toggle -->
 <script src="script.js"></script>
 
 <script>
