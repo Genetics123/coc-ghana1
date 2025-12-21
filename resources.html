@@ -20,15 +20,14 @@
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Polished Resource Tiles CSS + Fix for No Content Peek -->
+  <!-- Polished Collapsible Tiles + No Peek Fix -->
   <style>
-    /* Polished Resource Tiles/Collapsibles */
     .resource-card {
       background: white;
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       transition: all 0.4s ease;
     }
 
@@ -73,7 +72,7 @@
     }
 
     .collapsible-content {
-      max-height: 0; /* Fully hidden when closed */
+      max-height: 0;
       overflow: hidden;
       padding: 0 25px;
       background: #f9f9fb;
@@ -81,7 +80,7 @@
     }
 
     .collapsible.open .collapsible-content {
-      max-height: 2000px; /* Large enough for all content */
+      max-height: 3000px; /* Large enough for all content */
       padding: 25px;
     }
 
@@ -122,7 +121,6 @@
       line-height: 1.6;
     }
 
-    /* Mobile tweaks */
     @media (max-width: 768px) {
       .collapsible-header {
         padding: 18px 20px;
@@ -178,32 +176,88 @@
           No results found
         </p>
         <div class="resources-grid" id="resourcesList">
-          <!-- All your resource cards remain exactly the same -->
           <!-- Faith -->
-<div class="resource-card collapsible" data-keywords="faith tithing dispensation beliefs joseph moses holy spirit spiritual gifts sin salvation obedience prayer">
-  <div class="collapsible-header">
-    <h3 data-i18n="faith">Faith</h3>
-    <i data-feather="chevron-down" class="collapse-icon"></i>
-  </div>
-  <div class="collapsible-content">
-    <ul>
-      <li><a href="tithing.pdf" download>Tithing</a><p class="resource-desc">A biblical study on giving, stewardship, and the purpose of tithing in Christian living.</p></li>
-      <li><a href="dispensation-in-the-bible.pdf" download>Dispensation in the Bible</a><p class="resource-desc">Explains the different biblical dispensations and how God worked with humanity across ages.</p></li>
-      <li><a href="beliefs-of-the-churches-of-christ.pdf" download>Beliefs of the Churches of Christ</a><p class="resource-desc">An overview of core doctrines, worship practices, and New Testament foundations of the Church of Christ.</p></li>
-      <li><a href="the-life-of-joseph.pdf" download>The Life of Joseph</a><p class="resource-desc">Lessons from Joseph’s journey of faith, forgiveness, leadership, and God’s providence.</p></li>
-      <li><a href="the-life-of-moses.pdf" download>The Life of Moses</a><p class="resource-desc">A study of Moses’ calling, leadership, and the deliverance of Israel.</p></li>
-      <li><a href="the-holy-spirit.pdf" download>The Holy Spirit</a><p class="resource-desc">A biblical explanation of the Holy Spirit’s role in salvation, guidance, and Christian living.</p></li>
-      <li><a href="spiritual-gifts.pdf" download>Spiritual Gifts</a><p class="resource-desc">Understanding spiritual gifts, their purpose, and how they were used in the early church.</p></li>
-      <li><a href="sin-and-gods-plan-for-salvation.pdf" download>Sin and God's Plan for Salvation</a><p class="resource-desc">A clear study on sin, redemption, and God’s plan for saving humanity through Christ.</p></li>
-      <li><a href="after-church-whats-next.pdf" download>After Church, What's Next</a><p class="resource-desc">Guidance for new believers on spiritual growth, fellowship, and Christian maturity.</p></li>
-      <li><a href="obedience.pdf" download>Obedience</a><p class="resource-desc">A study on the importance of obedience in the Christian walk and biblical examples of faithful obedience.</p></li>
-      <li><a href="the-need-for-the-church-to-be-a-house-of-prayer.pdf" download>The Need for the Church to Be a House of Prayer</a><p class="resource-desc">Why prayer is central to the church’s mission and spiritual strength.</p></li>
-    </ul>
-  </div>
-</div>
-<!-- Purity, Evangelism, Hymns, Additional Bible Studies remain unchanged (same as your last version) -->
-<!-- ... (all other sections identical) ... -->
-        </div> <!-- End of resourcesList -->
+          <div class="resource-card collapsible" data-keywords="faith tithing dispensation beliefs joseph moses holy spirit spiritual gifts sin salvation obedience prayer">
+            <div class="collapsible-header">
+              <h3 data-i18n="faith">Faith</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="tithing.pdf" download>Tithing</a><p class="resource-desc">A biblical study on giving, stewardship, and the purpose of tithing in Christian living.</p></li>
+                <li><a href="dispensation-in-the-bible.pdf" download>Dispensation in the Bible</a><p class="resource-desc">Explains the different biblical dispensations and how God worked with humanity across ages.</p></li>
+                <li><a href="beliefs-of-the-churches-of-christ.pdf" download>Beliefs of the Churches of Christ</a><p class="resource-desc">An overview of core doctrines, worship practices, and New Testament foundations of the Church of Christ.</p></li>
+                <li><a href="the-life-of-joseph.pdf" download>The Life of Joseph</a><p class="resource-desc">Lessons from Joseph’s journey of faith, forgiveness, leadership, and God’s providence.</p></li>
+                <li><a href="the-life-of-moses.pdf" download>The Life of Moses</a><p class="resource-desc">A study of Moses’ calling, leadership, and the deliverance of Israel.</p></li>
+                <li><a href="the-holy-spirit.pdf" download>The Holy Spirit</a><p class="resource-desc">A biblical explanation of the Holy Spirit’s role in salvation, guidance, and Christian living.</p></li>
+                <li><a href="spiritual-gifts.pdf" download>Spiritual Gifts</a><p class="resource-desc">Understanding spiritual gifts, their purpose, and how they were used in the early church.</p></li>
+                <li><a href="sin-and-gods-plan-for-salvation.pdf" download>Sin and God's Plan for Salvation</a><p class="resource-desc">A clear study on sin, redemption, and God’s plan for saving humanity through Christ.</p></li>
+                <li><a href="after-church-whats-next.pdf" download>After Church, What's Next</a><p class="resource-desc">Guidance for new believers on spiritual growth, fellowship, and Christian maturity.</p></li>
+                <li><a href="obedience.pdf" download>Obedience</a><p class="resource-desc">A study on the importance of obedience in the Christian walk and biblical examples of faithful obedience.</p></li>
+                <li><a href="the-need-for-the-church-to-be-a-house-of-prayer.pdf" download>The Need for the Church to Be a House of Prayer</a><p class="resource-desc">Why prayer is central to the church’s mission and spiritual strength.</p></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Purity -->
+          <div class="resource-card collapsible" data-keywords="purity sabbath revelation 666 prophecy holiness">
+            <div class="collapsible-header">
+              <h3 data-i18n="purity">Purity</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="the-sabbaths.pdf" download>The Sabbaths</a><p class="resource-desc">A biblical explanation of the Sabbath and its relevance in Christian doctrine.</p></li>
+                <li><a href="revelation-13-666.pdf" download>Revelation 13 (666)</a><p class="resource-desc">A study on the symbolism of 666, the beast, and prophetic warnings in Revelation 13.</p></li>
+                <li><a href="revelation-11.pdf" download>Revelation 11</a><p class="resource-desc">Insights into the two witnesses, prophecy, and God’s judgment in Revelation 11.</p></li>
+                <li><a href="revelation-21.pdf" download>Revelation 21</a><p class="resource-desc">A hopeful study of the new heaven, new earth, and God’s eternal promise.</p></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Evangelism -->
+          <div class="resource-card collapsible" data-keywords="evangelism false teachers prophets prophecy gospel teaching">
+            <div class="collapsible-header">
+              <h3 data-i18n="evangelism">Evangelism</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="false-teachers-and-preachers.pdf" download>False Teachers and Preachers</a><p class="resource-desc">How to identify false teachings and remain grounded in biblical truth.</p></li>
+                <li><a href="the-bible-and-prophets.pdf" download>The Bible and Prophets</a><p class="resource-desc">A study on biblical prophets, their messages, and their role in God’s plan.</p></li>
+                <li><a href="the-bible-and-prophetic-telescoping.pdf" download>The Bible and Prophetic Telescoping</a><p class="resource-desc">Understanding how prophecy unfolds across time through “telescoping.”</p></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Hymns -->
+          <div class="resource-card collapsible" data-keywords="hymns songs music worship">
+            <div class="collapsible-header">
+              <h3 data-i18n="hymns">Hymns</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="https://cochymn.web.app/" target="_blank">Church of Christ Hymns (cochymn.web.app)</a><p class="resource-desc">A digital hymn book with songs used in Church of Christ congregations.</p></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Additional Bible Studies -->
+          <div class="resource-card collapsible" data-keywords="bible study workbook lesson new testament salvation church">
+            <div class="collapsible-header">
+              <h3>Additional Bible Studies</h3>
+              <i data-feather="chevron-down" class="collapse-icon"></i>
+            </div>
+            <div class="collapsible-content">
+              <ul>
+                <li><a href="https://westpalmbeachchurchofchrist.com/self-study-booklets" target="_blank">Self-Study Workbooks (West Palm Beach CoC)</a><p class="resource-desc">Downloadable self-study booklets designed for individual spiritual growth, small groups, or church classes.</p></li>
+                <li><a href="https://gewatkins.net/bible-study-lessons/" target="_blank">Free Printable Lessons (GEWatkins.net)</a><p class="resource-desc">A collection of sermon outlines, Bible lessons, and printable study materials from a faithful brother.</p></li>
+                <li><a href="http://camphillchurch.org/resources/study" target="_blank">Bible Studies by Paul Cantrell (Camp Hill Church of Christ)</a><p class="resource-desc">Over 200 in-depth downloadable Bible study PDFs authored by Paul Cantrell, a longtime minister.</p></li>
+                <li><a href="https://www.padfield.com/downloads/class.html" target="_blank">Class Books & Guides (Padfield.com)</a><p class="resource-desc">Free Bible class curriculum, workbooks, and study guides suitable for all ages (Sunday school to adult).</p></li>
+                <li><a href="https://bibletalk.tv/series" target="_blank">Book-by-Book Series (BibleTalk.tv)</a><p class="resource-desc">Easy-to-understand video and written Bible study series covering books of the Bible and Christian topics.</p></li>
+                <li><a href="https://www.lavistachurchofchrist.org/cms/bible-studies/" target="_blank">Bible Studies (La Vista CoC)</a><p class="resource-desc">A variety of Bible studies, including series for new Christians, teens, and adults, with personal study options.</p></li>
+                <li><a href="https://www.waltonchapelchurchofchrist.com/powerpointsermons.html" target="_blank">PowerPoint Sermons (Walton Chapel Church of Christ)</a><p class="resource-desc">A large collection of downloadable PowerPoint sermon outlines from a sister congregation.</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
