@@ -19,6 +19,116 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" href="fosco-logo.jpeg" type="image/jpeg">
   <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Polished Resource Tiles CSS -->
+  <style>
+    /* Polished Resource Tiles/Collapsibles */
+    .resource-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 25px;
+      transition: all 0.4s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .collapsible-header {
+      background: linear-gradient(to right, #004080, #0055aa);
+      color: white;
+      padding: 20px 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+
+    .collapsible-header:hover {
+      background: linear-gradient(to right, #003366, #004080);
+    }
+
+    .collapsible-header h3 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+    }
+
+    .collapse-icon {
+      width: 32px;
+      height: 32px;
+      stroke: white;
+      stroke-width: 3;
+      transition: transform 0.4s ease;
+    }
+
+    .collapsible.open .collapse-icon {
+      transform: rotate(180deg);
+    }
+
+    .collapsible-content {
+      padding: 25px;
+      background: #f9f9fb;
+      transition: all 0.5s ease;
+    }
+
+    .collapsible-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .collapsible-content li {
+      padding: 15px 0;
+      border-bottom: 1px dashed #ddd;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .collapsible-content li:last-child {
+      border-bottom: none;
+    }
+
+    .collapsible-content a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .collapsible-content a:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    .resource-desc {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      .collapsible-header {
+        padding: 18px 20px;
+        font-size: 1.4rem;
+      }
+      .collapsible-header h3 {
+        font-size: 1.4rem;
+      }
+      .collapsible-content {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
